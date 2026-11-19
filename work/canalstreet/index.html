@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canal Street Property Co. | Property management in Holyoke, MA</title>
+<meta name="description" content="Canal Street Property Co. manages 2–6 family homes and small apartment buildings in Holyoke, Chicopee, South Hadley, Easthampton and Springfield. Sample site by 413 Growth.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bar:36px;
+  --bg:#edefeb; --bg-2:#e2e6e0; --surface:#fbfcfa; --surface-2:#f2f4f1;
+  --ink:#142024; --muted:#4b595e; --line:#c9d0ca; --line-2:#dde2dc;
+  --teal:#0d5759; --teal-2:#147174; --teal-tint:#d6e8e5;
+  --brick:#a3432a; --brick-deep:#7d3320; --brick-tint:#f2dfd5;
+  --btn:#0d5759; --btn-ink:#ffffff; --btn-hover:#0a4647;
+  --hero:#0e4244; --hero-2:#0b3638; --hero-ink:#eef5f3; --hero-muted:#b4cfcb;
+  --b1:#8e3b24; --b2:#7a321f; --b3:#9b452b; --trim:#b8603f; --far:#155557; --far-2:#1a6264;
+  --glass:#173335; --lamp:#f2c46b; --canal:#14686a; --canal-hi:rgba(255,255,255,.28);
+  --mortar:rgba(0,0,0,.22);
+  --focus:#e5892c; --ok:#1f6d47; --ok-tint:#dceee3;
+  --shadow:0 1px 2px rgba(20,32,36,.06),0 8px 24px -12px rgba(20,32,36,.25);
+  --r:12px;
+  --head:"Zilla Slab",Rockwell,"Roboto Slab",Georgia,serif;
+  --body:"Barlow","Helvetica Neue",Arial,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e1416; --bg-2:#121b1e; --surface:#172226; --surface-2:#1b282c;
+    --ink:#e6ece9; --muted:#a3b3b5; --line:#2a3b40; --line-2:#223135;
+    --teal:#68c3bb; --teal-2:#86d3cc; --teal-tint:#15302f;
+    --brick:#e88a64; --brick-deep:#d06e48; --brick-tint:#2d1d17;
+    --btn:#68c3bb; --btn-ink:#08191a; --btn-hover:#86d3cc;
+    --hero:#0a1f21; --hero-2:#081819; --hero-ink:#e9f2f0; --hero-muted:#9dbcb8;
+    --b1:#6a2c1b; --b2:#5a2617; --b3:#753220; --trim:#8c4a30; --far:#10393b; --far-2:#134244;
+    --glass:#0d1d1f; --lamp:#e9b75a; --canal:#0f4a4c; --canal-hi:rgba(255,255,255,.18);
+    --ok:#7fd0a3; --ok-tint:#15291f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;padding-top:var(--bar);background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:var(--teal)}
+a:hover{color:var(--teal-2)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.08;margin:0 0 .5em;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,1.4rem + 2.6vw,3.1rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(1180px,100% - 64px)}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;font:700 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--brick);margin-bottom:1rem}
+.eyebrow::before{content:"";width:22px;height:3px;background:currentColor}
+.lede{font-size:1.15rem;color:var(--muted);max-width:60ch}
+.tag{display:inline-block;font:600 .72rem/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--line);border-radius:99px;padding:.35em .7em;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.75em 1.3em;border-radius:8px;border:2px solid var(--btn);background:var(--btn);color:var(--btn-ink);font:700 1rem/1.1 var(--body);text-decoration:none;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{background:var(--btn-hover);border-color:var(--btn-hover);color:var(--btn-ink);transform:translateY(-1px)}
+.btn--ghost{background:transparent;color:var(--teal)}
+.btn--ghost:hover{background:var(--teal-tint);color:var(--teal)}
+.btn--full{width:100%}
+
+/* ---------- sample banner ---------- */
+.sample-bar{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--bar);display:flex;align-items:center;justify-content:center;gap:.5em;padding:0 16px;background:#0a1214;color:#c9d6d4;font:500 12.5px/1.25 var(--body);letter-spacing:.01em;border-bottom:1px solid rgba(255,255,255,.08)}
+.sample-bar a{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.35)}
+.sample-bar a:hover{color:#ffd8a8;border-color:#ffd8a8}
+.sample-bar .sep{opacity:.5}
+@media (max-width:640px){
+  :root{--bar:46px}
+  .sample-bar{display:grid;grid-template-columns:1fr auto;grid-template-areas:"a l" "b b";align-content:center;gap:2px 10px;font-size:11.5px}
+  .sample-bar .sep{display:none}
+  .sample-bar .s1{grid-area:a}.sample-bar .s2{grid-area:b;opacity:.85}.sample-bar a{grid-area:l}
+}
+
+/* ---------- header ---------- */
+.site-head{background:var(--hero);color:var(--hero-ink);border-bottom:1px solid rgba(255,255,255,.07);position:relative;z-index:5}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--hero-ink);text-decoration:none}
+.logo:hover{color:#fff}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font:700 1.18rem/1 var(--head);letter-spacing:-.01em}
+.logo small{display:block;font:600 .66rem/1.3 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--hero-muted);margin-top:3px}
+.nav{display:none;gap:4px;align-items:center}
+.nav a{color:var(--hero-ink);text-decoration:none;font-weight:600;font-size:.95rem;padding:.55em .8em;border-radius:6px}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.head-call{display:inline-flex;align-items:center;gap:.45em;color:var(--hero);background:var(--hero-ink);text-decoration:none;font-weight:700;font-size:.95rem;padding:.6em .9em;border-radius:8px;white-space:nowrap}
+.head-call:hover{background:#fff;color:var(--hero)}
+.head-call svg{width:16px;height:16px}
+.menu{position:relative}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4em;font-weight:700;font-size:.95rem;padding:.6em .8em;border:1px solid rgba(255,255,255,.25);border-radius:8px}
+.menu summary::-webkit-details-marker{display:none}
+.menu[open] summary{background:rgba(255,255,255,.1)}
+.menu ul{position:absolute;right:0;top:calc(100% + 8px);list-style:none;margin:0;padding:6px;min-width:200px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.menu li a{display:block;padding:.65em .8em;color:var(--ink);text-decoration:none;font-weight:600;border-radius:6px}
+.menu li a:hover{background:var(--surface-2)}
+.head-right{display:flex;align-items:center;gap:8px}
+@media (min-width:960px){.nav{display:flex}.menu{display:none}}
+@media (max-width:420px){.head-call .num{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(180deg,var(--hero) 0%,var(--hero-2) 100%);color:var(--hero-ink);overflow:hidden;padding:44px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 80% 10%,rgba(242,196,107,.10),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{color:var(--lamp)}
+.hero h1{font-size:clamp(2.5rem,1.6rem + 4.4vw,4.9rem);font-weight:700;max-width:15ch;margin-bottom:.3em;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--lamp)}
+.hero .lede{color:var(--hero-muted);margin-bottom:28px}
+.hero-top{display:grid;gap:24px}
+.board{display:none}
+@media (min-width:1000px){
+  .hero-top{grid-template-columns:1fr 330px;gap:48px;align-items:end;margin-bottom:8px}
+  .board{display:block;margin-bottom:30px;padding:20px 22px;border:1px solid rgba(255,255,255,.14);border-radius:var(--r);background:rgba(0,0,0,.18);backdrop-filter:blur(2px)}
+}
+.board-h{font:700 .72rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--lamp);margin-bottom:10px}
+.board .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.16);font-size:.95rem}
+.board .row span{color:var(--hero-muted)}
+.board .row b{display:inline-flex;align-items:center;gap:8px}
+.board a{display:block;margin-top:14px;text-align:center;padding:.7em;border-radius:8px;background:var(--lamp);color:#1b1408;font:700 1.1rem/1.2 var(--head);text-decoration:none}
+.board a:hover{background:#ffd88c;color:#1b1408}
+.dot{width:8px;height:8px;border-radius:50%;background:#5fd08f;box-shadow:0 0 0 0 rgba(95,208,143,.6);animation:ping 2.4s ease-out infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(95,208,143,0)}100%{box-shadow:0 0 0 0 rgba(95,208,143,0)}}
+.doors{display:grid;gap:16px;margin-bottom:-1px}
+@media (min-width:760px){.doors{grid-template-columns:1fr 1fr;gap:22px}}
+.door{position:relative;display:flex;flex-direction:column;gap:6px;padding:72px 22px 22px;background:var(--surface);color:var(--ink);text-decoration:none;border-radius:var(--r) var(--r) 6px 6px;box-shadow:0 18px 40px -18px rgba(0,0,0,.6);border-top:12px solid var(--b1);transition:transform .2s ease,box-shadow .2s ease}
+.door::before{content:"";position:absolute;inset:-12px 0 auto 0;height:12px;border-radius:var(--r) var(--r) 0 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='12'%3E%3Cpath d='M0 6h32M16 0v6M0 6v6M32 6v6' stroke='%23000' stroke-opacity='.28' stroke-width='1.5'/%3E%3C/svg%3E")}
+.door:hover{transform:translateY(-4px);color:var(--ink);box-shadow:0 26px 50px -18px rgba(0,0,0,.7)}
+.door .fan{position:absolute;top:14px;left:22px;width:88px;height:44px;border-radius:88px 88px 0 0;border:4px solid var(--b1);border-bottom-width:5px;background:repeating-conic-gradient(from -90deg at 50% 100%,var(--glass) 0 20deg,var(--b1) 20deg 22.5deg)}
+.door--rent{border-top-color:var(--teal)}
+.door--rent .fan{border-color:var(--teal);background:repeating-conic-gradient(from -90deg at 50% 100%,var(--glass) 0 20deg,var(--teal) 20deg 22.5deg)}
+.door .plate{position:absolute;top:24px;right:22px;font:700 .72rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1.5px solid var(--line);padding:.5em .7em;border-radius:4px;background:var(--surface-2)}
+.door h2{font-size:clamp(1.9rem,1.5rem + 1.4vw,2.5rem);margin:6px 0 2px}
+.door p{color:var(--muted);margin:0 0 10px;max-width:46ch}
+.door ul{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;gap:6px}
+.door li{font-size:.85rem;font-weight:600;background:var(--surface-2);border:1px solid var(--line-2);border-radius:99px;padding:.3em .75em}
+.door .go{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:.6em;font-weight:700;padding:.8em 1em;border-radius:8px;background:var(--b1);color:#fff}
+.door--rent .go{background:var(--btn);color:var(--btn-ink)}
+.door .go svg{width:20px;height:20px;transition:transform .2s ease}
+.door:hover .go svg{transform:translateX(4px)}
+.skyline{position:relative;z-index:1;width:100%;height:clamp(150px,22vw,300px);margin-top:-60px}
+.skyline .b1{fill:var(--b1)}.skyline .b2{fill:var(--b2)}.skyline .b3{fill:var(--b3)}.skyline .trim{fill:var(--trim)}
+.skyline .far{fill:var(--far)}.skyline .far2{fill:var(--far-2)}.skyline .canal{fill:var(--canal)}
+.skyline .lit{fill:var(--lamp)}
+.wave{fill:none;stroke:var(--canal-hi);stroke-width:2;stroke-linecap:round;stroke-dasharray:28 46;animation:flow 6s linear infinite}
+.wave.w2{stroke-dasharray:14 60;animation-duration:9s;opacity:.7}
+@keyframes flow{to{stroke-dashoffset:-148}}
+.steam{fill:rgba(255,255,255,.16);animation:puff 7s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.steam.s2{animation-delay:2.3s}.steam.s3{animation-delay:4.6s}
+@keyframes puff{0%{opacity:0;transform:translate(0,10px) scale(.5)}20%{opacity:1}100%{opacity:0;transform:translate(60px,-40px) scale(1.8)}}
+.flick{animation:flick 5s steps(1) infinite}
+@keyframes flick{0%,100%{opacity:1}48%{opacity:.35}52%{opacity:1}}
+
+/* towns strip */
+.towns{background:var(--b1);color:#fbe9df;font:700 .82rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='16'%3E%3Cpath d='M0 8h48M24 0v8M0 8v8M48 8v8' stroke='%23000' stroke-opacity='.18' stroke-width='1.5'/%3E%3C/svg%3E")}
+.towns .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;padding:16px 0}
+.towns span{display:inline-flex;align-items:center;gap:22px}
+.towns span+span::before{content:"";width:6px;height:6px;flex:none;background:var(--lamp);transform:rotate(45deg)}
+
+/* ---------- sections ---------- */
+section.block{padding:72px 0}
+@media (min-width:900px){section.block{padding:104px 0}}
+.alt{background:var(--bg-2)}
+.sec-head{max-width:760px;margin-bottom:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+
+/* owners */
+.own-grid{display:grid;gap:28px}
+@media (min-width:960px){.own-grid{grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}}
+.handle{display:grid;gap:12px;list-style:none;padding:0;margin:0}
+@media (min-width:600px){.handle{grid-template-columns:1fr 1fr}}
+.handle li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.handle .ic{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;background:var(--teal-tint);color:var(--teal)}
+.handle .ic svg{width:24px;height:24px}
+.handle h3{font-size:1.1rem;margin:2px 0 4px}
+.handle p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.stmt{padding:0;overflow:hidden}
+.stmt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:20px 22px;border-bottom:2px dashed var(--line)}
+.stmt-top h3{margin:0 0 2px;font-size:1.25rem}
+.stmt-top p{margin:0;color:var(--muted);font-size:.9rem}
+.stmt table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.98rem}
+.stmt th,.stmt td{padding:12px 22px;text-align:left;border-bottom:1px solid var(--line-2)}
+.stmt th{font-weight:500;color:var(--ink)}
+.stmt td{text-align:right;font-weight:600;white-space:nowrap}
+.stmt .neg td{color:var(--brick)}
+.stmt tfoot th,.stmt tfoot td{border:0;font:700 1.15rem/1.2 var(--head);padding:16px 22px;background:var(--teal-tint);color:var(--teal)}
+.stmt-foot{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;padding:14px 22px;font-size:.88rem;color:var(--muted)}
+.stmt-foot b{color:var(--ink)}
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:56px;padding:0 22px 18px}
+.bar-chart i{flex:1;background:var(--teal);opacity:.35;border-radius:3px 3px 0 0}
+.bar-chart i:last-child{opacity:1}
+
+/* estimate form */
+.estimate{margin-top:56px;display:grid;overflow:hidden}
+@media (min-width:900px){.estimate{grid-template-columns:.85fr 1.15fr}}
+.est-side{position:relative;padding:32px 26px;background:var(--hero);color:var(--hero-ink);overflow:hidden}
+.est-side h2{font-size:clamp(1.8rem,1.4rem + 1.4vw,2.4rem);position:relative}
+.est-side p{color:var(--hero-muted);position:relative}
+.est-side .eyebrow{color:var(--lamp);position:relative}
+.est-side ol{position:relative;padding:0;margin:20px 0 0;list-style:none;counter-reset:s;display:grid;gap:12px}
+.est-side li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;font-weight:500}
+.est-side li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border:2px solid var(--lamp);color:var(--lamp);border-radius:50%;font:700 1rem/1 var(--head)}
+.est-side .bricks{position:absolute;inset:auto 0 0 0;height:70px;opacity:.5;background:var(--b1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16'%3E%3Cpath d='M0 8h40M20 0v8M0 8v8M40 8v8' stroke='%23000' stroke-opacity='.3' stroke-width='1.5'/%3E%3C/svg%3E");-webkit-mask:linear-gradient(transparent,#000);mask:linear-gradient(transparent,#000)}
+@media (min-width:900px){.est-side{padding:44px 40px 110px}}
+form.f{padding:28px 22px;display:grid;gap:18px}
+@media (min-width:600px){form.f{padding:40px;grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label,.lbl{font-weight:600;font-size:.95rem}
+.hint{font-size:.85rem;color:var(--muted);font-weight:400}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--surface-2);border:1.5px solid var(--line);border-radius:8px;padding:.75em .85em;min-height:48px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:3px solid color-mix(in srgb,var(--teal) 30%,transparent);outline-offset:0}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.chk input{width:20px;height:20px;min-height:0;margin:3px 0 0;flex:none;accent-color:var(--teal)}
+.status{grid-column:1/-1;display:none;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:8px;background:var(--ok-tint);color:var(--ok);font-weight:600;border:1px solid color-mix(in srgb,var(--ok) 35%,transparent)}
+.status.show{display:flex;animation:pop .25s ease}
+.status svg{width:22px;height:22px;flex:none;margin-top:1px}
+.status span{color:var(--ink);font-weight:400;display:block}
+@keyframes pop{from{transform:translateY(4px);opacity:.4}}
+.form-note{grid-column:1/-1;margin:0;font-size:.85rem;color:var(--muted)}
+
+/* fees */
+.fees-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:36px}
+.fees-head .sec-head{margin:0}
+.stamp{display:inline-grid;place-items:center;text-align:center;width:132px;height:132px;border-radius:50%;border:3px solid var(--brick);color:var(--brick);font:700 .72rem/1.25 var(--body);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-8deg);position:relative;flex:none}
+.stamp::before{content:"";position:absolute;inset:6px;border:1.5px dashed var(--brick);border-radius:50%;opacity:.6}
+.stamp b{display:block;font:700 1.55rem/1 var(--head);letter-spacing:0;text-transform:none;margin:4px 0}
+@media (max-width:640px){.stamp{width:108px;height:108px;font-size:.62rem;margin:-12px 0 0 auto}.stamp b{font-size:1.3rem}}
+.fee-grid{display:grid;gap:16px}
+@media (min-width:640px){.fee-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.fee-grid{grid-template-columns:repeat(3,1fr)}}
+.fee{padding:24px 22px 22px;position:relative;display:flex;flex-direction:column}
+.fee .what{font:700 .78rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.fee .num{font:700 clamp(2.6rem,2rem + 2vw,3.4rem)/1 var(--head);color:var(--ink);letter-spacing:-.02em}
+.fee .num small{font-size:.38em;font-family:var(--body);font-weight:600;color:var(--muted);letter-spacing:0;margin-left:.2em}
+.fee .sp{font-size:.82rem;color:var(--muted);font-style:italic;margin:6px 0 14px}
+.fee p{color:var(--muted);margin:0;font-size:.97rem}
+.fee.hl{border:2px solid var(--teal);background:linear-gradient(180deg,var(--teal-tint),var(--surface) 55%)}
+.fee.hl .num{color:var(--teal)}
+.fee.zero .num{color:var(--brick)}
+.never{margin-top:24px;padding:22px;display:grid;gap:14px;border-left:6px solid var(--brick)}
+@media (min-width:800px){.never{grid-template-columns:auto 1fr;align-items:center;gap:28px;padding:24px 28px}}
+.never h3{margin:0;font-size:1.25rem}
+.never ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px}
+.never li{display:flex;gap:8px;align-items:center;font-weight:500}
+.never li::before{content:"";width:16px;height:16px;flex:none;border-radius:50%;background:var(--brick-tint);border:2px solid var(--brick);background-image:linear-gradient(45deg,transparent 45%,var(--brick) 45% 55%,transparent 55%)}
+
+/* tenants */
+.ten-grid{display:grid;gap:16px}
+@media (min-width:900px){.ten-grid{grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}}
+.pay{padding:26px 22px}
+.pay .big{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.pay .big svg{width:48px;height:48px;flex:none;color:var(--teal)}
+.pay h3{margin:0}
+.pay ul{padding-left:1.2em;margin:0 0 18px;color:var(--muted)}
+.pay li{margin-bottom:6px}
+.pay li b{color:var(--ink)}
+.duedate{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 18px;text-align:center}
+.duedate div{background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;padding:10px 6px}
+.duedate b{display:block;font:700 1.5rem/1.1 var(--head);color:var(--teal)}
+.duedate span{font-size:.8rem;color:var(--muted);line-height:1.2;display:block}
+.emerg{margin-top:16px;padding:20px 22px;background:var(--brick-tint);border:1px solid color-mix(in srgb,var(--brick) 40%,transparent);border-radius:var(--r)}
+.emerg h3{color:var(--brick-deep);font-size:1.15rem;display:flex;gap:10px;align-items:center;margin-bottom:8px}
+@media (prefers-color-scheme:dark){.emerg h3{color:var(--brick)}}
+.emerg h3 svg{width:22px;height:22px}
+.emerg p{margin:0 0 10px;font-size:.96rem}
+.emerg a.tel{font:700 1.4rem/1.2 var(--head);color:var(--ink);text-decoration:none;border-bottom:2px solid var(--brick)}
+.repair-head{padding:26px 22px 0}
+@media (min-width:600px){.repair-head{padding:34px 40px 0}}
+.repair-head h3{margin-bottom:4px}
+.repair-head p{color:var(--muted);margin:0}
+.repair form.f{padding-top:20px}
+.units-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin:64px 0 22px}
+.units-head h3{font-size:clamp(1.6rem,1.3rem + 1vw,2.1rem);margin:0}
+.units{display:grid;gap:16px}
+@media (min-width:700px){.units{grid-template-columns:repeat(3,1fr)}}
+.unit{overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease}
+.unit:hover{transform:translateY(-3px)}
+.unit .art{position:relative;height:170px;background:linear-gradient(180deg,#cfe0dd 0%,#e9efe9 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+@media (prefers-color-scheme:dark){.unit .art{background:linear-gradient(180deg,#132b2d 0%,#1a2b2e 100%)}}
+.unit .art::after{content:"";position:absolute;inset:auto 0 0 0;height:20px;background:#8c9a92}
+@media (prefers-color-scheme:dark){.unit .art::after{background:#2c3a36}}
+.bld{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:var(--c);
+  background-image:conic-gradient(at 58% 56%,transparent 75%,var(--w) 0);background-size:var(--ws,26px) var(--wh,32px);background-position:var(--wp,12px 14px)}
+.bld::before{content:"";position:absolute;left:-10px;right:-10px;bottom:100%;height:var(--rh,40px);background:var(--roof);clip-path:var(--rclip,polygon(50% 0,100% 100%,0 100%))}
+.bld::after{content:"";position:absolute;bottom:0;left:calc(50% - 11px);width:22px;height:30px;background:var(--door,#2b3a3d);border-radius:11px 11px 0 0}
+.td{--c:#4f8a8b;--w:#f6e3b4;--roof:#33494c;width:120px;height:110px;--ws:30px;--wh:34px;--wp:7px 10px;margin-left:10px}
+.td i{position:absolute;inset:0 auto 0 -20px;width:20px;background:repeating-linear-gradient(180deg,var(--rail) 0 3px,transparent 3px 26px,var(--rail) 26px 28px,transparent 28px 36.7px),linear-gradient(90deg,var(--rail) 3px,transparent 3px 17px,var(--rail) 17px) #3a6a6b;--rail:#f3f1ea}
+.blk{--c:#9b452b;--w:#f2d79c;--roof:#6c2c1a;--rh:10px;--rclip:none;width:152px;height:118px;
+  background-image:conic-gradient(at 58% 56%,transparent 75%,var(--w) 0),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Cpath d='M0 4h20M10 0v4M0 4v4M20 4v4' stroke='%23000' stroke-opacity='.2'/%3E%3C/svg%3E");background-size:24px 30px,20px 8px;background-position:10px 10px,0 0}
+.duo{--c:#c6b8a2;--w:#2f4447;--roof:#5a4b45;--rh:48px;width:130px;height:96px;--ws:32px;--wh:34px;--wp:10px 10px}
+@media (prefers-color-scheme:dark){.td{--c:#3b6a6b;--w:#d9b866}.blk{--c:#7a3420;--w:#d9b866}.duo{--c:#8e8473;--w:#d9b866}}
+.tree{position:absolute;bottom:20px;width:34px;height:52px;background:#3f6b4f;border-radius:50% 50% 45% 45%}
+.tree::after{content:"";position:absolute;left:15px;top:100%;width:4px;height:10px;background:#5c4632}
+@media (prefers-color-scheme:dark){.tree{background:#24402f}}
+.unit .avail{position:absolute;top:12px;left:12px;font:700 .72rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;background:var(--surface);color:var(--ink);padding:.5em .7em;border-radius:4px;box-shadow:var(--shadow)}
+.unit .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.unit .rent{font:700 1.6rem/1 var(--head);color:var(--teal)}
+.unit .rent small{font:500 .85rem var(--body);color:var(--muted)}
+.unit h4{font:600 1.05rem/1.3 var(--body);margin:8px 0 6px}
+.unit .specs{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 10px}
+.unit .specs li{font-size:.82rem;font-weight:600;padding:.25em .6em;border-radius:4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.unit p{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.unit .btn{margin-top:auto;min-height:44px}
+.fh-note{margin-top:22px;display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:.95rem;color:var(--muted)}
+.fh-note svg{width:34px;height:34px;flex:none;color:var(--ink)}
+.fh-note b{color:var(--ink)}
+
+/* about */
+.about-grid{display:grid;gap:32px}
+@media (min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.facts div{padding:16px;border-top:4px solid var(--brick);background:var(--surface);border-radius:0 0 8px 8px}
+.facts b{display:block;font:700 2rem/1 var(--head);color:var(--ink)}
+.facts span{font-size:.9rem;color:var(--muted)}
+.team{display:grid;gap:12px}
+.person{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;padding:16px 18px}
+.person .av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font:700 1.2rem/1 var(--head);color:#fff;background:var(--b1)}
+.person:nth-child(2) .av{background:var(--teal-2)}
+.person:nth-child(3) .av{background:#3d5054}
+.person h3{font-size:1.1rem;margin:0}
+.person p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.45}
+
+/* reviews */
+.rev-grid{display:grid;gap:16px}
+@media (min-width:860px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+.rev{padding:24px 22px;margin:0;display:flex;flex-direction:column;position:relative}
+.rev::before{content:"\201C";position:absolute;top:6px;right:18px;font:700 5rem/1 Georgia,serif;color:var(--brick);opacity:.3}
+.stars{display:flex;gap:2px;color:var(--lamp);margin-bottom:12px}
+@media (prefers-color-scheme:light){.stars{color:#c48a1c}}
+.stars svg{width:18px;height:18px}
+.rev blockquote{margin:0 0 18px;font-size:1.05rem;line-height:1.55}
+.rev figcaption{margin-top:auto;font-weight:700}
+.rev figcaption span{display:block;font-weight:500;color:var(--muted);font-size:.9rem}
+
+/* faq */
+.faq-grid{display:grid;gap:28px}
+@media (min-width:900px){.faq-grid{grid-template-columns:.75fr 1.25fr;gap:56px}}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 2px;font:700 1.1rem/1.3 var(--body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--line);background:linear-gradient(var(--teal),var(--teal)) center/12px 2px no-repeat,linear-gradient(var(--teal),var(--teal)) center/2px 12px no-repeat;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;color:var(--muted);max-width:62ch}
+
+/* cta */
+.cta{background:var(--hero);color:var(--hero-ink);padding:64px 0;position:relative;overflow:hidden}
+.cta .wrap{display:grid;gap:24px;position:relative;z-index:1}
+@media (min-width:860px){.cta .wrap{grid-template-columns:1.2fr .8fr;align-items:center}}
+.cta h2{margin-bottom:.25em}
+.cta p{color:var(--hero-muted);margin:0}
+.cta .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media (min-width:860px){.cta .acts{justify-content:flex-end}}
+.cta .btn{background:var(--lamp);border-color:var(--lamp);color:#1b1408}
+.cta .btn:hover{background:#ffd88c;border-color:#ffd88c;color:#1b1408}
+.cta .btn--ghost{background:transparent;color:var(--hero-ink);border-color:rgba(255,255,255,.35)}
+.cta .btn--ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:#fff}
+.cta svg.arches{position:absolute;right:-40px;bottom:-10px;width:520px;opacity:.08;color:#fff}
+
+/* footer */
+.foot{background:#0a1214;color:#b9c7c5;padding:56px 0 28px;font-size:.95rem}
+.foot a{color:#e7efed;text-decoration:none}
+.foot a:hover{color:#fff;text-decoration:underline}
+.foot-grid{display:grid;gap:32px 20px;grid-template-columns:1fr 1fr}
+.foot-grid>div:first-child{grid-column:1/-1}
+@media (min-width:800px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}.foot-grid>div:first-child{grid-column:auto}}
+.foot h3{font:700 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#7f9794;margin-bottom:14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot .logo{color:#e7efed;margin-bottom:14px}
+.foot .logo small{color:#8fa9a5}
+.eho{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between}
+.eho-badge{display:flex;align-items:center;gap:14px;color:#e7efed}
+.eho-badge svg{width:46px;height:46px;flex:none}
+.eho-badge b{font-weight:700;font-size:1rem}
+.eho-badge span{display:block;font-size:.85rem;color:#9fb3b0;max-width:52ch}
+.fine{font-size:.82rem;color:#7f9794}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,calc(100% + 40px));visibility:hidden;z-index:60;max-width:calc(100% - 32px);background:#0a1214;color:#fff;padding:12px 18px;border-radius:10px;font-weight:600;font-size:.95rem;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s ease;border:1px solid rgba(255,255,255,.12)}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .steam{opacity:.6}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar" role="note" aria-label="Sample site notice">
+  <span class="s1">Sample site made by 413 Growth</span><span class="sep" aria-hidden="true">·</span><span class="s2">Canal Street Property Co. is a made-up business</span><span class="sep" aria-hidden="true">·</span><a href="../../work.html">← Back to our work</a>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Canal Street Property Co. home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#a3432a"/><path d="M8 32V17l6-5v20M14 32V17l6-5v20M20 32V17l6-5v20M26 32V12h6v20" fill="none" stroke="#fbe9df" stroke-width="2.4" stroke-linejoin="round"/><path d="M5 34.5c3.5-1.6 6.5 1.6 10 0s6.5 1.6 10 0 6.5 1.6 10 0" fill="none" stroke="#7fd0c9" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><b>Canal Street</b><small>Property Co. · Holyoke</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#owners">Owners</a><a href="#tenants">Tenants</a><a href="#fees">Fees</a><a href="#units">Units</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-right">
+      <a class="head-call" href="tel:+14135550158"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="num">(413) 555-0158</span><span class="sr-only">Call</span></a>
+      <details class="menu">
+        <summary aria-label="Open menu">Menu</summary>
+        <ul>
+          <li><a href="#owners">For owners</a></li><li><a href="#estimate">Free rent estimate</a></li><li><a href="#fees">Fees</a></li><li><a href="#tenants">For tenants</a></li><li><a href="#units">Available units</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-top">
+    <div>
+    <span class="eyebrow">Property management · Holyoke &amp; the Pioneer Valley</span>
+    <h1 id="hero-h">Well-run buildings, on <em>both</em> sides of the lease.</h1>
+    <p class="lede">We manage 2–6 family homes and small apartment buildings across Holyoke, Chicopee, South Hadley, Easthampton and Springfield. Pick your door.</p>
+    </div>
+    <aside class="board" aria-label="Office at a glance">
+      <div class="board-h">At the office</div>
+      <div class="row"><span>Office hours</span><b>Mon–Fri · 9–5</b></div>
+      <div class="row"><span>Maintenance line</span><b><i class="dot" aria-hidden="true"></i>Open 24/7</b></div>
+      <div class="row"><span>Units for lease</span><b>3 coming up</b></div>
+      <div class="row"><span>Fee sheet</span><b>Updated Nov 2026</b></div>
+      <a href="tel:+14135550158">(413) 555-0158</a>
+    </aside>
+    </div>
+    <div class="doors">
+      <a class="door door--own" href="#owners">
+        <span class="fan" aria-hidden="true"></span>
+        <span class="plate">Door 1 · Owners</span>
+        <h2>Own a rental?</h2>
+        <p>Leasing, rent collection, repairs and a plain-English statement every month. You stay in charge; we do the legwork.</p>
+        <ul aria-label="Highlights"><li>8% of collected rent</li><li>$0 when vacant</li><li>Free rent estimate</li></ul>
+        <span class="go">See owner services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="door door--rent" href="#tenants">
+        <span class="fan" aria-hidden="true"></span>
+        <span class="plate">Door 2 · Tenants</span>
+        <h2>Rent from us?</h2>
+        <p>Pay rent online, send a repair request with photos, and reach a real person on the maintenance line any hour.</p>
+        <ul aria-label="Highlights"><li>Pay rent</li><li>Request a repair</li><li>24/7 emergencies</li></ul>
+        <span class="go">Go to tenant help <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+  <svg class="skyline" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of brick mill buildings, a smokestack and a water tower along a canal">
+    <defs>
+      <pattern id="win" width="26" height="34" patternUnits="userSpaceOnUse"><path d="M7 29V14a6 6 0 0 1 12 0v15z" fill="var(--glass)"/></pattern>
+      <pattern id="saw" x="88" width="38" height="26" patternUnits="userSpaceOnUse"><path d="M0 26L38 0v26z" class="b2"/><path d="M36 2h2v24h-2z" fill="var(--glass)"/></pattern>
+    </defs>
+    <path class="far" d="M0 300V190h40v-30h60v40h50v-60h30v-20h20v20h40v90h60v-50h90v-40h40v40h30V90h18v70h40v-30h70v50h60v-70h20v-30h20v30h40v100h80v-60h60v20h50v-40h40v60h60v-90h20v90h50v-40h60v50h40v-80h60v50h50v-30h40v120z"/>
+    <path class="far2" d="M0 300V230h120v-30h80v50h140v-20h120v70zM980 300v-60h90v-30h110v40h120v-20h140v70z"/>
+    <path class="trim" d="M84 146h534v8H84z"/>
+    <rect class="b1" x="88" y="150" width="526" height="130"/>
+    <rect x="88" y="124" width="526" height="26" fill="url(#saw)"/>
+    <rect x="104" y="170" width="494" height="102" fill="url(#win)"/>
+    <path class="lit flick" d="M137 199v-15a6 6 0 0 1 12 0v15zM293 233v-15a6 6 0 0 1 12 0v15zM449 199v-15a6 6 0 0 1 12 0v15zM527 267v-15a6 6 0 0 1 12 0v15z"/>
+    <path class="lit" d="M215 267v-15a6 6 0 0 1 12 0v15zM371 199v-15a6 6 0 0 1 12 0v15zM553 233v-15a6 6 0 0 1 12 0v15z"/>
+    <path class="b3" d="M648 282h42l-6-246h-30z"/>
+    <path class="trim" d="M651 48h36v8h-36zM650 120h38v6h-38z"/>
+    <circle class="steam" cx="669" cy="28" r="10"/><circle class="steam s2" cx="669" cy="28" r="12"/><circle class="steam s3" cx="669" cy="28" r="9"/>
+    <path class="trim" d="M706 112h382v8H706z"/>
+    <rect class="b2" x="712" y="118" width="370" height="162"/>
+    <rect x="728" y="136" width="338" height="136" fill="url(#win)"/>
+    <path class="lit" d="M761 165v-15a6 6 0 0 1 12 0v15zM891 233v-15a6 6 0 0 1 12 0v15zM995 199v-15a6 6 0 0 1 12 0v15zM813 267v-15a6 6 0 0 1 12 0v15z"/>
+    <path class="lit flick" d="M1021 165v-15a6 6 0 0 1 12 0v15z"/>
+    <rect class="b1" x="860" y="62" width="70" height="56"/>
+    <path class="trim" d="M850 64l45-36 45 36z"/>
+    <circle cx="895" cy="90" r="15" fill="var(--lamp)" opacity=".9"/><path d="M895 80v10l7 5" stroke="var(--glass)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect class="b3" x="1154" y="186" width="270" height="94"/>
+    <path class="trim" d="M1148 180h282v8h-282z"/>
+    <rect x="1170" y="204" width="234" height="68" fill="url(#win)"/>
+    <path class="lit" d="M1229 233v-15a6 6 0 0 1 12 0v15zM1333 267v-15a6 6 0 0 1 12 0v15z"/>
+    <path d="M1238 180l6-40M1290 180l-6-40M1250 180l3-40M1278 180l-3-40" stroke="var(--far-2)" stroke-width="3"/>
+    <rect x="1232" y="116" width="64" height="30" rx="3" class="b2"/>
+    <path d="M1228 118l36-22 36 22z" class="trim"/>
+    <rect class="canal" x="0" y="262" width="1440" height="38"/>
+    <path class="wave" d="M0 274h1440"/><path class="wave w2" d="M20 286h1420"/><path class="wave" d="M-30 296h1500" style="animation-duration:11s"/>
+  </svg>
+</section>
+
+<div class="towns" aria-label="Towns we serve"><div class="wrap"><span>Holyoke</span><span>Chicopee</span><span>South Hadley</span><span>Easthampton</span><span>Springfield</span></div></div>
+
+<!-- OWNERS -->
+<section class="block" id="owners" aria-labelledby="own-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Door 1 · For owners</span>
+      <h2 id="own-h">Your building, handled. Your money, accounted for.</h2>
+      <p class="lede">Most of our owners have one to three buildings and a full-time job. We take the phone calls, the turnovers and the 2&nbsp;a.m. leaks, and you get one clear statement a month.</p>
+    </div>
+    <div class="own-grid">
+      <div>
+        <h3 class="sr-only">What we handle</h3>
+        <ul class="handle">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><div><h3>Leasing &amp; showings</h3><p>Listing, photos, showings, one written screening standard for every applicant, lease signing.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><div><h3>Rent collection</h3><p>Online payments, auto-pay, deposits tracked to the penny and held the way state law requires.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><div><h3>Repairs, 24/7</h3><p>Local licensed trades at cost. Anything over your limit waits for your OK, except true emergencies.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span><div><h3>Inspections &amp; code</h3><p>Move-in and move-out photo reports, smoke and CO certificates, city inspections scheduled for you.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg></span><div><h3>Monthly statements</h3><p>Income, every expense with its invoice, and your deposit, by the 10th of each month.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>One person to call</h3><p>You get a named manager with a direct line, not a ticket number or a call center.</p></div></li>
+        </ul>
+      </div>
+      <div class="card stmt">
+        <div class="stmt-top">
+          <div><h3>Owner statement · Oct 2026</h3><p>Two-family, Chicopee · Units A &amp; B</p></div>
+          <span class="tag">Sample</span>
+        </div>
+        <table>
+          <caption class="sr-only">Sample monthly owner statement</caption>
+          <tbody>
+            <tr><th scope="row">Rent collected (2 units)</th><td>$2,700.00</td></tr>
+            <tr class="neg"><th scope="row">Management fee (8%)</th><td>−$216.00</td></tr>
+            <tr class="neg"><th scope="row">Repair: kitchen faucet, Unit B <span class="hint" style="display:block">Invoice and photo attached</span></th><td>−$145.00</td></tr>
+            <tr><th scope="row">Vacancy fee</th><td>$0.00</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">Deposited to you</th><td>$2,339.00</td></tr></tfoot>
+        </table>
+        <div class="stmt-foot"><span>Paid <b>Nov 10</b> by direct deposit</span><span>Occupancy <b>100%</b></span></div>
+        <div class="bar-chart" role="img" aria-label="Small chart of net deposits for the last eight months, steady with October highest"><i style="height:62%"></i><i style="height:70%"></i><i style="height:66%"></i><i style="height:74%"></i><i style="height:40%"></i><i style="height:72%"></i><i style="height:76%"></i><i style="height:84%"></i></div>
+      </div>
+    </div>
+
+    <div class="card estimate" id="estimate">
+      <div class="est-side">
+        <span class="eyebrow">Free · no obligation</span>
+        <h2>What should your units rent for?</h2>
+        <p>Tell us about the building. We'll compare it with what similar units nearby actually leased for and send you a rent range.</p>
+        <ol><li>Fill in three things below</li><li>We check recent local leases</li><li>You get a range within one business day</li></ol>
+        <div class="bricks" aria-hidden="true"></div>
+      </div>
+      <form class="f" id="est-form" novalidate>
+        <div class="field full"><label for="e-addr">Property address</label><input id="e-addr" name="address" autocomplete="street-address" placeholder="Street and number" required></div>
+        <div class="field"><label for="e-town">Town</label><select id="e-town" name="town"><option>Holyoke</option><option>Chicopee</option><option>South Hadley</option><option>Easthampton</option><option>Springfield</option><option>Somewhere else nearby</option></select></div>
+        <div class="field"><label for="e-units">Number of units</label><select id="e-units" name="units"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7–12</option><option>13+</option></select></div>
+        <div class="field"><label for="e-beds">Bedrooms per unit <span class="hint">(typical)</span></label><select id="e-beds" name="bedrooms"><option>Studio</option><option>1</option><option selected>2</option><option>3</option><option>4+</option><option>It varies</option></select></div>
+        <div class="field"><label for="e-mail">Email for your estimate</label><input id="e-mail" type="email" name="email" autocomplete="email" placeholder="you@example.com"></div>
+        <button class="btn btn--full field full" type="submit">Get my free rent estimate</button>
+        <div class="status" role="status" aria-live="polite"></div>
+        <p class="form-note">We only use this to send your estimate. No calls unless you ask for one.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="block alt" id="fees" aria-labelledby="fee-h">
+  <div class="wrap">
+    <div class="fees-head">
+      <div class="sec-head">
+        <span class="eyebrow">Fees</span>
+        <h2 id="fee-h">What it costs. Written down.</h2>
+        <p class="lede">The same numbers we put in the management agreement. If they change, this page changes first, with a new date.</p>
+      </div>
+      <div class="stamp" role="img" aria-label="Updated November 2026"><div>Updated<b>Nov 2026</b>Fee sheet</div></div>
+    </div>
+    <div class="fee-grid">
+      <article class="card fee hl"><div class="what">Monthly management</div><div class="num">8%<small>of collected rent</small></div><div class="sp">(sample pricing)</div><p>Charged only on rent that actually comes in. If a tenant doesn't pay, we don't get paid either.</p></article>
+      <article class="card fee"><div class="what">Leasing a unit</div><div class="num">½<small>month's rent</small></div><div class="sp">(sample pricing)</div><p>Listing, photos, showings, screening with one written standard, lease signing and a move-in photo report.</p></article>
+      <article class="card fee zero"><div class="what">While a unit is vacant</div><div class="num">$0<small>no fee</small></div><div class="sp">(sample pricing)</div><p>No management fee on a unit that isn't producing rent. We're paid to fill it, not to wait.</p></article>
+      <article class="card fee"><div class="what">Lease renewal</div><div class="num">$150<small>per renewal</small></div><div class="sp">(sample pricing)</div><p>Market rent check, renewal paperwork and a walkthrough of the unit.</p></article>
+      <article class="card fee"><div class="what">Getting started</div><div class="num">$0<small>setup</small></div><div class="sp">(sample pricing)</div><p>We collect leases, deposits and keys, introduce ourselves to your tenants and set up your bank deposit.</p></article>
+      <article class="card fee"><div class="what">Repairs &amp; maintenance</div><div class="num">At cost<small>no markup</small></div><div class="sp">(sample pricing)</div><p>You see the contractor's own invoice. You set the dollar limit for work that needs your approval.</p></article>
+    </div>
+    <div class="card never">
+      <h3>Never on the bill</h3>
+      <ul><li>Markups on contractor invoices</li><li>Yearly "technology" fees</li><li>Fees to end the agreement with 30 days' notice</li><li>Ad fees for listing your unit</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- TENANTS -->
+<section class="block" id="tenants" aria-labelledby="ten-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Door 2 · For tenants</span>
+      <h2 id="ten-h">Pay rent, get things fixed, find your next place.</h2>
+      <p class="lede">Everything you need from us is on this page. Office hours are Monday to Friday, 9 to 5. The maintenance line answers 24/7 for emergencies.</p>
+    </div>
+    <div class="ten-grid">
+      <div>
+        <div class="card pay" id="pay">
+          <div class="big"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M5 19h38M12 30h10"/><circle cx="36" cy="30" r="3"/></svg><h3>Pay rent</h3></div>
+          <div class="duedate"><div><b>1st</b><span>Rent is due</span></div><div><b>$0</b><span>Fee to pay by bank</span></div><div><b>24/7</b><span>Portal open</span></div></div>
+          <ul>
+            <li><b>Online:</b> bank transfer or card in the resident portal.</li>
+            <li><b>Auto-pay:</b> set it once and it goes out on the 1st.</li>
+            <li><b>In person:</b> check or money order in the office drop box.</li>
+          </ul>
+          <a class="btn btn--full" href="#pay" data-sample>Open the resident portal</a>
+        </div>
+        <div class="emerg">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>Emergency? Call, don't type.</h3>
+          <p>No heat, no water, a leak you can't stop, sparking outlets or a lockout. Smell gas? Leave first, then call 911 and the gas company.</p>
+          <a class="tel" href="tel:+14135550158">(413) 555-0158, press 2</a>
+        </div>
+      </div>
+
+      <div class="card repair" id="repair">
+        <div class="repair-head"><h3>Request a repair</h3><p>Non-emergency repairs are scheduled within two business days. Photos help us send the right person the first time.</p></div>
+        <form class="f" id="repair-form" novalidate>
+          <div class="field full"><label for="r-addr">Your address and unit</label><input id="r-addr" name="address" autocomplete="street-address" placeholder="e.g. 12 Main St, Unit 2"></div>
+          <div class="field"><label for="r-type">What needs fixing?</label><select id="r-type" name="type"><option>Plumbing / leak</option><option>Heat or hot water</option><option>Electrical</option><option>Appliance</option><option>Doors, windows, locks</option><option>Pests</option><option>Something else</option></select></div>
+          <div class="field"><label for="r-phone">Best phone number</label><input id="r-phone" type="tel" name="phone" autocomplete="tel" placeholder="(413) 555-0000"></div>
+          <div class="field full"><label for="r-desc">Tell us what's going on</label><textarea id="r-desc" name="details" placeholder="Where is it, when did it start, is it getting worse?"></textarea></div>
+          <div class="field full"><label for="r-photo">Photos <span class="hint">(optional)</span></label><input id="r-photo" type="file" name="photos" accept="image/*" multiple></div>
+          <label class="chk field full"><input type="checkbox" name="entry" checked> OK to enter with a key if I'm not home</label>
+          <button class="btn btn--full field full" type="submit">Send repair request</button>
+          <div class="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="units-head" id="units">
+      <div><span class="eyebrow">Available units</span><h3>Coming up for lease</h3></div>
+      <span class="tag">Sample listings</span>
+    </div>
+    <div class="units">
+      <article class="card unit">
+        <div class="art" aria-hidden="true"><span class="tree" style="left:16%"></span><div class="bld td"><i></i></div><span class="avail">Available Dec 1</span></div>
+        <div class="body">
+          <div class="rent">$1,375<small> / month</small></div>
+          <h4>Second floor of a three-family · Holyoke</h4>
+          <ul class="specs"><li>2 bed</li><li>1 bath</li><li>Heat included</li></ul>
+          <p>Hardwood floors, front and back porches, eat-in kitchen, coin laundry in the basement, off-street parking for one car.</p>
+          <a class="btn btn--ghost" href="#units" data-sample>Request a showing</a>
+        </div>
+      </article>
+      <article class="card unit">
+        <div class="art" aria-hidden="true"><div class="bld blk"></div><span class="tree" style="right:12%"></span><span class="avail">Available Jan 1</span></div>
+        <div class="body">
+          <div class="rent">$1,150<small> / month</small></div>
+          <h4>Brick building, third floor · Chicopee</h4>
+          <ul class="specs"><li>1 bed</li><li>1 bath</li><li>Hot water included</li></ul>
+          <p>Tall windows, updated kitchen with dishwasher, storage cage in the basement, on a bus line.</p>
+          <a class="btn btn--ghost" href="#units" data-sample>Request a showing</a>
+        </div>
+      </article>
+      <article class="card unit">
+        <div class="art" aria-hidden="true"><span class="tree" style="left:12%"></span><div class="bld duo"></div><span class="tree" style="right:14%;height:44px"></span><span class="avail">Available now</span></div>
+        <div class="body">
+          <div class="rent">$1,650<small> / month</small></div>
+          <h4>First floor of a two-family · Easthampton</h4>
+          <ul class="specs"><li>3 bed</li><li>1.5 bath</li><li>Washer/dryer</li></ul>
+          <p>Gas heat, shared backyard, two parking spaces in the driveway, new windows throughout. Ground-level entry with no steps.</p>
+          <a class="btn btn--ghost" href="#units" data-sample>Request a showing</a>
+        </div>
+      </article>
+    </div>
+    <div class="fh-note">
+      <svg viewBox="0 0 48 48" role="img" aria-label="Equal Housing Opportunity"><path d="M24 4L3 20h5v24h32V20h5z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M15 25h18M15 33h18" stroke="currentColor" stroke-width="4"/></svg>
+      <p style="margin:0"><b>Equal Housing Opportunity.</b> Every application is reviewed with the same written criteria, applied the same way, under federal and Massachusetts fair housing law. Need a reasonable accommodation or modification? Call or email us and we'll work it out with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block alt" id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">About us</span>
+      <h2 id="about-h">A small company in an old mill town.</h2>
+      <p class="lede">We started in 2011 managing one two-family on a side street off the canals. Owners kept asking if we'd take theirs too.</p>
+      <p>Today we're a team of six in a converted mill office in downtown Holyoke. We stay small on purpose: every owner knows their manager by name, every tenant knows who picks up the phone, and we turn down buildings we can't reach within half an hour.</p>
+      <div class="facts">
+        <div><b>310</b><span>units managed</span></div>
+        <div><b>94</b><span>owners, most with 1–3 buildings</span></div>
+        <div><b>19 days</b><span>average time to lease a unit</span></div>
+        <div><b>5</b><span>towns, all within 30 minutes</span></div>
+      </div>
+    </div>
+    <div class="team">
+      <div class="card person"><span class="av" aria-hidden="true">DR</span><div><h3>Dana Ruiz</h3><p>Founder &amp; owner relations. Licensed Massachusetts broker, still answers owner calls herself.</p></div></div>
+      <div class="card person"><span class="av" aria-hidden="true">KO</span><div><h3>Kevin O'Brien</h3><p>Maintenance coordinator. Twenty years in the trades; runs the 24/7 line and our vendor list.</p></div></div>
+      <div class="card person"><span class="av" aria-hidden="true">MT</span><div><h3>Mei Tran</h3><p>Leasing &amp; accounting. Runs showings, leases and the statements that go out on the 10th.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">From owners</span>
+      <h2 id="rev-h">What owners say <span class="tag" style="vertical-align:middle;font-size:.8rem">Sample reviews</span></h2>
+    </div>
+    <div class="rev-grid">
+      <figure class="card rev"><div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path id="st" d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg></div><blockquote>I live two hours away. Statements show up on the 10th, every repair comes with a photo, and I haven't had to drive out once this year.</blockquote><figcaption>Marcus<span>Owner, three-family in Chicopee</span></figcaption></figure>
+      <figure class="card rev"><div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg></div><blockquote>They told me exactly what the fees were before I signed, and the fee sheet hasn't surprised me since. My last turnover took 17 days.</blockquote><figcaption>Linda<span>Owner, two-family in South Hadley</span></figcaption></figure>
+      <figure class="card rev"><div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#st"/></svg></div><blockquote>A pipe burst at midnight in January. The maintenance line picked up, a plumber was there within the hour, and I got the invoice and photos the next morning.</blockquote><figcaption>Raj<span>Owner, six units in Holyoke</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-h">Questions we hear a lot.</h2>
+      <p class="lede">Don't see yours? Call the office, Monday to Friday, 9 to 5.</p>
+      <a class="btn btn--ghost" href="tel:+14135550158">(413) 555-0158</a>
+    </div>
+    <div class="faq">
+      <details open><summary>What kinds of buildings do you manage?</summary><p>Mostly 2–6 family homes and small apartment buildings up to about 24 units, in Holyoke, Chicopee, South Hadley, Easthampton and Springfield. If yours is a little outside that, ask.</p></details>
+      <details><summary>When and how do I get paid?</summary><p>By direct deposit on the 10th of each month, with a statement that lists rent collected, every expense with its invoice, and our fee.</p></details>
+      <details><summary>Do I get a say in repairs?</summary><p>Yes. You set a dollar limit. Anything above it waits for your OK. True emergencies, like no heat in winter or an active leak, get handled right away and you hear from us the same day.</p></details>
+      <details><summary>How do you choose tenants?</summary><p>Every applicant is reviewed with the same written criteria, applied the same way, in line with federal and Massachusetts fair housing law. We share those criteria with you before we list your unit.</p></details>
+      <details><summary>How do tenants reach maintenance after hours?</summary><p>The maintenance line, (413) 555-0158 then press 2, is answered 24/7 for emergencies. Everything else goes through the repair request form or the resident portal.</p></details>
+      <details><summary>Can I leave if it isn't working out?</summary><p>Yes. Give 30 days' written notice. There's no cancellation fee, and we hand over leases, deposits, keys and records in an orderly way.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-h">
+  <svg class="arches" viewBox="0 0 520 200" aria-hidden="true"><path d="M10 200V90a40 40 0 0 1 80 0v110M110 200V90a40 40 0 0 1 80 0v110M210 200V90a40 40 0 0 1 80 0v110M310 200V90a40 40 0 0 1 80 0v110M410 200V90a40 40 0 0 1 80 0v110" fill="none" stroke="currentColor" stroke-width="14"/></svg>
+  <div class="wrap">
+    <div><h2 id="cta-h">Thinking about handing off a building?</h2><p>Start with a free rent estimate, or call and talk it through with Dana. No pressure, no long contract.</p></div>
+    <div class="acts"><a class="btn" href="#estimate">Get a free rent estimate</a><a class="btn btn--ghost" href="tel:+14135550158">Call (413) 555-0158</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#a3432a"/><path d="M8 32V17l6-5v20M14 32V17l6-5v20M20 32V17l6-5v20M26 32V12h6v20" fill="none" stroke="#fbe9df" stroke-width="2.4" stroke-linejoin="round"/><path d="M5 34.5c3.5-1.6 6.5 1.6 10 0s6.5 1.6 10 0 6.5 1.6 10 0" fill="none" stroke="#7fd0c9" stroke-width="2" stroke-linecap="round"/></svg><span><b>Canal Street</b><small>Property Co. · Holyoke</small></span></a>
+        <p>Property management for 2–6 family homes and small apartment buildings in the Pioneer Valley.</p>
+      </div>
+      <div><h3>Contact</h3><ul><li><a href="tel:+14135550158">(413) 555-0158</a></li><li>Office: Mon–Fri, 9–5</li><li>Maintenance: 24/7, press 2</li><li>canalstreetpm.com</li></ul></div>
+      <div><h3>Owners</h3><ul><li><a href="#owners">What we handle</a></li><li><a href="#fees">Fees</a></li><li><a href="#estimate">Free rent estimate</a></li><li><a href="#reviews">Owner reviews</a></li></ul></div>
+      <div><h3>Tenants</h3><ul><li><a href="#pay">Pay rent</a></li><li><a href="#repair">Request a repair</a></li><li><a href="#units">Available units</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    </div>
+    <div class="eho">
+      <div class="eho-badge">
+        <svg viewBox="0 0 48 48" role="img" aria-label="Equal Housing Opportunity logo"><path d="M24 4L3 20h5v24h32V20h5z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M15 25h18M15 33h18" stroke="currentColor" stroke-width="4"/></svg>
+        <div><b>Canal Street Property Co. · Equal Housing Opportunity</b><span>We follow federal and Massachusetts fair housing law in every listing, showing and application.</span></div>
+      </div>
+      <p class="fine" style="margin:0">© 2026 Canal Street Property Co. · Sample site by 413 Growth. The business, people, listings and reviews are made up.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toast=document.getElementById('toast'),t;
+  function say(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('show')},3200)}
+  document.querySelectorAll('[data-sample]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();say('This is a sample site, so that button isn’t connected.')})
+  });
+  var tick='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>';
+  [['est-form','In a real site, Canal Street would email a rent range within one business day.'],['repair-form','In a real site, this would create a work order and text you a confirmation.']].forEach(function(p){
+    var f=document.getElementById(p[0]);
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var s=f.querySelector('.status');
+      s.innerHTML=tick+'<div>This is a sample site — nothing was sent.<span>'+p[1]+'</span></div>';
+      s.classList.add('show');
+    });
+  });
+  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open')})});
+})();
+</script>
+</body>
+</html>

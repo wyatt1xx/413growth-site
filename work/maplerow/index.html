@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maple Row Animal Clinic · Belchertown, MA</title>
+<meta name="description" content="Maple Row Animal Clinic is an independent two-vet clinic for dogs and cats in Belchertown, MA. Accepting new patients. (Sample site by 413 Growth.)">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F6F1; --surface:#FFFFFF; --surface-2:#EAF0E8; --surface-3:#E0E9DF;
+  --ink:#1B2A26; --ink-2:#4B5C56; --ink-3:#6E7D77; --line:#D9E1D8;
+  --pine:#22584B; --pine-2:#2E6E5E; --on-pine:#FFFFFF;
+  --maple:#B9491F; --maple-hi:#A23F1A; --on-maple:#FFFFFF; --maple-soft:#FBE8DD; --maple-line:#F1CDB9;
+  --honey:#E3A23A; --go:#2B7A4B; --go-soft:#E1F1E5;
+  --hill-1:#CFDDCF; --hill-2:#B5CBB8; --hill-3:#94B39C;
+  --deep:#1F4F43; --on-deep:#FFFFFF; --bar:#16201D; --bar-ink:#DDE5E1; --bar-link:#FFFFFF;
+  --shadow:0 1px 2px rgba(27,42,38,.06),0 8px 24px -12px rgba(27,42,38,.18);
+  --radius:18px; --bar-h:34px; --head-h:68px;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1714; --surface:#16211D; --surface-2:#1A2823; --surface-3:#21322C;
+    --ink:#E7EEEA; --ink-2:#AEBDB6; --ink-3:#8A9A93; --line:#2A3A34;
+    --pine:#7CC6AE; --pine-2:#94D4BF; --on-pine:#0C1A15;
+    --maple:#F08A5D; --maple-hi:#F49B73; --on-maple:#1E0F08; --maple-soft:#33211A; --maple-line:#553326;
+    --honey:#F0BE5E; --go:#7FD39C; --go-soft:#183025;
+    --hill-1:#1B2B25; --hill-2:#20352D; --hill-3:#284236;
+    --deep:#173A31; --on-deep:#EAF3EF; --bar:#060B09; --bar-ink:#B9C6C0; --bar-link:#FFFFFF;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar-h) + var(--head-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);padding-top:var(--bar-h);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em;margin:0}
+p{margin:0}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--surface);padding:10px 14px;border-radius:10px}
+.skip:focus{top:calc(var(--bar-h) + 8px)}
+
+/* sample strip */
+.sample{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--bar);color:var(--bar-ink);font:500 12.5px/1.35 var(--sans);letter-spacing:.01em}
+.sample .wrap{min-height:var(--bar-h);display:flex;align-items:center;justify-content:center;padding-top:7px;padding-bottom:7px}
+.sample p{margin:0;text-align:center;text-wrap:balance}
+.sample b{font-weight:700;color:var(--bar-link)}
+.sample a{color:var(--bar-link);font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;white-space:nowrap}
+.sample .dot{opacity:.5;margin:0 6px}
+
+/* header */
+.head{position:sticky;top:var(--bar-h);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.head.scrolled{border-bottom-color:var(--line)}
+.head .wrap{height:var(--head-h);display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--pine);display:grid;place-items:center;flex:none}
+.brand-mark svg{width:24px;height:24px;color:var(--on-pine)}
+.brand-name{font-family:var(--serif);font-size:19px;line-height:1.05}
+.brand-name small{display:block;font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:3px}
+.nav{display:none;gap:4px}
+.nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2);padding:8px 12px;border-radius:999px}
+.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.tel{display:none;text-decoration:none;font-weight:600;font-size:15px;color:var(--pine);white-space:nowrap}
+.head .book{display:none}
+
+/* the one Book button */
+.book{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--maple);color:var(--on-maple);font:700 16px/1 var(--sans);text-decoration:none;padding:15px 22px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 6px 16px -8px var(--maple);transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease;white-space:nowrap}
+.book svg{width:18px;height:18px;flex:none}
+.book:hover{background:var(--maple-hi);transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 10px 22px -10px var(--maple)}
+.book:active{transform:translateY(0)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--sans);color:var(--pine);text-decoration:none;padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--pine)}
+.btn-ghost svg{width:18px;height:18px}
+
+/* status pill */
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--go-soft);color:var(--go);border:1px solid color-mix(in srgb,var(--go) 30%,transparent);font:700 14px/1.2 var(--sans);padding:8px 14px 8px 12px;border-radius:999px}
+.pill .pulse{width:10px;height:10px;border-radius:50%;background:var(--go);position:relative;flex:none}
+.pill .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--go);opacity:0;animation:ping 2.4s ease-out infinite}
+.pill span.muted{font-weight:500;color:var(--ink-2)}
+@keyframes ping{0%{transform:scale(.5);opacity:.7}80%,100%{transform:scale(1.5);opacity:0}}
+
+/* hero */
+.hero{position:relative;padding:28px 0 0;overflow:hidden}
+.hero-grid{display:grid;gap:28px;position:relative;z-index:2}
+.hero h1{font-size:clamp(38px,9.6vw,64px);margin:18px 0 16px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--maple)}
+.lede{font-size:18.5px;color:var(--ink-2);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;padding:0;list-style:none;font-size:14.5px;color:var(--ink-2)}
+.facts li{display:flex;align-items:center;gap:7px}
+.facts svg{width:16px;height:16px;color:var(--pine)}
+.art{position:relative;max-width:380px;width:100%;margin:0 auto;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.art svg{width:100%;height:auto}
+.leaf-f{animation:drift 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.leaf-f.b{animation-duration:9s;animation-delay:-3s}
+.leaf-f.c{animation-duration:8s;animation-delay:-5s}
+.tail-wag{animation:wag 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:0% 100%}
+@keyframes drift{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(4px,8px) rotate(14deg)}}
+@keyframes wag{0%,100%{transform:rotate(0)}50%{transform:rotate(-9deg)}}
+@keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+.hills{position:relative;z-index:1;margin-top:-6px;line-height:0}
+.hills svg{width:100%;height:auto;min-height:60px}
+
+/* notice cards */
+.notices{background:var(--hill-3);padding:0 0 8px;position:relative;z-index:3}
+.notice-grid{display:grid;gap:14px;transform:translateY(-6px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h2,.card h3{font-size:22px}
+.tag{display:inline-flex;align-items:center;gap:7px;font:700 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.tag svg{width:15px;height:15px}
+.holiday{border-color:var(--maple-line);background:linear-gradient(180deg,var(--maple-soft),var(--surface) 70%)}
+.holiday .tag{color:var(--maple)}
+.hrow{display:flex;gap:14px;align-items:flex-start;margin-top:14px}
+.date{flex:none;width:52px;text-align:center;border-radius:12px;background:var(--surface);border:1px solid var(--maple-line);overflow:hidden}
+.date b{display:block;background:var(--maple);color:var(--on-maple);font:700 10.5px/1 var(--sans);letter-spacing:.12em;padding:5px 0 4px}
+.date span{display:block;font:400 22px/1.3 var(--serif);padding:2px 0 3px}
+.hrow p{font-size:15.5px;color:var(--ink-2)}
+.hrow strong{display:block;color:var(--ink);font-weight:700;font-size:16.5px}
+.updated{font-size:13px;color:var(--ink-3);margin-top:16px}
+.hours-list{list-style:none;margin:12px 0 0;padding:0;font-size:15.5px}
+.hours-list li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.hours-list li:last-child{border-bottom:0}
+.hours-list span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+.hours-list .closed{color:var(--ink-3);font-weight:500}
+.emerg{background:var(--surface-2);border-style:solid;border-left:5px solid var(--honey)}
+.emerg .tag{color:var(--ink-2)}
+.emerg p{color:var(--ink-2);font-size:15.5px;margin-top:8px}
+.emerg p strong{color:var(--ink)}
+
+/* sections */
+section.block{padding:72px 0}
+.eyebrow{font:700 12.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--maple);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.eyebrow svg{width:14px;height:14px}
+.sec-head{display:grid;gap:18px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(32px,7vw,48px);text-wrap:balance}
+.sec-head>p:not(.sample-tag){color:var(--ink-2);max-width:36em;font-size:17.5px}
+.sec-foot{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.sec-foot p{color:var(--ink-2);font-size:15.5px}
+
+.svc-grid{display:grid;gap:14px}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--pine) 35%,var(--line))}
+.ico{width:48px;height:48px;border-radius:14px;background:var(--surface-2);color:var(--pine);display:grid;place-items:center;margin-bottom:18px}
+.ico svg{width:26px;height:26px}
+.svc h3{font-size:23px;margin-bottom:8px}
+.svc p{color:var(--ink-2);font-size:15.5px}
+.svc ul{margin:12px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--ink-3)}
+.svc li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--honey);margin:0 9px 2px 0}
+
+/* first visit */
+.first{background:var(--surface-2);border-block:1px solid var(--line)}
+.first-grid{display:grid;gap:28px;align-items:start}
+.bring{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:b}
+.bring li{display:flex;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.bring .ico{margin:0;width:44px;height:44px;flex:none}
+.bring h3{font:700 17px/1.3 var(--sans);letter-spacing:0;margin-bottom:3px}
+.bring p{font-size:15px;color:var(--ink-2)}
+.steps{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:16px;color:var(--ink-2)}
+.steps b{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--pine);color:var(--pine);font:400 16px/1 var(--serif)}
+.steps strong{color:var(--ink)}
+
+/* vets */
+.vet-grid{display:grid;gap:16px}
+.vet{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:grid}
+.vet-art{background:var(--surface-3);position:relative;aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden}
+.vet-art svg{width:100%;height:100%}
+.vet-body{padding:24px}
+.vet h3{font-size:27px}
+.vet .role{font:600 14px/1.4 var(--sans);color:var(--maple);margin:4px 0 12px}
+.vet p{color:var(--ink-2);font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding:0;list-style:none}
+.chips li{font:600 13px/1 var(--sans);padding:8px 12px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+
+/* reviews */
+.rev-grid{display:grid;gap:14px}
+.rev{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:16px;margin:0}
+.stars{display:flex;gap:3px;color:var(--honey)}
+.stars svg{width:18px;height:18px}
+.rev blockquote{margin:0;font:400 19px/1.45 var(--serif);color:var(--ink)}
+.rev figcaption{margin-top:auto;font-size:14.5px;color:var(--ink-3)}
+.rev figcaption b{color:var(--ink);font-weight:700}
+.sample-tag{display:inline-flex;align-items:center;gap:8px;background:var(--surface-2);border:1px dashed var(--ink-3);color:var(--ink-2);font:700 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:8px;width:max-content}
+
+/* book */
+.book-sec{background:var(--deep);color:var(--on-deep);position:relative;overflow:hidden}
+.book-sec .eyebrow{color:var(--on-deep);opacity:.85}
+.book-sec .sec-head p{font-size:17.5px;max-width:30em}
+.book-sec .sec-head p{color:color-mix(in srgb,var(--on-deep) 82%,transparent)}
+.book-grid{display:grid;gap:28px;align-items:start;position:relative;z-index:1}
+.book-sec .leafbg{position:absolute;right:-60px;top:-40px;width:360px;opacity:.07;color:var(--on-deep)}
+.form{background:var(--surface);color:var(--ink);border-radius:22px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.field{display:grid;gap:7px;margin-bottom:16px}
+.field label,.field legend{font:700 15px/1.3 var(--sans);padding:0}
+.field .hint{font-size:13.5px;color:var(--ink-3);font-weight:500}
+input[type=text],select,textarea{width:100%;font:500 16px/1.4 var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:96px;resize:vertical}
+input[type=text]:focus,select:focus,textarea:focus{outline:none;border-color:var(--pine);box-shadow:0 0 0 4px color-mix(in srgb,var(--pine) 22%,transparent)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236E7D77' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:20px;padding-right:42px}
+fieldset{border:0;margin:0 0 16px;padding:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:7px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{display:flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid var(--line);border-radius:12px;padding:12px;font:600 16px/1 var(--sans);cursor:pointer;background:var(--bg);transition:border-color .15s,background-color .15s}
+.seg svg{width:30px;height:30px;color:var(--ink-3)}
+.seg input:checked+label{border-color:var(--pine);background:color-mix(in srgb,var(--pine) 10%,var(--surface))}
+.seg input:checked+label svg{color:var(--pine)}
+.seg input:focus-visible+label{outline:3px solid var(--honey);outline-offset:2px}
+.form .book{width:100%;margin-top:4px}
+.form-note{font-size:13.5px;color:var(--ink-3);margin-top:12px;text-align:center}
+.sent{display:none;margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--go-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--go) 35%,transparent);font-weight:600;font-size:15px}
+.sent.show{display:flex;gap:10px;align-items:flex-start}
+.sent svg{width:20px;height:20px;color:var(--go);flex:none;margin-top:1px}
+.book-side{display:grid;gap:14px}
+.side-card{border:1px solid color-mix(in srgb,var(--on-deep) 22%,transparent);border-radius:18px;padding:20px;background:color-mix(in srgb,var(--on-deep) 6%,transparent)}
+.side-card h3{font-size:21px;margin-bottom:6px}
+.side-card p{font-size:15.5px;color:color-mix(in srgb,var(--on-deep) 82%,transparent)}
+.side-card a{font-weight:700;color:var(--on-deep);white-space:nowrap}
+
+/* visit */
+.visit-grid{display:grid;gap:16px}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--surface-2);min-height:260px}
+.map svg{width:100%;height:100%}
+.visit .card .addr{font:400 24px/1.3 var(--serif);margin:6px 0 10px;color:var(--ink)}
+.visit .card p{color:var(--ink-2);font-size:15.5px}
+.visit .card .btn-ghost{margin-top:16px}
+
+/* faq */
+.faq-grid{display:grid;gap:28px}
+.faq{display:grid;gap:10px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font:600 17px/1.35 var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322584B' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 7v10M7 12h10'/%3E%3C/svg%3E") center/14px no-repeat;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+@media (prefers-color-scheme:dark){.faq summary::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237CC6AE' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 7v10M7 12h10'/%3E%3C/svg%3E")}}
+.faq details p{padding:0 0 18px;color:var(--ink-2);font-size:15.5px}
+
+/* footer */
+footer{background:var(--surface);border-top:1px solid var(--line);padding:56px 0 40px;font-size:15px;color:var(--ink-2)}
+.foot-grid{display:grid;gap:28px}
+footer h2{font:700 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline;text-underline-offset:3px}
+.fine{border-top:1px solid var(--line);margin-top:36px;padding-top:22px;font-size:13.5px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* phone sticky bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;gap:10px}
+.dock .book{flex:1}
+.dock .call{flex:none;width:52px;height:48px;border-radius:999px;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--pine);background:var(--surface)}
+.dock .call svg{width:20px;height:20px}
+body{padding-bottom:72px}
+
+@media (min-width:640px){
+  .notice-grid{grid-template-columns:1fr 1fr}
+  .notice-grid .emerg{grid-column:1/-1}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .vet-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  :root{--head-h:76px}
+  body{padding-bottom:0}
+  .dock{display:none}
+  .wrap{padding:0 40px}
+  .nav{display:flex}
+  .tel{display:inline}
+  .head .book{display:inline-flex;padding:12px 18px;font-size:15px}
+  .hero{padding-top:56px}
+  .hero-grid{grid-template-columns:1.08fr .92fr;align-items:center;gap:40px}
+  .art{max-width:none}
+  .notice-grid{grid-template-columns:1.15fr 1fr 1fr;transform:translateY(-30px)}
+  .notice-grid .emerg{grid-column:auto}
+  .notices{padding-bottom:0}
+  section.block{padding:104px 0}
+  .sec-head{grid-template-columns:1fr 1fr;align-items:end;gap:40px}
+  .svc-grid{grid-template-columns:repeat(6,1fr)}
+  .svc{grid-column:span 2}
+  .svc:nth-child(4),.svc:nth-child(5){grid-column:span 3}
+  .first-grid{grid-template-columns:.9fr 1.1fr;gap:64px}
+  .bring{grid-template-columns:1fr 1fr}
+  .vet{grid-template-columns:.8fr 1.2fr}
+  .vet-art{aspect-ratio:auto;min-height:100%}
+  .vet-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .book-grid{grid-template-columns:1fr 1.05fr;gap:64px}
+  .form{padding:34px}
+  .visit-grid{grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto}
+  .visit-grid .map{grid-row:span 2}
+  .faq-grid{grid-template-columns:.8fr 1.2fr;gap:64px}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}
+}
+@media (min-width:1200px){
+  .vet-grid{grid-template-columns:1fr 1fr}
+  .vet{grid-template-columns:1fr}
+  .vet-art{aspect-ratio:16/8}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L13.6 5.6L16 4.4L15.4 8.6L18.6 6.4L19 8.6L21.8 8.2L20.4 11.2L22 12.2L17.4 15.6L18 17.4L13.6 16.6L12.8 17.8L12.8 22L11.2 22L11.2 17.8L10.4 16.6L6 17.4L6.6 15.6L2 12.2L3.6 11.2L2.2 8.2L5 8.6L5.4 6.4L8.6 8.6L8 4.4L10.4 5.6Z"/></symbol>
+    <symbol id="cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M9 14.5l2 2 4-4"/></g></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3.5h3.5l1.8 4.6-2.3 1.5a11 11 0 0 0 6.4 6.4l1.5-2.3 4.6 1.8V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="paw" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="6.5" cy="10" rx="2" ry="2.6"/><ellipse cx="17.5" cy="10" rx="2" ry="2.6"/><ellipse cx="9.6" cy="5.8" rx="2" ry="2.7"/><ellipse cx="14.4" cy="5.8" rx="2" ry="2.7"/><path d="M12 11.5c3 0 5.5 3.6 5.5 6 0 2-1.6 2.8-3 2.4-1-.3-1.6-.7-2.5-.7s-1.5.4-2.5.7c-1.4.4-3-.4-3-2.4 0-2.4 2.5-6 5.5-6z"/></g></symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16 9.7"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="sample" role="note" aria-label="About this sample site">
+  <div class="wrap">
+    <p>Sample site made by <b>413 Growth</b><span class="dot" aria-hidden="true">·</span>Maple Row Animal Clinic is a made-up business<span class="dot" aria-hidden="true">·</span><a href="../../work.html">← Back to our work</a></p>
+  </div>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="head" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Maple Row Animal Clinic, home">
+      <span class="brand-mark"><svg aria-hidden="true"><use href="#leaf"/></svg></span>
+      <span class="brand-name">Maple Row<small>Animal Clinic</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#first-visit">First visit</a>
+      <a href="#vets">Our vets</a>
+      <a href="#visit">Hours &amp; location</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="tel" href="tel:+14135550189">(413) 555-0189</a>
+    <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill" role="status"><span class="pulse" aria-hidden="true"></span>Accepting new patients <span class="muted">· dogs &amp; cats</span></p>
+        <h1 id="hero-h">Unhurried care for the dogs and cats of <em>Belchertown</em>.</h1>
+        <p class="lede">Maple Row is an independent, two-vet clinic on the edge of town. Thirty-minute exams, plain answers, and a front desk that picks up the phone.</p>
+        <div class="cta">
+          <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+          <a class="btn-ghost" href="tel:+14135550189"><svg aria-hidden="true"><use href="#phone"/></svg>(413) 555-0189</a>
+        </div>
+        <ul class="facts">
+          <li><svg aria-hidden="true"><use href="#clock"/></svg>Mon–Fri 8–6 · Sat 8–12</li>
+          <li><svg aria-hidden="true"><use href="#pin"/></svg>48 Maple Row, Belchertown <small style="opacity:.7">(sample address)</small></li>
+          <li><svg aria-hidden="true"><use href="#paw"/></svg>Dogs &amp; cats only</li>
+        </ul>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 420 360" role="img" aria-labelledby="art-t">
+          <title id="art-t">Line drawing of a cat and a dog sitting side by side under falling maple leaves</title>
+          <circle cx="215" cy="190" r="150" fill="var(--surface-2)"/>
+          <circle cx="215" cy="190" r="150" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 7"/>
+          <g class="leaf-f" color="var(--maple)"><use href="#leaf" x="60" y="54" width="34" height="34" transform="rotate(-18 77 71)"/></g>
+          <g class="leaf-f b" color="var(--honey)"><use href="#leaf" x="338" y="76" width="26" height="26"/></g>
+          <g class="leaf-f c" color="var(--maple)" opacity=".6"><use href="#leaf" x="300" y="24" width="18" height="18"/></g>
+          <path d="M40 316 H380" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" opacity=".2"/>
+          <g fill="none" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- cat -->
+            <path d="M118 204 C96 234 90 280 98 314 L188 314 C194 280 188 234 166 204" fill="var(--surface)"/>
+            <path class="tail-wag" d="M188 300 C226 302 238 268 216 252"/>
+            <path d="M126 314 V266 M156 314 V266"/>
+            <path d="M100 160 C100 130 112 114 112 114 L108 82 L136 104 C140 103 146 103 150 104 L176 82 L172 114 C172 114 184 130 184 160 C184 188 166 204 142 204 C118 204 100 188 100 160 Z" fill="var(--surface)"/>
+            <path d="M120 156 q7 -7 14 0 M150 156 q7 -7 14 0"/>
+            <path d="M137 168 l5 5 l5 -5 z" fill="var(--maple)" stroke-width="2.4"/>
+            <path d="M142 173 q-5 8 -12 3 M142 173 q5 8 12 3"/>
+            <path d="M118 172 L92 168 M118 178 L94 182 M166 172 L192 168 M166 178 L190 182" stroke-width="2"/>
+            <!-- dog -->
+            <path d="M246 196 C218 236 214 282 220 314 L330 314 C336 282 332 236 304 196" fill="var(--surface)"/>
+            <path class="tail-wag" d="M330 296 C358 288 366 262 354 244"/>
+            <path d="M258 314 V262 M292 314 V262"/>
+            <path d="M232 142 C232 106 252 90 275 90 C298 90 318 106 318 142 C318 176 300 196 275 196 C250 196 232 176 232 142 Z" fill="var(--surface)"/>
+            <path d="M242 106 C222 106 208 132 212 164 C214 178 228 178 236 164" fill="var(--surface-3)"/>
+            <path d="M308 106 C328 106 342 132 338 164 C336 178 322 178 314 164" fill="var(--surface-3)"/>
+            <ellipse cx="275" cy="166" rx="24" ry="18" fill="var(--surface)"/>
+            <ellipse cx="275" cy="157" rx="8" ry="5.5" fill="var(--ink)" stroke-width="2"/>
+            <path d="M275 162 v6 M275 168 q-7 8 -13 2 M275 168 q7 8 13 2"/>
+            <circle cx="259" cy="135" r="3.2" fill="var(--ink)" stroke="none"/>
+            <circle cx="291" cy="135" r="3.2" fill="var(--ink)" stroke="none"/>
+            <path d="M250 194 q25 14 50 0" stroke="var(--pine)" stroke-width="5"/>
+            <circle cx="275" cy="208" r="7" fill="var(--honey)" stroke-width="2.4"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="hills" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0 70 C180 30 320 40 480 64 S820 100 1000 58 1300 30 1440 52 V120 H0Z" fill="var(--hill-1)"/>
+        <path d="M0 92 C220 60 400 70 620 90 S1040 110 1200 82 1380 70 1440 78 V120 H0Z" fill="var(--hill-2)"/>
+        <path d="M0 108 C260 92 520 100 760 108 S1200 112 1440 100 V120 H0Z" fill="var(--hill-3)"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="notices" aria-label="Hours and notices">
+    <div class="wrap notice-grid">
+      <article class="card holiday" aria-labelledby="hol-h">
+        <p class="tag"><svg aria-hidden="true"><use href="#leaf"/></svg>Holiday hours</p>
+        <h2 id="hol-h">Thanksgiving week</h2>
+        <div class="hrow">
+          <div class="date" aria-hidden="true"><b>NOV</b><span>26</span></div>
+          <p><strong>Closed Thu, Nov 26</strong>For Thanksgiving. Refill requests sent by Wed noon go out that day.</p>
+        </div>
+        <div class="hrow">
+          <div class="date" aria-hidden="true"><b>NOV</b><span>27</span></div>
+          <p><strong>Open Fri, Nov 27, 8–12</strong>Half day. Regular hours return Sat, Nov 28.</p>
+        </div>
+        <p class="updated">Updated Nov 14 · We post holiday changes two weeks ahead.</p>
+      </article>
+      <article class="card" aria-labelledby="hrs-h">
+        <p class="tag"><svg aria-hidden="true"><use href="#clock"/></svg>Regular hours</p>
+        <h2 id="hrs-h">When we're in</h2>
+        <ul class="hours-list">
+          <li><span>Monday – Friday</span><span>8:00 – 6:00</span></li>
+          <li><span>Saturday</span><span>8:00 – 12:00</span></li>
+          <li><span>Sunday</span><span class="closed">Closed</span></li>
+        </ul>
+      </article>
+      <article class="card emerg" aria-labelledby="em-h">
+        <p class="tag"><svg aria-hidden="true"><use href="#phone"/></svg>Not for emergencies</p>
+        <h2 id="em-h">After hours or urgent?</h2>
+        <p><strong>For emergencies after hours, call your nearest 24-hour animal hospital.</strong> Please don't use our booking form or voicemail for anything urgent. We can't see those messages until morning.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Services</p>
+          <h2 id="svc-h">Everyday care, done carefully.</h2>
+        </div>
+        <p>We keep things simple: the visits most pets need, done in-house by the same two vets, with a written estimate before anything beyond the exam.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3H5v5a4 4 0 0 0 8 0V3h-1"/><path d="M9 12v2.5a5 5 0 0 0 10 0V12"/><circle cx="19" cy="10" r="2"/></svg></div>
+          <h3>Wellness exams</h3>
+          <p>A nose-to-tail check once a year, more often for puppies and kittens. Time for your questions is built in.</p>
+          <ul><li>30-minute appointments</li><li>Weight &amp; nutrition check-ins</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2l4 4M20 4l-4 4M14 4.5l5.5 5.5M16.5 7.5L8 16l-3.5-3.5L13 4"/><path d="M8 16l-5 5M10 9.5l1.5 1.5M12.5 7l1.5 1.5"/></svg></div>
+          <h3>Vaccines</h3>
+          <p>Core and lifestyle vaccines on a schedule that fits your pet, with reminders by text or email.</p>
+          <ul><li>Rabies certificates same day</li><li>Boarding paperwork</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M7 3C4.5 3 3 5 3 7.5c0 3 1.5 4.5 2 7 .5 3 1 6.5 3 6.5s2-4 4-4 2 4 4 4 2.5-3.5 3-6.5c.5-2.5 2-4 2-7C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></div>
+          <h3>Dental care</h3>
+          <p>Cleanings under anesthesia with full monitoring, plus at-home tips that actually stick.</p>
+          <ul><li>Dental X-rays in-house</li><li>February dental month</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="8.5" width="20" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M10.5 10.5h.01M13.5 13.5h.01M13.5 10.5h.01M10.5 13.5h.01" stroke-width="2.4"/></svg></div>
+          <h3>Surgery</h3>
+          <p>Spays, neuters, and routine soft-tissue procedures, with a clear estimate and a call from the surgeon when your pet wakes up.</p>
+          <ul><li>Pain plan for every patient</li><li>Free recheck at 10–14 days</li></ul>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.4 12 20 12 20z"/><path d="M8 12h2l1.2-2 1.6 4 1.2-2h2" stroke-linecap="round"/></svg></div>
+          <h3>Senior care</h3>
+          <p>Twice-yearly visits for pets seven and up, with bloodwork and a gentler pace. Quiet rooms, non-slip mats, no rushing.</p>
+          <ul><li>Comfort-focused exams</li><li>Mobility &amp; diet guidance</li></ul>
+        </article>
+      </div>
+      <div class="sec-foot">
+        <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+        <p>Not sure which visit to pick? Choose "Other" and we'll sort it out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block first" id="first-visit" aria-labelledby="fv-h">
+    <div class="wrap first-grid">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Your first visit</p>
+        <h2 id="fv-h" style="font-size:clamp(32px,7vw,48px)">New here? Here's how it goes.</h2>
+        <ol class="steps">
+          <li><b>1</b><span><strong>Request a time</strong> with the form below or by phone. We confirm within one business day.</span></li>
+          <li><b>2</b><span><strong>Send records ahead</strong> if you can. We'll ask your old clinic for you if that's easier.</span></li>
+          <li><b>3</b><span><strong>Arrive 10 minutes early.</strong> Cats go straight to our quiet room, away from the dogs.</span></li>
+        </ol>
+        <div class="sec-foot">
+          <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="sr">What to bring</h3>
+        <ul class="bring" aria-label="What to bring">
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+            <div><h3>Past records</h3><p>Vaccine history and any recent lab work from your previous vet.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-30 12 12)"/><path d="M9.8 8.2l4.4 7.6"/></svg></div>
+            <div><h3>List of medications</h3><p>Names and doses of anything your pet takes, including supplements and flea or tick products.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 11h18v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M7 11V8a5 5 0 0 1 10 0v3M8 15.5h8"/></svg></div>
+            <div><h3>Carrier or leash</h3><p>Cats in a carrier, dogs on a short leash. A favorite blanket helps.</p></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/></svg></div>
+            <div><h3>New-client forms</h3><p>We'll email them after you book. Fill them out at home to skip the clipboard.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="vets" aria-labelledby="vets-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Meet the vets</p>
+          <h2 id="vets-h">Two vets. Every visit.</h2>
+        </div>
+        <p>No rotating staff. You'll see Dr. Ruiz or Dr. Kessler, and they'll remember your pet next time.</p>
+      </div>
+      <div class="vet-grid">
+        <article class="vet">
+          <div class="vet-art">
+            <svg viewBox="0 0 320 180" role="img" aria-label="Illustrated badge for Dr. Ana Ruiz">
+              <circle cx="160" cy="90" r="62" fill="var(--surface)"/>
+              <circle cx="160" cy="90" r="62" fill="none" stroke="var(--pine)" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+              <text x="160" y="104" text-anchor="middle" font-family="Young Serif, Georgia, serif" font-size="42" fill="var(--pine)">AR</text>
+              <g color="var(--maple)"><use href="#leaf" x="204" y="34" width="30" height="30"/></g>
+              <g color="var(--honey)" opacity=".8"><use href="#leaf" x="70" y="118" width="22" height="22"/></g>
+              <g color="var(--ink-3)" opacity=".35"><use href="#paw" x="246" y="120" width="20" height="20"/><use href="#paw" x="56" y="40" width="16" height="16"/></g>
+            </svg>
+          </div>
+          <div class="vet-body">
+            <h3>Dr. Ana Ruiz, DVM</h3>
+            <p class="role">Founder · Wellness &amp; dental</p>
+            <p>Dr. Ruiz opened Maple Row to practice the way she'd want her own dogs treated: unhurried visits and plain talk about options and cost. She leads our dental program and puppy-and-kitten care.</p>
+            <ul class="chips"><li>Preventive care</li><li>Dentistry</li><li>Fear-free handling</li></ul>
+          </div>
+        </article>
+        <article class="vet">
+          <div class="vet-art">
+            <svg viewBox="0 0 320 180" role="img" aria-label="Illustrated badge for Dr. Tom Kessler">
+              <circle cx="160" cy="90" r="62" fill="var(--surface)"/>
+              <circle cx="160" cy="90" r="62" fill="none" stroke="var(--pine)" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+              <text x="160" y="104" text-anchor="middle" font-family="Young Serif, Georgia, serif" font-size="42" fill="var(--pine)">TK</text>
+              <g color="var(--honey)"><use href="#leaf" x="88" y="30" width="28" height="28"/></g>
+              <g color="var(--maple)" opacity=".85"><use href="#leaf" x="228" y="116" width="24" height="24"/></g>
+              <g color="var(--ink-3)" opacity=".35"><use href="#paw" x="246" y="36" width="18" height="18"/><use href="#paw" x="60" y="122" width="18" height="18"/></g>
+            </svg>
+          </div>
+          <div class="vet-body">
+            <h3>Dr. Tom Kessler, DVM</h3>
+            <p class="role">Associate · Surgery &amp; senior care</p>
+            <p>Dr. Kessler handles most of our surgery and our senior-pet visits. He's the one who calls you after a procedure, and he'll walk you through recovery at whatever pace you need.</p>
+            <ul class="chips"><li>Soft-tissue surgery</li><li>Senior pets</li><li>Pain management</li></ul>
+          </div>
+        </article>
+      </div>
+      <div class="sec-foot">
+        <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+        <p>Have a preference? Mention it in your request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="reviews" aria-labelledby="rev-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Kind words</p>
+          <h2 id="rev-h">What neighbors say.</h2>
+        </div>
+        <p class="sample-tag"><svg aria-hidden="true" width="14" height="14"><use href="#check"/></svg>Sample reviews</p>
+      </div>
+      <div class="rev-grid">
+        <figure class="rev">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>“They called me back the same afternoon and actually explained the estimate line by line. No surprises at checkout.”</blockquote>
+          <figcaption><b>Jess</b> · Belchertown</figcaption>
+        </figure>
+        <figure class="rev">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>“Our cat hates the car, so the separate quiet room made a huge difference. Calmest vet trip we've had.”</blockquote>
+          <figcaption><b>Marcus</b> · Ware</figcaption>
+        </figure>
+        <figure class="rev">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>“Easy to book, easy parking, and the front desk remembered our dog's name on the second visit.”</blockquote>
+          <figcaption><b>Priya</b> · Granby</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block book-sec" id="book" aria-labelledby="book-h">
+    <svg class="leafbg" aria-hidden="true"><use href="#leaf"/></svg>
+    <div class="wrap book-grid">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Book a visit</p>
+        <div class="sec-head" style="display:block;margin-bottom:24px">
+          <h2 id="book-h">Request an appointment.</h2>
+          <p style="margin-top:16px">Tell us who's coming in and why. We'll call or text within one business day to pick a time that works.</p>
+        </div>
+        <div class="book-side">
+          <div class="side-card">
+            <h3>Rather call?</h3>
+            <p>Reach the front desk at <a href="tel:+14135550189">(413) 555-0189</a>, <span style="white-space:nowrap">Mon–Fri 8–6</span> and <span style="white-space:nowrap">Sat 8–12</span>.</p>
+          </div>
+          <div class="side-card">
+            <h3>Not for emergencies</h3>
+            <p>This form isn't watched after hours. For emergencies after hours, call your nearest 24-hour animal hospital.</p>
+          </div>
+        </div>
+      </div>
+      <form class="form" id="book-form" novalidate>
+        <div class="field">
+          <label for="pet">Pet's name</label>
+          <input type="text" id="pet" name="pet" autocomplete="off" placeholder="e.g. Juniper" required>
+        </div>
+        <fieldset>
+          <legend class="field" style="margin:0"><span style="font:700 15px/1.3 var(--sans)">Species</span></legend>
+          <div class="seg">
+            <input type="radio" id="sp-dog" name="species" value="dog" checked>
+            <label for="sp-dog"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14c0-5 4-8 8-8s8 3 8 8c0 6-3 10-8 10s-8-4-8-10z"/><path d="M13.5 9C9 9 6.5 14 7.5 19c.5 2 3 2 4.5-.5M26.5 9c4.5 0 7 5 6 10-.5 2-3 2-4.5-.5"/><circle cx="17" cy="14" r=".6" fill="currentColor"/><circle cx="23" cy="14" r=".6" fill="currentColor"/><path d="M18.5 18h3l-1.5 1.5z" fill="currentColor"/><path d="M14 23c-2 4-2 8-1 11h14c1-3 1-7-1-11"/></svg>Dog</label>
+            <input type="radio" id="sp-cat" name="species" value="cat">
+            <label for="sp-cat"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 16c0-3 1-5 1-5l-1-6 6 4h6l6-4-1 6s1 2 1 5c0 5-4 8-9 8s-9-3-9-8z"/><path d="M16 16q1.5-1.5 3 0M21 16q1.5-1.5 3 0M18.5 19h3l-1.5 1.5z"/><path d="M14 23c-2 4-2 8-1 11h14c1-3 1-7-1-11M27 32c4 0 5-4 3-6"/></svg>Cat</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="reason">Reason for visit</label>
+          <select id="reason" name="reason">
+            <option>New patient visit</option>
+            <option>Wellness exam</option>
+            <option>Vaccines</option>
+            <option>Dental check or cleaning</option>
+            <option>Surgery consult</option>
+            <option>Senior check-up</option>
+            <option>Something's off (non-emergency)</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Anything we should know? <span class="hint">(optional)</span></label>
+          <textarea id="notes" name="notes" placeholder="Best days or times, a vet preference, nervous in the car..."></textarea>
+        </div>
+        <button class="book" type="submit"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</button>
+        <p class="sent" id="sent" role="status" aria-live="polite"></p>
+        <p class="form-note">We'll confirm by phone or text. No account needed.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="block visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Hours &amp; location</p>
+          <h2 id="visit-h">Easy to find, easy to park.</h2>
+        </div>
+        <p>Five minutes from the town common, with a level lot right by the door. Cats have their own entrance on the side porch.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="map">
+          <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Simple map showing Maple Row Animal Clinic near the town common">
+            <rect width="600" height="420" fill="var(--surface-2)"/>
+            <path d="M-20 300 C120 260 200 330 330 280 S520 200 640 240" fill="none" stroke="var(--hill-2)" stroke-width="40" opacity=".55"/>
+            <ellipse cx="420" cy="78" rx="78" ry="44" fill="var(--hill-1)"/>
+            <g fill="none" stroke="var(--surface)" stroke-linecap="round">
+              <path d="M-10 140 H620" stroke-width="22"/>
+              <path d="M180 -10 C190 120 230 260 200 430" stroke-width="16"/>
+              <path d="M200 260 C300 240 360 250 420 300 S540 380 620 380" stroke-width="12"/>
+              <path d="M300 -10 V140" stroke-width="10"/>
+            </g>
+            <g fill="var(--ink-3)" font-family="Figtree, sans-serif" font-size="13" font-weight="600">
+              <text x="110" y="124">State Route</text>
+              <text x="420" y="84" text-anchor="middle">Town Common</text>
+              <text x="430" y="338" transform="rotate(30 430 338)">Maple Row</text>
+            </g>
+                        <g transform="translate(330 252)">
+              <circle r="38" fill="var(--maple)" opacity=".15"/>
+              <path d="M0 4 C-16 -14 -18 -22 -18 -30 a18 18 0 0 1 36 0 c0 8 -2 16 -18 34z" fill="var(--maple)"/>
+              <g color="var(--on-maple)"><use href="#leaf" x="-10" y="-40" width="20" height="20"/></g>
+            </g>
+            <g transform="translate(262 330)" font-family="Figtree, sans-serif">
+              <rect x="-6" y="-24" width="160" height="34" rx="10" fill="var(--surface)"/>
+              <text x="8" y="-2" font-size="14" font-weight="700" fill="var(--ink)">Maple Row Clinic</text>
+            </g>
+          </svg>
+        </div>
+        <div class="card">
+          <p class="tag"><svg aria-hidden="true"><use href="#pin"/></svg>Address</p>
+          <p class="addr">48 Maple Row<br>Belchertown, MA 01007 <small style="opacity:.7">(sample address)</small></p>
+          <p>Free parking in our lot. Wheelchair-accessible front entrance.</p>
+          <a class="btn-ghost" href="tel:+14135550189"><svg aria-hidden="true"><use href="#phone"/></svg>(413) 555-0189</a>
+        </div>
+        <div class="card">
+          <p class="tag"><svg aria-hidden="true"><use href="#clock"/></svg>Hours</p>
+          <ul class="hours-list">
+            <li><span>Monday – Friday</span><span>8:00 am – 6:00 pm</span></li>
+            <li><span>Saturday</span><span>8:00 am – 12:00 pm</span></li>
+            <li><span>Sunday</span><span class="closed">Closed</span></li>
+            <li><span>Thu, Nov 26</span><span class="closed">Closed · Thanksgiving</span></li>
+          </ul>
+          <div class="sec-foot" style="margin-top:20px">
+            <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#leaf"/></svg>Questions</p>
+        <h2 id="faq-h" style="font-size:clamp(32px,7vw,48px)">Good to know.</h2>
+        <p style="color:var(--ink-2);margin-top:16px;max-width:26em">Can't find your answer? Call the front desk. A real person picks up during open hours.</p>
+        <div class="sec-foot">
+          <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Are you taking new patients?</summary>
+          <p>Yes. We're currently accepting new dogs and cats. Most new-patient visits are booked within one to two weeks.</p>
+        </details>
+        <details>
+          <summary>Do you handle emergencies?</summary>
+          <p>No. We're a scheduled-care clinic. For emergencies after hours, call your nearest 24-hour animal hospital. During open hours, call us first and we'll tell you whether to come in or go straight there.</p>
+        </details>
+        <details>
+          <summary>Do you see animals other than dogs and cats?</summary>
+          <p>Not right now. Keeping to dogs and cats lets our two vets stay sharp on what they see every day.</p>
+        </details>
+        <details>
+          <summary>Will I know the cost before treatment?</summary>
+          <p>Always. You'll get a written estimate before anything beyond the exam, and we'll call before going over it.</p>
+        </details>
+        <details>
+          <summary>How do I get my pet's records transferred?</summary>
+          <p>Give us your previous clinic's name when you book, and we'll request the records for you.</p>
+        </details>
+        <details>
+          <summary>Can I stay with my pet during the exam?</summary>
+          <p>Yes, for exams and vaccines. For dental work and surgery, we'll send updates and call when it's time for pickup.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Maple Row Animal Clinic, back to top">
+          <span class="brand-mark"><svg aria-hidden="true"><use href="#leaf"/></svg></span>
+          <span class="brand-name">Maple Row<small>Animal Clinic</small></span>
+        </a>
+        <p style="margin-top:16px;max-width:24em">Independent care for dogs and cats in Belchertown and the Quabbin towns.</p>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <ul><li>48 Maple Row</li><li>Belchertown, MA 01007 <small style="opacity:.7">(sample address)</small></li><li><a href="tel:+14135550189">(413) 555-0189</a></li><li>hello@maplerowvet.com</li></ul>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <ul><li>Mon–Fri 8–6</li><li>Sat 8–12</li><li>Sun closed</li><li>Closed Thu, Nov 26</li></ul>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul><li><a href="#services">Services</a></li><li><a href="#first-visit">First visit</a></li><li><a href="#vets">Our vets</a></li><li><a href="#book">Book a visit</a></li></ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© 2026 Maple Row Animal Clinic · maplerowvet.com</span>
+      <span>Not an emergency clinic. After hours, call your nearest 24-hour animal hospital.</span>
+      <span>Sample site by <a href="../../work.html" style="text-decoration:underline">413 Growth</a>, fictional business</span>
+    </div>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="book" href="#book"><svg aria-hidden="true"><use href="#cal"/></svg>Book a visit</a>
+  <a class="call" href="tel:+14135550189" aria-label="Call (413) 555-0189"><svg aria-hidden="true"><use href="#phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var bar=document.querySelector('.sample'),root=document.documentElement;
+  function fit(){root.style.setProperty('--bar-h',bar.offsetHeight+'px')}
+  fit();
+  if('ResizeObserver' in window){new ResizeObserver(fit).observe(bar)}else{addEventListener('resize',fit)}
+  var head=document.querySelector('.head');
+  function sc(){head.classList.toggle('scrolled',scrollY>8)}
+  sc();addEventListener('scroll',sc,{passive:true});
+  var f=document.getElementById('book-form'),s=document.getElementById('sent');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    s.innerHTML='<svg aria-hidden="true"><use href="#check"/></svg><span>This is a sample site — nothing was sent.</span>';
+    s.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

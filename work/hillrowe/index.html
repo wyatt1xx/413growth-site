@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hill &amp; Rowe Law · Longmeadow, MA</title>
+<meta name="description" content="Hill &amp; Rowe Law: wills, trusts, MassHealth planning and probate for western Massachusetts families, explained in plain English. Free first consult. (Sample site by 413 Growth.)">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f2ee;
+  --surface:#fafaf7;
+  --surface-2:#e8e9e3;
+  --ink:#17232b;
+  --ink-2:#43515a;
+  --ink-3:#66737b;
+  --line:#d3d6cf;
+  --accent:#a84e22;
+  --accent-hover:#8f411b;
+  --accent-ink:#ffffff;
+  --accent-soft:#f3e3d8;
+  --band:#1b2b34;
+  --band-2:#22363f;
+  --on-band:#eef0ec;
+  --on-band-2:#aebcc1;
+  --banner-bg:#0e161b;
+  --banner-ink:#d6dddf;
+  --door:#a84e22;
+  --shadow:0 1px 2px rgba(20,32,40,.06),0 8px 28px -12px rgba(20,32,40,.18);
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bh:34px;
+  --gutter:clamp(20px,5vw,48px);
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10171c;
+    --surface:#162027;
+    --surface-2:#1c2830;
+    --ink:#e8ece9;
+    --ink-2:#b9c3c6;
+    --ink-3:#8c999e;
+    --line:#2a3943;
+    --accent:#e48a5c;
+    --accent-hover:#efa27b;
+    --accent-ink:#1b120d;
+    --accent-soft:#33241d;
+    --band:#0b1216;
+    --band-2:#121c22;
+    --on-band:#e8ece9;
+    --on-band-2:#9eacb1;
+    --banner-bg:#060a0d;
+    --banner-ink:#c6cfd2;
+    --door:#c96a3c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--bh) + 84px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;padding-top:var(--bh);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.01em;margin:0;color:var(--ink);font-optical-sizing:auto}
+p{margin:0 0 1em}
+ul,ol{margin:0;padding:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:calc(var(--bh) + 8px);z-index:100;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:8px}
+.skip:focus{left:12px}
+
+/* sample banner */
+.sample{position:fixed;inset:0 0 auto 0;z-index:60;min-height:var(--bh);display:flex;align-items:center;justify-content:center;gap:.15em .6em;flex-wrap:wrap;padding:6px 16px;background:var(--banner-bg);color:var(--banner-ink);font-size:12.5px;line-height:1.35;letter-spacing:.01em;text-align:center;text-wrap:balance}
+.sample b{font-weight:600;color:#fff}
+.sample .dot{opacity:.45}
+.sample a{color:#fff;font-weight:600;text-underline-offset:3px;white-space:nowrap}
+.sample a:hover{color:#f2b48f}
+
+/* header */
+.site-head{position:sticky;top:var(--bh);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:38px;height:38px;flex:none;color:var(--accent)}
+.brand-name{font-family:var(--serif);font-size:23px;font-weight:500;line-height:1;letter-spacing:-.01em;display:block}
+.brand-sub{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-top:4px;font-weight:600}
+.nav{display:none}
+.nav a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:8px 2px;position:relative}
+.nav a::after{content:"";position:absolute;left:2px;right:2px;bottom:2px;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.head-actions{display:flex;align-items:center;gap:10px}
+.head-actions .head-call{display:none}
+.menu{position:relative}
+.menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary svg{width:16px;height:16px}
+.menu[open] .menu-panel{display:flex}
+.menu-panel{display:none;position:absolute;right:0;top:calc(100% + 10px);flex-direction:column;min-width:220px;padding:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.menu-panel a{padding:11px 12px;border-radius:8px;text-decoration:none;font-weight:500}
+.menu-panel a:hover{background:var(--surface-2)}
+@media (min-width:1000px){
+  .nav{display:flex;gap:26px}
+  .menu{display:none}
+  .head-actions .head-call{display:inline-flex}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border-radius:999px;font:600 16px/1.2 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-ghost{border-color:color-mix(in srgb,var(--ink) 30%,transparent);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn-sm{min-height:42px;padding:9px 16px;font-size:15px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:28px}
+.cta .hours{flex-basis:100%;display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-3);margin:2px 0 0}
+.cta .hours svg{width:15px;height:15px;flex:none}
+@media (max-width:420px){.cta .btn{flex:1 1 auto}}
+
+/* eyebrow + type */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:currentColor}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--ink-2);line-height:1.6}
+.muted{color:var(--ink-3)}
+
+/* hero */
+.hero{position:relative;padding:44px 0 56px;overflow:hidden}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.ad-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6.4vw,74px);font-weight:400;letter-spacing:-.022em;line-height:1.02}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lead{margin-top:22px;max-width:36em}
+.door-card{position:relative;margin:0 auto;width:100%;max-width:420px;aspect-ratio:4/5;background:var(--surface);border:1px solid var(--line);border-radius:220px 220px 18px 18px;box-shadow:var(--shadow);padding:34px 26px 46px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.door-card svg{width:100%;height:auto;color:var(--ink)}
+@media (max-width:959px){.door-card{max-width:330px}}
+.door-cap{position:absolute;left:18px;right:18px;bottom:16px;font-size:13px;color:var(--ink-3);text-align:center;font-style:italic;font-family:var(--serif)}
+.facts{display:grid;gap:1px;margin-top:44px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.fact{background:var(--surface);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.fact svg{width:26px;height:26px;color:var(--accent);flex:none;margin-top:2px}
+.fact b{display:block;font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.25}
+.fact span{font-size:14.5px;color:var(--ink-3)}
+@media (min-width:700px){.facts{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:960px){
+  .hero{padding:72px 0 80px}
+  .hero-grid{grid-template-columns:1.25fr .9fr;gap:64px}
+}
+
+/* practice index */
+.areas-index{display:grid;gap:14px;margin-top:22px}
+.area-link{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--surface);transition:border-color .2s,transform .2s}
+.area-link:hover{border-color:var(--accent);transform:translateX(3px)}
+.area-link svg.ic{width:30px;height:30px;color:var(--accent);flex:none}
+.area-link b{font-family:var(--serif);font-weight:500;font-size:19px;display:block;line-height:1.2}
+.area-link span{font-size:14px;color:var(--ink-3)}
+.area-link .arr{margin-left:auto;width:18px;height:18px;color:var(--ink-3)}
+
+/* sections */
+section{position:relative}
+.sec{padding:56px 0}
+@media (min-width:760px){.sec{padding:80px 0}}
+.sec-alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec h2{font-size:clamp(32px,4.4vw,50px);font-weight:400;letter-spacing:-.018em}
+.sec h2 em{font-style:italic;color:var(--accent)}
+.sec-head{max-width:46rem;margin-bottom:40px}
+.sec-head .lead,.sec h2 + .lead{margin-top:16px}
+
+/* practice area */
+.practice-grid{display:grid;gap:36px}
+.practice-side .num{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink-3);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.practice-side .num svg{width:44px;height:44px;color:var(--accent)}
+.practice-side .lead{margin-top:18px}
+.items{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.items li{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.items li::before{content:"";grid-row:1 / span 2;width:9px;height:9px;margin-top:9px;border:1.5px solid var(--accent);border-radius:50%}
+.items b{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.3}
+.items span{grid-column:2;color:var(--ink-2);font-size:16px}
+.callout{margin-top:28px;padding:22px 22px 20px;border-radius:var(--radius);background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent)}
+.callout h3{font-size:20px;margin-bottom:10px}
+.callout ul{list-style:none;display:grid;gap:7px}
+.callout li{display:flex;gap:10px;font-size:15.5px;color:var(--ink-2)}
+.callout li svg{width:18px;height:18px;flex:none;margin-top:4px;color:var(--accent)}
+.note{margin-top:20px;font-size:14.5px;color:var(--ink-3);font-style:italic;font-family:var(--serif);font-size:16.5px}
+.steps-mini{list-style:none;counter-reset:s;display:grid;gap:12px;margin-top:6px}
+.steps-mini li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:2px 14px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.sec-alt .steps-mini li{background:var(--bg)}
+.steps-mini li::before{content:counter(s);grid-row:1 / span 2;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:19px;color:var(--accent);border:1.5px solid var(--accent)}
+.steps-mini b{font-family:var(--serif);font-weight:500;font-size:19px}
+.steps-mini span{color:var(--ink-2);font-size:15.5px}
+@media (min-width:960px){
+  .practice-grid{grid-template-columns:.95fr 1.05fr;gap:72px;align-items:start}
+  .practice-side{position:sticky;top:calc(var(--bh) + 100px)}
+}
+
+/* courts band */
+.courts{background:var(--band);color:var(--on-band);padding:64px 0;overflow:hidden}
+.courts h2{color:var(--on-band);font-size:clamp(28px,3.4vw,40px);font-weight:400}
+.courts .eyebrow{color:#f0a57f}
+.court-list{list-style:none;display:grid;gap:0;margin-top:30px;border-top:1px solid rgba(255,255,255,.14)}
+.court-list li{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.court-list b{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.3vw,27px)}
+.court-list span{color:var(--on-band-2);font-size:14.5px;letter-spacing:.02em}
+.courts-inline{margin-top:22px;color:var(--on-band-2);font-size:15px}
+.courts .btn-ghost{color:var(--on-band);border-color:rgba(255,255,255,.35)}
+.courts .btn-ghost:hover{border-color:#fff}
+.courts .hours{color:var(--on-band-2)}
+.courts-grid{display:grid;gap:30px}
+@media (min-width:960px){.courts-grid{grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}.court-list{margin-top:0}}
+
+/* process */
+.process{list-style:none;counter-reset:p;display:grid;gap:16px}
+.process li{counter-increment:p;position:relative;padding:26px 24px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.sec-alt .process li{background:var(--bg)}
+.process li::before{content:"0" counter(p);display:block;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--accent);margin-bottom:14px;letter-spacing:.04em}
+.process h3{font-size:23px;margin-bottom:8px}
+.process p{color:var(--ink-2);font-size:15.5px;margin:0}
+@media (min-width:700px){.process{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.process{grid-template-columns:repeat(4,1fr)}}
+
+/* checklist */
+.check-wrap{display:grid;gap:32px}
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:6px 6px var(--radius) var(--radius);box-shadow:var(--shadow);padding:28px 22px 22px;position:relative}
+.sheet::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--accent);border-radius:6px 6px 0 0}
+.sheet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:16px;border-bottom:1px dashed var(--line);margin-bottom:6px}
+.sheet-head h3{font-size:25px}
+.sheet-head p{margin:4px 0 0;font-size:14px;color:var(--ink-3)}
+.sheet-head svg{width:40px;height:40px;color:var(--accent);flex:none}
+.sheet fieldset{border:0;margin:0;padding:16px 0 8px;min-width:0}
+.sheet legend{float:left;width:100%;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);padding:0;margin-bottom:8px}
+.ck{clear:both;display:flex;gap:12px;align-items:flex-start;padding:8px 0;font-size:15.5px;color:var(--ink-2);cursor:pointer}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:2px 0 0;border:1.5px solid color-mix(in srgb,var(--ink) 40%,transparent);border-radius:5px;display:grid;place-items:center;cursor:pointer;background:var(--bg);transition:background-color .15s,border-color .15s}
+.ck input::after{content:"";width:10px;height:6px;border-left:2px solid var(--accent-ink);border-bottom:2px solid var(--accent-ink);transform:rotate(-45deg) translate(1px,-1px) scale(0);transition:transform .15s}
+.ck input:checked{background:var(--accent);border-color:var(--accent)}
+.ck input:checked::after{transform:rotate(-45deg) translate(1px,-1px) scale(1)}
+.ck input:checked + span{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 40%,transparent);color:var(--ink-3)}
+.sheet-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:14px;margin-top:8px}
+@media (min-width:760px){.sheet{padding:34px 36px 26px}.sheet-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}}
+@media (min-width:1000px){.check-wrap{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}}
+
+/* attorneys */
+.people{display:grid;gap:22px}
+.person{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:grid;gap:18px}
+.sec-alt .person{background:var(--bg)}
+.person-top{display:flex;gap:18px;align-items:center}
+.mono{width:84px;height:84px;flex:none;color:var(--accent)}
+.person h3{font-size:28px}
+.person .role{font-size:14px;color:var(--ink-3);margin:4px 0 0}
+.person p{color:var(--ink-2);font-size:16px;margin:0}
+.person dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14.5px;padding-top:16px;border-top:1px solid var(--line)}
+.person dt{color:var(--ink-3);font-weight:600}
+.person dd{margin:0;color:var(--ink-2)}
+@media (min-width:860px){.people{grid-template-columns:1fr 1fr}.person{padding:32px}}
+
+/* faq */
+.faq{border-top:1px solid var(--line);max-width:52rem}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 2px;font-family:var(--serif);font-size:clamp(20px,2.1vw,24px);line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{position:relative;width:28px;height:28px;flex:none;border:1.5px solid var(--line);border-radius:50%}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--accent);transform:translate(-50%,-50%);transition:transform .25s ease}
+.faq summary .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq summary:hover{color:var(--accent)}
+.faq .ans{padding:0 2px 24px;color:var(--ink-2);max-width:44rem}
+.faq .ans p:last-child{margin:0}
+
+@media (min-width:1000px){.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;grid-template-areas:"head faq" "cta faq";grid-template-rows:auto 1fr;gap:0 72px}.faq-grid>.sec-head{grid-area:head;margin-bottom:0}.faq-grid>.faq{grid-area:faq}.faq-grid>.cta{grid-area:cta;align-self:start}}
+/* consult */
+.consult-grid{display:grid;gap:28px}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow)}
+.form h3{font-size:27px;margin-bottom:6px}
+.form .sub{font-size:15px;color:var(--ink-3);margin-bottom:22px}
+.field{display:grid;gap:7px;margin-bottom:18px}
+.field label,.field legend{font-size:14.5px;font-weight:600;color:var(--ink)}
+.field .opt{font-weight:400;color:var(--ink-3)}
+.field input,.field select,.field textarea{width:100%;font:16px/1.4 var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+.field .hint{font-size:13.5px;color:var(--ink-3)}
+.row2{display:grid;gap:0 16px}
+@media (min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+fieldset.field{border:0;padding:0;margin:0 0 18px}
+.radios{display:flex;flex-wrap:wrap;gap:10px}
+.radio{display:flex;align-items:center;gap:9px;padding:10px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:15px;cursor:pointer;background:var(--bg)}
+.radio input{accent-color:var(--accent);width:17px;height:17px;margin:0}
+.radio:has(input:checked){border-color:var(--accent)}
+.form .btn{width:100%;margin-top:4px}
+.form-status{margin-top:14px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);color:var(--ink);font-size:15px;display:none}
+.form-status.on{display:block}
+.privacy{font-size:13px;color:var(--ink-3);margin:14px 0 0}
+.office{display:grid;gap:0;align-content:start;align-self:start}
+.office .ob{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.office .ob:first-child{padding-top:0}
+.office .ob:last-child{border-bottom:0;padding-bottom:0}
+.office-card{background:var(--band);color:var(--on-band);border-radius:var(--radius);padding:28px 24px;border:1px solid var(--line)}
+.office-card h3{color:var(--on-band);font-size:24px;margin-bottom:14px}
+.office-card table{width:100%;border-collapse:collapse;font-size:15px}
+.office-card th{text-align:left;font-weight:500;color:var(--on-band-2);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.office-card td{text-align:right;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.office-card .big{display:block;font-family:var(--serif);font-size:30px;color:#fff;text-decoration:none;margin:4px 0 2px}
+.office-card .big:hover{color:#f0a57f}
+.office-card p{color:var(--on-band-2);font-size:15px;margin:0}
+.office-card address{font-style:normal;color:var(--on-band);font-size:16px;line-height:1.55}
+.office-card .small{font-size:14px;color:var(--on-band-2);margin-top:10px}
+@media (min-width:960px){.consult-grid{grid-template-columns:1.25fr .85fr;gap:48px}.form{padding:36px}}
+
+/* footer */
+.foot{background:var(--band);color:var(--on-band-2);padding:56px 0 32px;font-size:14.5px}
+.foot .brand{color:var(--on-band)}
+.foot .brand-sub{color:var(--on-band-2)}
+.foot-grid{display:grid;gap:30px}
+.foot h4{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-band);font-weight:700;margin-bottom:12px}
+.foot ul{list-style:none;display:grid;gap:6px}
+.foot a{text-decoration:none;color:var(--on-band-2)}
+.foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.notices{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:grid;gap:10px;font-size:13.5px;line-height:1.55}
+.notices strong{color:var(--on-band);font-weight:600}
+.copy{margin-top:22px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+
+/* sticky phone bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:55;display:grid;grid-template-columns:1fr 1.3fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.dock .btn{min-height:46px;padding:10px 12px;font-size:15.5px}
+@media (max-width:759px){body{padding-bottom:78px}}
+@media (min-width:760px){.dock{display:none}}
+
+/* motion */
+.door-line{stroke-dasharray:1;stroke-dashoffset:0}
+@media (prefers-reduced-motion: no-preference){
+  .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.26s}.rise.d4{animation-delay:.36s}
+  .door-line{animation:draw 2.2s .2s cubic-bezier(.45,.05,.2,1) both}
+  .door-fill{animation:fade 1.2s 1.2s ease both}
+  .glow{animation:glow 5s 2.4s ease-in-out infinite alternate}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes glow{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+@media (max-width:520px){:root{--bh:46px}.sample{font-size:11.5px;padding:5px 14px}}
+@media print{.sample,.site-head,.dock{display:none}body{padding:0}}
+</style>
+</head>
+<body>
+
+<div class="sample" id="sample" role="note" aria-label="About this sample site">
+  <span><b>Sample site made by 413 Growth</b></span><span class="dot" aria-hidden="true">·</span><span>Hill &amp; Rowe Law is a made-up firm</span><span class="dot" aria-hidden="true">·</span><a href="../../work.html">← Back to our work</a>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4-2.1 1.3a11 11 0 0 0 7.5 7.5l1.3-2.1 4 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C14 3.4 14.6 5 13.4 6.2C15.6 5.8 17 7.2 15.6 8.8C17.8 8.8 18.8 10.8 16.8 12C18.6 12.8 18.4 15 16.2 15.2C16.8 17 15 18 13.2 17.2L12.75 18.6V22.5H11.25V18.6L10.8 17.2C9 18 7.2 17 7.8 15.2C5.6 15 5.4 12.8 7.2 12C5.2 10.8 6.2 8.8 8.4 8.8C7 7.2 8.4 5.8 10.6 6.2C9.4 5 10 3.4 12 2Z"/></symbol>
+    <symbol id="i-will" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M17 20h15M17 25h15M17 30h9"/><path d="M19 38c2-3 4-3 5 0s3 3 5-1" /></g></symbol>
+    <symbol id="i-home" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22L24 8l17 14"/><path d="M11 19v22h26V19"/><path d="M20 41V30h8v11"/><path d="M24 25.5c-1.6-2.4-5-1.2-4 1.4.7 1.7 4 3.6 4 3.6s3.3-1.9 4-3.6c1-2.6-2.4-3.8-4-1.4z" transform="translate(0 -8)"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="24" r="8"/><circle cx="15" cy="24" r="3"/><path d="M23 24h19M36 24v6M41 24v4"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Hill and Rowe Law, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.3"/><use href="#i-leaf" x="9" y="8.5" width="22" height="22"/></svg>
+      <span><span class="brand-name">Hill &amp; Rowe</span><span class="brand-sub">Law · Longmeadow</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#estate">Estate planning</a>
+      <a href="#elder">Elder law</a>
+      <a href="#probate">Probate</a>
+      <a href="#attorneys">Attorneys</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-ghost btn-sm head-call" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>(413) 555-0124</a>
+      <a class="btn btn-primary btn-sm head-call" href="#consult">Free consult</a>
+      <details class="menu">
+        <summary aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Menu</summary>
+        <nav class="menu-panel" aria-label="Mobile">
+          <a href="#estate">Estate planning</a>
+          <a href="#elder">Elder law</a>
+          <a href="#probate">Probate</a>
+          <a href="#process">What to expect</a>
+          <a href="#checklist">Free checklist</a>
+          <a href="#attorneys">Our attorneys</a>
+          <a href="#faq">Questions</a>
+          <a href="#consult">Free consult</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="ad-tag rise">Attorney advertising</span>
+        <h1 id="hero-h" class="rise d1">Get your family’s affairs in order, <em>in plain English.</em></h1>
+        <p class="lead rise d2">Hill &amp; Rowe is a two-attorney law firm in Longmeadow. We help western Massachusetts families write wills and trusts, plan for long-term care, and settle a loved one’s estate. No jargon, no rush, and a fee quoted in writing before any work starts.</p>
+        <div class="cta rise d3">
+          <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Book a free consult</a>
+          <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (413) 555-0124</a>
+          <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evening consults by appointment</p>
+        </div>
+        <nav class="areas-index rise d4" aria-label="Practice areas">
+          <a class="area-link" href="#estate"><svg class="ic" aria-hidden="true"><use href="#i-will"/></svg><span><b>Estate planning</b><span>Wills, trusts, health care proxies</span></span><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="area-link" href="#elder"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span><b>Elder law</b><span>MassHealth planning, long-term care</span></span><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="area-link" href="#probate"><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg><span><b>Probate</b><span>Settling a loved one’s estate</span></span><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </nav>
+      </div>
+
+      <figure class="door-card rise d2" style="margin-inline:auto">
+        <svg viewBox="0 0 320 380" role="img" aria-labelledby="door-t door-d">
+          <title id="door-t">Line drawing of the firm’s front door</title>
+          <desc id="door-d">A New England Federal-style doorway with a fan-shaped window above a six-panel door, flanked by columns and a lantern.</desc>
+          <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- clapboards -->
+            <path class="door-line" pathLength="1" stroke-opacity=".28" d="M0 40H58M262 40H320M0 58H58M262 58H320M0 76H58M262 76H320M0 94H58M262 94H320M0 112H58M262 112H320M0 130H58M262 130H320M0 148H58M262 148H320M0 166H58M262 166H320M0 184H58M262 184H320M0 202H58M262 202H320M0 220H58M262 220H320M0 238H58M262 238H320M0 256H58M262 256H320M0 274H58M262 274H320M0 292H58M262 292H320M0 310H58M262 310H320M0 328H58M262 328H320"/>
+          </g>
+          <!-- door fill -->
+          <g class="door-fill">
+            <rect x="98" y="146" width="124" height="196" fill="var(--door)"/>
+            <path class="glow" d="M92 140A68 68 0 0 1 228 140Z" fill="#f2b06a" opacity=".85"/>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- arch surround -->
+            <path class="door-line" pathLength="1" d="M66 140A94 94 0 0 1 254 140"/>
+            <path class="door-line" pathLength="1" d="M78 140A82 82 0 0 1 242 140"/>
+            <path class="door-line" pathLength="1" d="M152 50h16l-2 12h-12z"/>
+            <!-- fanlight -->
+            <path class="door-line" pathLength="1" d="M90 140A70 70 0 0 1 230 140Z"/>
+            <path class="door-line" pathLength="1" stroke-width="1.2" d="M160 140L95.3 113.2M160 140L110.5 90.5M160 140L133.2 75.3M160 140V70M160 140L186.8 75.3M160 140L209.5 90.5M160 140L224.7 113.2"/>
+            <path class="door-line" pathLength="1" d="M110 140A50 50 0 0 1 210 140"/>
+            <path d="M143 140A17 17 0 0 1 177 140Z" fill="var(--surface)"/>
+            <!-- capitals and pilasters -->
+            <path class="door-line" pathLength="1" d="M60 140H260M60 146H260"/>
+            <path class="door-line" pathLength="1" d="M66 146V342M84 146V342M236 146V342M254 146V342M72 160V328M78 160V328M242 160V328M248 160V328"/>
+            <!-- door -->
+            <path class="door-line" pathLength="1" d="M98 146V342H222V146"/>
+            <g stroke="#fff" stroke-opacity=".55" stroke-width="1.3">
+              <path d="M110 158h42v46h-42zM168 158h42v46h-42zM110 216h42v58h-42zM168 216h42v58h-42zM110 286h42v44h-42zM168 286h42v44h-42z"/>
+            </g>
+            <circle cx="214" cy="248" r="3.4" fill="#f2b06a" stroke="none"/>
+            <!-- steps -->
+            <path class="door-line" pathLength="1" d="M52 342H268V354H52ZM38 354H282V366H38Z"/>
+            <path class="door-line" pathLength="1" stroke-opacity=".4" d="M0 366H320"/>
+            <!-- lantern -->
+            <path class="door-line" pathLength="1" d="M30 176v10M22 194l8-8 8 8M22 194h16v22H22zM20 216h20M26 216l4 8 4-8"/>
+          </g>
+          <rect class="glow" x="24" y="196" width="12" height="18" fill="#f2b06a" opacity=".8"/>
+          <!-- oak sprig at base -->
+          <g fill="currentColor" opacity=".9">
+            <use href="#i-leaf" x="266" y="318" width="30" height="30" transform="rotate(18 281 333)" style="color:var(--accent)"/>
+            <use href="#i-leaf" x="286" y="326" width="24" height="24" transform="rotate(38 298 338)" opacity=".7"/>
+          </g>
+        </svg>
+        <figcaption class="door-cap">Ground-floor office · parking out front</figcaption>
+      </figure>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><svg aria-hidden="true"><use href="#i-cal"/></svg><div><b>Free first meeting</b><span>30 minutes, in person, by phone or video.</span></div></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Flat fees, in writing</b><span>For most plans, quoted before we start.</span></div></div>
+      <div class="fact"><svg aria-hidden="true"><use href="#i-home"/></svg><div><b>We come to you</b><span>Home, hospital or nursing home visits by appointment.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTATE PLANNING -->
+<section class="sec sec-alt" id="estate" aria-labelledby="estate-h">
+  <div class="wrap practice-grid">
+    <div class="practice-side">
+      <p class="num"><svg aria-hidden="true"><use href="#i-will"/></svg>01 · Estate planning</p>
+      <h2 id="estate-h">Decide who gets what, and <em>who’s in charge</em> if you can’t be.</h2>
+      <p class="lead">An estate plan is a short stack of papers that says what happens to your things when you die, and who can make decisions for you if you’re sick or hurt. Most families need four documents. We’ll explain each one before you sign anything.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Free consult</a>
+        <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+      </div>
+    </div>
+    <div>
+      <ul class="items">
+        <li><b>A will</b><span>Says who inherits your things, and who would raise your children if you couldn’t.</span></li>
+        <li><b>A trust, if it helps</b><span>Lets your family skip most of probate and keeps the details private. Not everyone needs one; we’ll tell you honestly if you don’t.</span></li>
+        <li><b>A health care proxy</b><span>Names one person to make medical decisions for you if you can’t speak for yourself.</span></li>
+        <li><b>A durable power of attorney</b><span>Lets someone you trust pay your bills and handle money matters if you’re unable to.</span></li>
+      </ul>
+      <div class="callout">
+        <h3>A good time to call</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>You had a baby, got married, or got divorced</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>You bought a house or moved to Massachusetts</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your current plan is more than five years old</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>You don’t have a plan at all (most people don’t)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELDER LAW -->
+<section class="sec" id="elder" aria-labelledby="elder-h">
+  <div class="wrap practice-grid">
+    <div class="practice-side">
+      <p class="num"><svg aria-hidden="true"><use href="#i-home"/></svg>02 · Elder law</p>
+      <h2 id="elder-h">Plan for long-term care <em>before</em> it becomes an emergency.</h2>
+      <p class="lead">A year in a Massachusetts nursing home can cost more than many families save in a lifetime. MassHealth (our state’s Medicaid program) can help pay, but its rules about savings, the house, and gifts to family are strict. We help you understand them and plan ahead.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Free consult</a>
+        <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+      </div>
+    </div>
+    <div>
+      <ul class="items">
+        <li><b>MassHealth planning</b><span>What counts against you, what doesn’t, and how the five-year “look-back” on gifts works.</span></li>
+        <li><b>MassHealth applications</b><span>We gather the paperwork, file the application, and answer the follow-up letters so you don’t have to.</span></li>
+        <li><b>Protecting the family home</b><span>Options that may help keep the house in the family, explained with their trade-offs.</span></li>
+        <li><b>Guardianship and conservatorship</b><span>If a parent can no longer decide for themselves and no plan is in place, we ask the court to put someone in charge.</span></li>
+      </ul>
+      <div class="callout">
+        <h3>A good time to call</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>A parent needs more help at home than they used to</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Someone is heading into rehab or a nursing home</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>A MassHealth letter asked for more documents, or said no</li>
+        </ul>
+      </div>
+      <p class="note">Every family is different. We’ll tell you plainly what is and isn’t possible in your situation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBATE -->
+<section class="sec sec-alt" id="probate" aria-labelledby="probate-h">
+  <div class="wrap practice-grid">
+    <div class="practice-side">
+      <p class="num"><svg aria-hidden="true"><use href="#i-key"/></svg>03 · Probate</p>
+      <h2 id="probate-h">Settling an estate, <em>one step at a time.</em></h2>
+      <p class="lead">When someone dies, their property often has to pass through the Probate and Family Court before it can go to the family. It’s mostly paperwork and deadlines, at a time when you have enough to carry. We handle the court side and keep you posted.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Free consult</a>
+        <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+      </div>
+    </div>
+    <div>
+      <ol class="steps-mini">
+        <li><b>Open the estate</b><span>We file the will (if there is one) and the first forms with the court.</span></li>
+        <li><b>Name who’s in charge</b><span>The court appoints a “personal representative,” usually the person named in the will.</span></li>
+        <li><b>Take stock and pay bills</b><span>We list what the person owned, notify creditors, and pay final bills and taxes.</span></li>
+        <li><b>Distribute and close</b><span>What’s left goes to the family, and we file the papers that close the estate.</span></li>
+      </ol>
+      <p class="note">Many simple estates wrap up in about a year. After we look at yours, we’ll give you a realistic timeline and a written fee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COURTS -->
+<section class="courts" aria-labelledby="courts-h">
+  <div class="wrap courts-grid">
+    <div>
+      <p class="eyebrow">Where we work</p>
+      <h2 id="courts-h">The courts we appear in</h2>
+      <p class="courts-inline">We also meet clients at home, in the hospital, or in assisted living anywhere in these three counties.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#consult">Free consult</a>
+        <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+      </div>
+    </div>
+    <ul class="court-list">
+      <li><b>Hampden Probate and Family Court</b><span>Springfield · Hampden County</span></li>
+      <li><b>Hampshire Probate and Family Court</b><span>Northampton · Hampshire County</span></li>
+      <li><b>Franklin Probate and Family Court</b><span>Greenfield · Franklin County</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="process" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What to expect</p>
+      <h2 id="process-h">From first call to <em>signed and filed</em></h2>
+      <p class="lead">No surprises. Here’s how working with us usually goes, whatever brings you in.</p>
+    </div>
+    <ol class="process">
+      <li><h3>You reach out</h3><p>Call, or send the short form below. A real person calls you back within one business day.</p></li>
+      <li><h3>Free 30-minute consult</h3><p>At our office, by phone, or on video. Tell us what’s going on; we’ll explain your options in plain words.</p></li>
+      <li><h3>A fee in writing</h3><p>For most plans you get a flat fee before any work starts. Nothing is billed until you say yes.</p></li>
+      <li><h3>Review, sign, done</h3><p>We walk through every page with you, then keep your originals safe in our fireproof vault.</p></li>
+    </ol>
+    <div class="cta">
+      <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Start with a free consult</a>
+      <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>(413) 555-0124</a>
+      <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="sec sec-alt" id="checklist" aria-labelledby="check-h">
+  <div class="wrap check-wrap">
+    <div>
+      <p class="eyebrow">Free checklist</p>
+      <h2 id="check-h">The estate planning checklist</h2>
+      <p class="lead">Not sure where to start? Work through this list before your consult. Tick things off right here, or just bring your answers with you. Half-finished is fine.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Free consult</a>
+        <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+      </div>
+    </div>
+    <form class="sheet" aria-labelledby="sheet-h" onsubmit="return false">
+      <div class="sheet-head">
+        <div><h3 id="sheet-h">Before your consult</h3><p>Hill &amp; Rowe Law · Estate planning checklist</p></div>
+        <svg aria-hidden="true"><use href="#i-leaf"/></svg>
+      </div>
+      <div class="sheet-cols">
+        <fieldset>
+          <legend>People</legend>
+          <label class="ck"><input type="checkbox"><span>Who should inherit, and in what shares</span></label>
+          <label class="ck"><input type="checkbox"><span>Who would raise your children, plus a backup</span></label>
+          <label class="ck"><input type="checkbox"><span>Who should handle money if you can’t</span></label>
+          <label class="ck"><input type="checkbox"><span>Who should make medical decisions</span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Property</legend>
+          <label class="ck"><input type="checkbox"><span>Your home and any other real estate</span></label>
+          <label class="ck"><input type="checkbox"><span>Bank, retirement and investment accounts</span></label>
+          <label class="ck"><input type="checkbox"><span>Life insurance policies</span></label>
+          <label class="ck"><input type="checkbox"><span>Anything with sentimental value you want to name</span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Paperwork you have</legend>
+          <label class="ck"><input type="checkbox"><span>Any old will, trust or proxy</span></label>
+          <label class="ck"><input type="checkbox"><span>Beneficiary forms on accounts and policies</span></label>
+          <label class="ck"><input type="checkbox"><span>A copy of your deed</span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Worth thinking about</legend>
+          <label class="ck"><input type="checkbox"><span>Does anyone in the family need extra care or protection?</span></label>
+          <label class="ck"><input type="checkbox"><span>How would you want end-of-life care handled?</span></label>
+          <label class="ck"><input type="checkbox"><span>Any charity you’d like to remember?</span></label>
+        </fieldset>
+      </div>
+      <div class="sheet-foot"><span>Nothing here is sent anywhere.</span><span id="ck-count" aria-live="polite">0 of 14 done</span></div>
+    </form>
+  </div>
+</section>
+
+<!-- ATTORNEYS -->
+<section class="sec" id="attorneys" aria-labelledby="att-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Our attorneys</p>
+      <h2 id="att-h">Two lawyers. <em>You’ll know both by name.</em></h2>
+      <p class="lead">There’s no call center and no hand-off to someone you’ve never met. The attorney at your first meeting is the one who sees your matter through.</p>
+    </div>
+    <div class="people">
+      <article class="person">
+        <div class="person-top">
+          <svg class="mono" viewBox="0 0 84 84" role="img" aria-label="Monogram for Margaret Hill"><circle cx="42" cy="42" r="40.5" fill="var(--accent-soft)" stroke="currentColor" stroke-width="1.2"/><circle cx="42" cy="42" r="35" fill="none" stroke="currentColor" stroke-width=".6" stroke-dasharray="1.5 3"/><text x="42" y="51" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="28" fill="currentColor">MH</text></svg>
+          <div><h3>Margaret Hill</h3><p class="role">Founding attorney · Estate planning &amp; elder law</p></div>
+        </div>
+        <p>Margaret has helped western Massachusetts families plan ahead for more than twenty years. She started the firm after watching her own grandmother’s long-term care costs catch the family off guard. She takes the time to explain every page, and never rushes a decision. Outside the office, she sings alto in a community choir and keeps far too many tomato plants.</p>
+        <dl>
+          <dt>Admitted</dt><dd>Massachusetts, 2003</dd>
+          <dt>Focus</dt><dd>Wills, trusts, MassHealth planning</dd>
+          <dt>Lives in</dt><dd>Longmeadow</dd>
+        </dl>
+      </article>
+      <article class="person">
+        <div class="person-top">
+          <svg class="mono" viewBox="0 0 84 84" role="img" aria-label="Monogram for David Rowe"><circle cx="42" cy="42" r="40.5" fill="var(--accent-soft)" stroke="currentColor" stroke-width="1.2"/><circle cx="42" cy="42" r="35" fill="none" stroke="currentColor" stroke-width=".6" stroke-dasharray="1.5 3"/><text x="42" y="51" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="28" fill="currentColor">DR</text></svg>
+          <div><h3>David Rowe</h3><p class="role">Partner · Probate &amp; estate administration</p></div>
+        </div>
+        <p>David handles most of the firm’s probate work. Before law school he worked in a bank’s trust department, so he knows the paperwork from the other side of the counter. He’s patient with questions, especially the ones people feel silly asking. On weekends you’ll find him coaching youth soccer.</p>
+        <dl>
+          <dt>Admitted</dt><dd>Massachusetts, 2011 · Connecticut, 2012</dd>
+          <dt>Focus</dt><dd>Probate, estate settlement, guardianship</dd>
+          <dt>Lives in</dt><dd>East Longmeadow</dd>
+        </dl>
+      </article>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Meet us for free</a>
+      <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+      <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div class="sec-head">
+      <p class="eyebrow">Plain answers</p>
+      <h2 id="faq-h">Questions people ask us</h2>
+      <p class="lead">Short, honest answers. If yours isn’t here, ask us. There’s no such thing as a silly question about your family’s future.</p>
+    </div>
+    <div class="faq">
+      <details open><summary>How much does a will or estate plan cost?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>It depends on what you need, so we don’t guess on the phone. After your free consult we quote a flat fee in writing for most plans. You only pay if you decide to go ahead.</p></div></details>
+      <details><summary>Do I need a trust, or is a will enough?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Plenty of people only need a will, a health care proxy and a power of attorney. A trust can help if you own a home, want to keep things private, or want to spare your family most of probate. We’ll tell you which camp you’re in.</p></div></details>
+      <details><summary>What is MassHealth’s five-year look-back?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>When someone applies for MassHealth to help pay for nursing home care, the state looks at gifts and transfers made in the five years before. Some of those can delay coverage. That’s why planning early matters.</p></div></details>
+      <details><summary>Does every estate have to go through probate?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>No. Things held in a trust, owned jointly, or with a named beneficiary usually pass outside probate. Small estates may qualify for a simpler process. We’ll look at what your loved one owned and tell you which path applies.</p></div></details>
+      <details><summary>Can you meet my parent at home or in a nursing home?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Yes. We regularly visit clients at home, in the hospital, and in assisted living around Hampden, Hampshire and Franklin counties. Just ask when you call.</p></div></details>
+      <details><summary>Does contacting you make you my lawyer?<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Not yet. We become your lawyers once we both sign a written engagement letter. Until then, please don’t send us private or sensitive details through this website.</p></div></details>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Ask us in a free consult</a>
+      <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+      <p class="hours"><svg aria-hidden="true"><use href="#i-clock"/></svg>Mon–Fri 9–5 · evenings by appointment</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULT -->
+<section class="sec" id="consult" aria-labelledby="consult-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Free consult</p>
+      <h2 id="consult-h">Let’s talk it through. <em>The first 30 minutes are free.</em></h2>
+      <p class="lead">Send a few details and we’ll call you back within one business day to set a time. Prefer to talk now? Call <a href="tel:+14135550124">(413) 555-0124</a>.</p>
+    </div>
+    <div class="consult-grid">
+      <form class="form" id="consult-form" novalidate>
+        <h3>Request a free consult</h3>
+        <p class="sub">All fields except email are needed so we can reach you.</p>
+        <div class="row2">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="field"><label for="f-email">Email <span class="opt">(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field">
+          <label for="f-area">What can we help with?</label>
+          <select id="f-area" name="area" required>
+            <option value="">Choose one</option>
+            <option>Estate planning (will, trust, proxy)</option>
+            <option>Elder law / MassHealth</option>
+            <option>Probate / settling an estate</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <fieldset class="field">
+          <legend>Best time to call you</legend>
+          <div class="radios">
+            <label class="radio"><input type="radio" name="when" value="day" checked>Daytime</label>
+            <label class="radio"><input type="radio" name="when" value="eve">Evening</label>
+            <label class="radio"><input type="radio" name="when" value="any">Either</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="f-msg">Anything we should know? <span class="opt">(optional)</span></label>
+          <textarea id="f-msg" name="msg" aria-describedby="f-msg-hint"></textarea>
+          <span class="hint" id="f-msg-hint">A sentence or two is plenty. Please don’t include private details yet.</span>
+        </div>
+        <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-cal"/></svg>Request my free consult</button>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        <p class="privacy">Sending this form doesn’t make us your lawyers, and nothing on this site is legal advice.</p>
+      </form>
+
+      <aside class="office office-card" aria-label="Office and hours">
+        <div class="ob">
+          <h3>Call the office</h3>
+          <a class="big" href="tel:+14135550124">(413) 555-0124</a>
+          <p>A person answers, not a phone tree.</p>
+        </div>
+        <div class="ob">
+          <h3>Hours</h3>
+          <table>
+            <tr><th scope="row">Monday–Friday</th><td>9:00–5:00</td></tr>
+            <tr><th scope="row">Evenings</th><td>By appointment</td></tr>
+            <tr><th scope="row">Home visits</th><td>By appointment</td></tr>
+            <tr><th scope="row">Weekends</th><td>Closed</td></tr>
+          </table>
+        </div>
+        <div class="ob">
+          <h3>Visit</h3>
+          <address>Hill &amp; Rowe Law<br>3 Wainscot Green, Suite 1<br>Longmeadow, MA 01106 <small style="opacity:.7">(sample address)</small></address>
+          <p class="small">Ground floor, no stairs. Free parking right out front.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Hill and Rowe Law, back to top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" style="color:#f0a57f"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.3"/><use href="#i-leaf" x="9" y="8.5" width="22" height="22"/></svg>
+          <span><span class="brand-name">Hill &amp; Rowe</span><span class="brand-sub">Law · Longmeadow</span></span>
+        </a>
+        <p style="margin-top:16px;max-width:28em">Estate planning, elder law and probate for families in Hampden, Hampshire and Franklin counties.</p>
+      </div>
+      <div>
+        <h4>Practice areas</h4>
+        <ul><li><a href="#estate">Estate planning</a></li><li><a href="#elder">Elder law</a></li><li><a href="#probate">Probate</a></li><li><a href="#checklist">Free checklist</a></li></ul>
+      </div>
+      <div>
+        <h4>The firm</h4>
+        <ul><li><a href="#attorneys">Our attorneys</a></li><li><a href="#process">What to expect</a></li><li><a href="#faq">Questions</a></li><li><a href="#consult">Free consult</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+14135550124">(413) 555-0124</a></li><li>Mon–Fri 9–5</li><li>Evenings by appointment</li><li>hillrowelaw.com</li></ul>
+      </div>
+    </div>
+    <div class="notices">
+      <p style="margin:0"><strong>Attorney advertising.</strong> Prior results do not guarantee a similar outcome.</p>
+      <p style="margin:0"><strong>Nothing on this site is legal advice; contacting us doesn’t create an attorney-client relationship.</strong> We represent you only after we both sign a written engagement letter. Please don’t send confidential information through this site.</p>
+      <p style="margin:0"><strong>Courts we appear in:</strong> Hampden Probate and Family Court · Hampshire Probate and Family Court · Franklin Probate and Family Court</p>
+      <p style="margin:0">Attorneys at Hill &amp; Rowe Law are licensed in Massachusetts; David Rowe is also licensed in Connecticut.</p>
+    </div>
+    <div class="copy"><span>© <span id="yr">2026</span> Hill &amp; Rowe Law · hillrowelaw.com</span><span>Sample site by 413 Growth. Firm, people and address are fictional.</span></div>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Quick contact">
+  <a class="btn btn-ghost" href="tel:+14135550124"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-primary" href="#consult"><svg aria-hidden="true"><use href="#i-cal"/></svg>Free consult</a>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('sample'),r=document.documentElement;
+  function fit(){r.style.setProperty('--bh',b.offsetHeight+'px')}
+  fit();addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+
+  var m=document.querySelector('.menu');
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.removeAttribute('open')})});
+  document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.removeAttribute('open')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.open){m.removeAttribute('open');m.querySelector('summary').focus()}});
+
+  var boxes=document.querySelectorAll('.sheet input'),c=document.getElementById('ck-count');
+  function upd(){var n=0;boxes.forEach(function(x){if(x.checked)n++});c.textContent=n+' of '+boxes.length+' done'}
+  boxes.forEach(function(x){x.addEventListener('change',upd)});upd();
+
+  var f=document.getElementById('consult-form'),s=document.getElementById('form-status');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    s.textContent='This is a sample site — nothing was sent.';
+    s.classList.add('on');
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

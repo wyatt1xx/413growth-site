@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ridgeline Heating &amp; Cooling · Westfield, MA</title>
+<meta name="description" content="Family-run heating, cooling and plumbing in Westfield, MA and the surrounding hilltowns. Furnaces, boilers, heat pumps, AC, water heaters and no-heat emergencies. (Sample site by 413 Growth.)">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f0e6; --surface:#fffdf8; --surface-2:#ebe5d6; --ink:#16231f; --muted:#55615b; --line:#d8cfbd;
+  --brand:#1f4a3f; --brand-2:#2b5f51; --brand-ink:#f6f2e8; --accent:#1f4a3f;
+  --ember:#b9491a; --ember-btn:#b9491a; --ember-hi:#e2763d; --ember-ink:#fff; --ice:#2f7393;
+  --sky-a:#f7e9d0; --sky-b:#eecfa6; --sun:#f0a25e;
+  --h1:#b7c7b5; --h2:#86a593; --h3:#4f7a68; --h4:#2b5446; --h5:#1a3a31;
+  --snow:#fbfaf5; --win:#f6b54e;
+  --banner-bg:#121a17; --banner-ink:#dfe6df;
+  --shadow:0 1px 2px rgba(22,35,31,.06),0 8px 24px -12px rgba(22,35,31,.18);
+  --radius:14px; --bannerh:34px; --headh:64px;
+  --display:"Zilla Slab",Rockwell,"Roboto Slab",Georgia,serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0e1614; --surface:#15201d; --surface-2:#1b2925; --ink:#e8ede5; --muted:#a2b0a8; --line:#2a3b35;
+    --brand:#2a5e50; --brand-2:#347060; --brand-ink:#f1f5ef; --accent:#8fd0b5;
+    --ember:#e0703a; --ember-btn:#c0501d; --ember-hi:#f08a52; --ice:#7bbad6;
+    --sky-a:#0f1d27; --sky-b:#1c2f3a; --sun:#e9e2c8;
+    --h1:#2a3e46; --h2:#22363a; --h3:#1b2e2c; --h4:#152521; --h5:#0e1614;
+    --snow:#c9d3d1; --win:#ffbe5c;
+    --banner-bg:#050807; --banner-ink:#c9d2cc;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;padding-top:var(--bannerh);background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--ember-hi);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[id]{scroll-margin-top:calc(var(--bannerh) + var(--headh) + 12px)}
+
+/* sample banner */
+.sample{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--banner-bg);color:var(--banner-ink);font:500 12px/1.35 var(--sans);letter-spacing:.01em}
+@media (max-width:640px){.sample{font-size:11px;line-height:1.3}.sample .wrap{padding-left:16px;padding-right:16px;gap:10px}}
+.sample .wrap{display:flex;align-items:center;justify-content:center;gap:12px;min-height:var(--bannerh);padding-top:4px;padding-bottom:4px}
+.sample p{opacity:.9}
+.sample a{color:#fff;font-weight:600;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.35)}
+.sample a:hover{border-color:#fff}
+.sample .dot{opacity:.45;margin:0 .35em}
+@media (max-width:640px){.sample .wrap{justify-content:space-between;text-align:left}.sample p .hide-s{display:none}}
+
+/* header */
+.top{position:sticky;top:var(--bannerh);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:var(--headh)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font:700 19px/1 var(--display);letter-spacing:-.01em;display:block;white-space:nowrap}
+.brand small{display:block;font:600 10.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;white-space:nowrap}
+.nav{display:none;gap:26px;font-weight:500;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--sans);text-decoration:none;border-radius:999px;padding:12px 18px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease,box-shadow .15s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-1px)}
+.btn-call{background:var(--ember-btn);color:var(--ember-ink);box-shadow:0 6px 16px -8px rgba(185,73,26,.8)}
+.btn-call:hover{background:color-mix(in srgb,var(--ember-btn) 88%,#000)}
+.btn-text{background:var(--brand);color:var(--brand-ink)}
+.btn-text:hover{background:var(--brand-2)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.top .btn{padding:10px 14px;font-size:14px}
+.top .num{display:none}
+@media (min-width:600px){.top .num{display:inline}}
+@media (min-width:980px){.nav{display:flex}.top .btn{padding:11px 16px}}
+@media (max-width:380px){.brand small{display:none}.brand b{font-size:17px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sky-a) 0%,var(--sky-b) 100%)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:28px;padding-top:28px;padding-bottom:0}
+.creds{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font:600 12px/1.3 var(--sans);letter-spacing:.04em;color:var(--ink)}
+.creds .pill{display:inline-flex;align-items:flex-start;gap:7px;background:color-mix(in srgb,var(--surface) 70%,transparent);border:1px solid var(--line);border-radius:999px;padding:6px 10px}
+.creds svg{width:14px;height:14px;flex:none;margin-top:1px;color:var(--brand-2)}
+.creds em{font-style:normal;font-weight:500;color:var(--muted)}
+.eyebrow{font:700 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+.hero h1{font-size:clamp(40px,10.5vw,76px);margin-top:14px;max-width:13ch}
+.hero h1 span{color:var(--ember)}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:36ch;margin-top:16px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.cta .btn{padding:15px 22px;font-size:16px}
+@media (max-width:520px){.cta .btn{flex:1 1 100%}}
+.promise{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);align-self:start}
+.promise h2{font-size:24px;margin-top:10px}
+.promise p{color:var(--muted);margin-top:8px;font-size:15.5px}
+.status{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--sans);color:var(--brand-2);background:color-mix(in srgb,var(--brand) 12%,transparent);padding:7px 11px;border-radius:999px}
+@media (prefers-color-scheme:dark){.status{color:var(--accent)}}
+.status i{width:8px;height:8px;border-radius:50%;background:#2fae6f;box-shadow:0 0 0 0 rgba(47,174,111,.6);animation:pulse 2.2s infinite}
+.status.closed{color:var(--ember)}
+.status.closed i{background:var(--ember-hi);box-shadow:none;animation:none}
+.hours{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px;font-size:15px}
+.hours li{display:flex;justify-content:space-between;gap:12px;border-top:1px dashed var(--line);padding-top:8px}
+.hours b{font-weight:600}
+.clock{width:46px;height:46px;flex:none}
+.promise-head{display:flex;gap:14px;align-items:flex-start}
+.scene{position:relative;z-index:1;margin-top:8px;width:100%;height:auto;min-height:150px}
+.scene svg{width:100%;height:auto;min-width:760px;margin-left:50%;transform:translateX(-50%)}
+.smoke{animation:drift 7s ease-in-out infinite;transform-origin:center bottom}
+.smoke:nth-of-type(2){animation-delay:-2.5s}
+.glow{animation:flicker 4s ease-in-out infinite}
+.star{animation:twinkle 3.5s ease-in-out infinite}
+.sunmoon{fill:var(--sun)}
+.stars{display:none}
+@media (prefers-color-scheme:dark){.stars{display:inline}}
+.rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.16s}.rise.d3{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,174,111,.55)}70%{box-shadow:0 0 0 8px rgba(47,174,111,0)}100%{box-shadow:0 0 0 0 rgba(47,174,111,0)}}
+@keyframes drift{0%,100%{transform:translate(0,0);opacity:.75}50%{transform:translate(6px,-6px);opacity:.4}}
+@keyframes flicker{0%,100%{opacity:1}45%{opacity:.82}55%{opacity:.95}}
+@keyframes twinkle{0%,100%{opacity:.9}50%{opacity:.3}}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.35fr .9fr;align-items:end;padding-top:64px;gap:48px}
+  .scene{margin-top:-30px}
+  .scene svg{min-width:0;margin:0;transform:none}
+}
+
+/* promise band */
+.band{background:var(--brand);color:var(--brand-ink)}
+.band .wrap{display:grid;gap:18px;padding-top:30px;padding-bottom:30px}
+.band q{quotes:none;font:600 clamp(24px,4vw,36px)/1.15 var(--display);letter-spacing:-.01em}
+.band q b{color:#ffc38f}
+.band p{opacity:.85;font-size:15.5px;max-width:58ch}
+.band .tick{display:grid;gap:10px;list-style:none;margin:0;padding:0;font-size:15px}
+.band .tick li{display:flex;gap:10px;align-items:flex-start}
+.band .tick svg{width:18px;height:18px;flex:none;margin-top:3px;color:#ffc38f}
+@media (min-width:900px){.band .wrap{grid-template-columns:1.3fr 1fr;align-items:center;gap:48px;padding-top:40px;padding-bottom:40px}}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{display:grid;gap:12px;margin-bottom:30px;max-width:720px}
+.sec-head h2{font-size:clamp(32px,6vw,50px)}
+.sec-head p{color:var(--muted);font-size:17.5px}
+.sec-head .eyebrow{color:var(--ember);font-size:12px}
+@media (min-width:900px){section{padding:96px 0}}
+
+.grid{display:grid;gap:14px}
+@media (min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.grid.three{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:640px) and (max-width:999px){.grid.three{grid-template-columns:1fr 1fr}}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease}
+.card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--brand-2) 40%,var(--line))}
+.ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--brand-2)}
+@media (prefers-color-scheme:dark){.ico{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}}
+.ico.hot{background:color-mix(in srgb,var(--ember) 13%,transparent);color:var(--ember)}
+.ico.cool{background:color-mix(in srgb,var(--ice) 14%,transparent);color:var(--ice)}
+.ico svg{width:28px;height:28px}
+.svc h3{font-size:23px;margin-top:16px}
+.svc p{color:var(--muted);margin-top:8px;font-size:15.5px}
+.svc ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.svc li{font:600 12px/1 var(--sans);padding:7px 9px;border-radius:7px;background:var(--surface-2);color:var(--muted)}
+.svc.urgent{background:var(--ember-btn);border-color:var(--ember-btn);color:#fff}
+.svc.urgent p,.svc.urgent li{color:#fff}
+.svc.urgent li{background:rgba(255,255,255,.16)}
+.svc.urgent .ico{background:rgba(255,255,255,.18);color:#fff}
+.svc.urgent a{color:#fff;font-weight:700}
+.note{font-size:13.5px;color:var(--muted);margin-top:18px}
+
+/* towns */
+.towns{background:var(--surface-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 28px;padding:0;list-style:none}
+.chips a{display:inline-block;text-decoration:none;font:600 14px/1 var(--sans);padding:10px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.chips a:hover{border-color:var(--brand-2);color:var(--brand-2)}
+.town{position:relative;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.town .t-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.town h3{font-size:25px}
+.town .mi{font:600 12px/1 var(--sans);color:var(--muted);white-space:nowrap}
+.town .job-k{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ember);margin-top:4px}
+.town .job{font-size:16px}
+.town .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.town .tags span{font:600 12px/1 var(--sans);padding:6px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.town .ridge{position:absolute;right:14px;bottom:16px;width:90px;height:30px;opacity:.14;color:var(--brand-2);pointer-events:none}
+.town:target{outline:2px solid var(--ember);outline-offset:2px}
+@media (min-width:640px){.town.more{grid-column:span 2}}
+.home-base{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.home-base .mi,.home-base .job-k{color:#ffc38f}
+.home-base .tags span{background:rgba(255,255,255,.14);color:var(--brand-ink)}
+.home-base .ridge{opacity:.25;color:#fff}
+
+/* why + reviews */
+.why{display:grid;gap:40px}
+@media (min-width:960px){.why{grid-template-columns:.9fr 1.1fr;gap:64px}}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.points li{display:grid;grid-template-columns:44px 1fr;gap:14px}
+.points .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 18px/1 var(--display);background:var(--brand);color:var(--brand-ink)}
+.points h3{font-size:21px}
+.points p{color:var(--muted);font-size:15.5px;margin-top:4px}
+.tagline{display:inline-flex;align-items:center;gap:8px;font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border-radius:6px;border:1.5px dashed var(--muted);color:var(--muted)}
+.reviews{display:grid;gap:14px;margin-top:18px}
+.review{margin:0}
+.review blockquote{margin:0;font:500 19px/1.4 var(--display)}
+.review figcaption{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.review figcaption b{color:var(--ink)}
+.stars5{display:flex;gap:2px;color:#e0a43a;margin-bottom:10px}
+.stars5 svg{width:16px;height:16px}
+.av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 14px/1 var(--display);background:var(--surface-2);color:var(--ink)}
+
+/* form */
+.req{background:var(--surface-2)}
+.req-grid{display:grid;gap:28px}
+@media (min-width:960px){.req-grid{grid-template-columns:.8fr 1.2fr;gap:56px}}
+.aside-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.aside-list li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.aside-list svg{width:22px;height:22px;flex:none;color:var(--ember);margin-top:2px}
+form.card:hover{transform:none}
+.fields{display:grid;gap:16px}
+@media (min-width:640px){.fields{grid-template-columns:1fr 1fr}.full{grid-column:1/-1}}
+label,.lbl{display:block;font:600 14px/1.3 var(--sans);margin-bottom:6px}
+.opt{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;font:400 16px/1.4 var(--sans);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:12px 13px;appearance:none;-webkit-appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 13px) 52%;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand-2) 25%,transparent)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg label{margin:0;position:relative}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:block;white-space:nowrap;text-align:center;font:600 14px/1.2 var(--sans);padding:12px 6px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);cursor:pointer}
+.seg input:checked+span{border-color:var(--ember);background:color-mix(in srgb,var(--ember) 10%,var(--paper));color:var(--ember)}
+.seg input:focus-visible+span{outline:3px solid var(--ember-hi);outline-offset:2px}
+.form-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:20px}
+.form-foot .btn{padding:15px 24px;font-size:16px}
+.form-foot small{color:var(--muted);font-size:13.5px;max-width:34ch}
+.sent{display:none;margin-top:16px;padding:14px 16px;border-radius:10px;background:color-mix(in srgb,var(--brand) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--brand-2) 40%,var(--line));font-weight:600}
+.sent.show{display:flex;gap:10px;align-items:flex-start}
+.sent svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--brand-2)}
+
+/* faq */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font:600 20px/1.3 var(--display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);position:relative;transition:transform .2s ease}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i{transform:rotate(45deg);border-color:var(--ember);color:var(--ember)}
+.faq details p{padding:0 0 20px;color:var(--muted);max-width:66ch}
+
+/* footer */
+footer{background:var(--h5);color:#dfe7e1;padding:0 0 32px}
+@media (prefers-color-scheme:dark){footer{background:#08100e}}
+footer .ridgefoot{display:block;width:100%;height:60px;color:var(--h5);background:var(--paper)}
+@media (prefers-color-scheme:dark){footer .ridgefoot{color:#08100e}}
+.foot{display:grid;gap:30px;padding-top:24px}
+@media (min-width:860px){.foot{grid-template-columns:1.3fr 1fr 1fr}}
+footer h2{font-size:15px;font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#9fb8ab;margin-bottom:12px}
+footer p,footer li{font-size:15px;color:#c7d3cc}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{color:#fff}
+.lic{margin-top:34px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between}
+.lic-badge{display:inline-flex;align-items:center;gap:10px;font:600 14px/1.3 var(--sans);color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px 14px}
+.lic-badge svg{width:20px;height:20px;color:#ffc38f;flex:none}
+.lic-badge em{font-style:normal;font-weight:400;color:#9fb8ab;font-size:12.5px}
+.fine{font-size:13px;color:#93a69c}
+.fbrand{display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.fbrand svg{width:40px;height:40px;border-radius:10px;box-shadow:0 0 0 1px rgba(255,255,255,.22)}
+.fbrand b{font:700 22px/1 var(--display);color:#fff}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="sample" id="sample" role="note" aria-label="Sample site notice">
+  <div class="wrap">
+    <p>Sample site made by 413 Growth<span class="dot">·</span>Ridgeline Heating is a made-up business<span class="dot hide-s">·</span></p>
+    <a href="../../work.html">← Back to our work</a>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.7 4.3-2.2 1.5a11 11 0 0 0 6.2 6.2l1.5-2.2L20 14.5V18a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 10h8M8 13h5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+    <symbol id="i-ridge" viewBox="0 0 90 30"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" d="M0 28l16-14 9 7 17-18 13 12 9-6 26 19"/></symbol>
+    <symbol id="logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#1f4a3f"/><circle cx="27" cy="13" r="5" fill="#e2763d"/><path d="M4 31l9-10 5 5 8-10 10 15z" fill="#f4f0e6"/><path d="M4 31l9-10 5 5 8-10 10 15" fill="none" stroke="#f4f0e6" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 21l2.2 3.4M26 16l2.6 4.2" stroke="#1f4a3f" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ridgeline Heating and Cooling, home">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span><b>Ridgeline</b><small>Heating &amp; Cooling</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#towns">Towns</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-text" href="sms:+14135550142" aria-label="Text us at (413) 555-0142"><svg aria-hidden="true"><use href="#i-text"/></svg>Text</a>
+    <a class="btn btn-call" href="tel:+14135550142" aria-label="Call (413) 555-0142"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call<span class="num">&nbsp;(413) 555-0142</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div>
+        <div class="creds rise">
+          <span class="pill"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>MA HIC #000000 · Master Plumber #00000 · Insured <em>(sample numbers)</em></span></span>
+        </div>
+        <p class="eyebrow rise d1" style="margin-top:22px">Family-run in Westfield since 1994</p>
+        <h1 id="hero-h" class="rise d1">Warm houses in the <span>hilltowns</span>, every winter.</h1>
+        <p class="lede rise d2">Furnaces, boilers, heat pumps, AC and water heaters for Westfield and the ten towns around it. A real person answers, and the truck that shows up is ours.</p>
+        <div class="cta rise d3">
+          <a class="btn btn-call" href="tel:+14135550142"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call (413) 555-0142</a>
+          <a class="btn btn-ghost" href="#request">Request service online</a>
+        </div>
+      </div>
+
+      <aside class="promise rise d2" aria-labelledby="promise-h">
+        <div class="promise-head">
+          <svg class="clock" viewBox="0 0 48 48" role="img" aria-label="Clock icon">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3" opacity=".2"/>
+            <path d="M24 3a21 21 0 0 1 21 21" fill="none" stroke="var(--ember)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M24 12v12l7 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <span class="status" id="status"><i aria-hidden="true"></i><span id="status-t">Weekdays 7 AM – 6 PM</span></span>
+            <h2 id="promise-h">We usually call back within the hour, 7&nbsp;AM to 6&nbsp;PM.</h2>
+          </div>
+        </div>
+        <p>Leave a voicemail, send a text, or fill out the form. If we're on a roof or under a house, the office will still get back to you, usually inside sixty minutes.</p>
+        <ul class="hours">
+          <li><span>Mon – Fri</span><b>7:00 AM – 6:00 PM</b></li>
+          <li><span>Evenings &amp; weekends</span><b>Emergency line, no-heat calls</b></li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="scene" aria-hidden="false">
+      <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of layered green ridgelines with a small house, its windows lit and chimney smoking, set among pine trees">
+        <g class="stars" fill="#f3efe0">
+          <circle class="star" cx="140" cy="40" r="1.6"/><circle class="star" cx="300" cy="22" r="1.2" style="animation-delay:-1s"/><circle class="star" cx="520" cy="55" r="1.4" style="animation-delay:-2s"/><circle class="star" cx="760" cy="18" r="1.2"/><circle class="star" cx="980" cy="48" r="1.6" style="animation-delay:-1.4s"/><circle class="star" cx="1300" cy="30" r="1.3" style="animation-delay:-.6s"/>
+        </g>
+        <circle class="sunmoon" cx="1180" cy="92" r="34" opacity=".9"/>
+        <path fill="var(--h1)" d="M0 150 L120 110 L210 132 L330 78 L450 124 L560 96 L690 140 L820 86 L940 120 L1060 70 L1190 118 L1300 96 L1440 130 V300 H0Z"/>
+        <path fill="var(--h2)" d="M0 190 L90 160 L200 182 L300 140 L420 178 L540 150 L660 186 L780 146 L900 176 L1010 136 L1130 172 L1260 150 L1440 180 V300 H0Z"/>
+        <path fill="var(--snow)" opacity=".7" d="M300 140 L322 152 L308 151 L296 158 L284 150 L276 151Z M780 146 L801 157 L788 156 L777 162 L766 155 L758 157Z M1010 136 L1032 148 L1018 147 L1006 154 L995 146 L986 148Z"/>
+        <path fill="var(--h3)" d="M0 230 L140 200 L260 218 L380 188 L520 214 L640 196 L760 222 L900 194 L1040 220 L1180 198 L1320 214 L1440 204 V300 H0Z"/>
+        <g fill="var(--h4)">
+          <path d="M150 230 l14-40 14 40z M172 234 l10-30 10 30z M1215 226 l16-46 16 46z M1240 230 l11-32 11 32z M1270 232 l9-26 9 26z M60 236 l12-34 12 34z"/>
+        </g>
+        <!-- house -->
+        <g transform="translate(560 168)">
+          <path class="smoke" d="M128 18 c-8 -10 6 -16 -2 -28 c-6 -9 4 -14 0 -22" fill="none" stroke="var(--surface)" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+          <path class="smoke" d="M134 10 c10 -8 -2 -18 8 -28" fill="none" stroke="var(--surface)" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+          <rect x="120" y="20" width="14" height="30" fill="#7a3b26"/>
+          <path d="M20 66 L90 16 L160 66Z" fill="#3a2a24"/>
+          <path d="M14 68 L90 12 L166 68" fill="none" stroke="var(--snow)" stroke-width="6" stroke-linejoin="round"/>
+          <rect x="32" y="64" width="116" height="66" fill="#efe6d4"/>
+          <rect x="32" y="64" width="116" height="66" fill="#000" opacity=".06"/>
+          <rect class="glow" x="46" y="82" width="24" height="22" rx="2" fill="var(--win)"/>
+          <rect class="glow" x="110" y="82" width="24" height="22" rx="2" fill="var(--win)" style="animation-delay:-1.7s"/>
+          <path d="M58 82v22M46 93h24M122 82v22M110 93h24" stroke="#3a2a24" stroke-width="2"/>
+          <rect x="80" y="92" width="20" height="38" fill="#1f4a3f"/>
+          <circle cx="95" cy="112" r="1.6" fill="#f4c46a"/>
+        </g>
+        <!-- van -->
+        <g transform="translate(820 252)">
+          <rect x="0" y="0" width="92" height="34" rx="6" fill="#f4f0e6"/>
+          <path d="M92 8 h14 l12 14 v12 h-26z" fill="#f4f0e6"/>
+          <path d="M96 11 h9 l8 10 h-17z" fill="#9cc3d6"/>
+          <rect x="0" y="16" width="92" height="5" fill="#b9491a"/>
+          <path d="M10 10 l8 -6 5 4 8 -6 9 8" fill="none" stroke="#1f4a3f" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="22" cy="36" r="8" fill="#1a1a1a"/><circle cx="96" cy="36" r="8" fill="#1a1a1a"/>
+          <circle cx="22" cy="36" r="3" fill="#bbb"/><circle cx="96" cy="36" r="3" fill="#bbb"/>
+        </g>
+        <path fill="var(--h5)" d="M0 262 C220 242 380 250 560 262 C640 268 760 290 900 292 C1080 294 1240 254 1440 248 V300 H0Z"/>
+        <path fill="var(--paper)" d="M0 290 C300 280 600 296 900 300 L0 300Z" opacity="0"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="band" role="region" aria-label="Our callback promise">
+    <div class="wrap">
+      <q>Call us at 7:15 and you'll usually hear back <b>before 8:15</b>.</q>
+      <ul class="tick">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Weekdays 7 AM – 6 PM: a person calls back, usually within the hour.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>If a job runs long and we'll miss the hour, we text you and say so.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>After 6 PM, the emergency line is for no-heat and active leaks.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we fix and install</p>
+        <h2 id="svc-h">Heat, cooling and hot water, start to finish.</h2>
+        <p>We service what's already in your basement and quote replacements in writing. When it's worth repairing, we'll tell you that first.</p>
+      </div>
+      <div class="grid three">
+        <article class="card svc">
+          <div class="ico hot"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M16 4c1 5 7 7 7 14a7 7 0 0 1-14 0c0-4 2-6 3-8 1 3 2 4 4 4 0-4-2-6 0-10z"/></svg></div>
+          <h3>Furnaces</h3>
+          <p>Gas, oil and propane furnace repair, tune-ups and replacements, sized to the house rather than the last unit.</p>
+          <ul><li>No-heat repair</li><li>Annual tune-up</li><li>Replacement</li></ul>
+        </article>
+        <article class="card svc">
+          <div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="7" y="4" width="18" height="24" rx="2"/><path d="M7 11h18M12 16v8M16 16v8M20 16v8"/></g></svg></div>
+          <h3>Boilers &amp; radiators</h3>
+          <p>Old cast-iron boilers, baseboard and steam systems. Repairs, zone fixes, and high-efficiency combi boilers.</p>
+          <ul><li>Oil &amp; gas boilers</li><li>Radiator balancing</li><li>Combi units</li></ul>
+        </article>
+        <article class="card svc">
+          <div class="ico cool"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="8" width="26" height="17" rx="2"/><circle cx="12" cy="16.5" r="5"/><path d="M12 11.5v10M7 16.5h10M21 12h5M21 16h5M21 20h5"/></g></svg></div>
+          <h3>Heat pumps</h3>
+          <p>Cold-climate ducted and ductless heat pumps that keep working on a January night. We help with Mass Save rebate paperwork.</p>
+          <ul><li>Ductless mini-splits</li><li>Ducted systems</li><li>Rebate help</li></ul>
+        </article>
+        <article class="card svc">
+          <div class="ico cool"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M16 3v26M4.7 9.5l22.6 13M4.7 22.5l22.6-13M12 5l4 4 4-4M12 27l4-4 4 4"/></svg></div>
+          <h3>Air conditioning</h3>
+          <p>Central AC repair and installs, refrigerant leaks, and the upstairs bedroom that never cools off.</p>
+          <ul><li>Central AC</li><li>Spring tune-up</li><li>Leak repair</li></ul>
+        </article>
+        <article class="card svc">
+          <div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="9" y="3" width="14" height="24" rx="6"/><path d="M13 27v2M19 27v2M16 11c2 2.5 2.5 3.5 2.5 5a2.5 2.5 0 0 1-5 0c0-1.5.5-2.5 2.5-5z"/></g></svg></div>
+          <h3>Water heaters</h3>
+          <p>Tank, tankless and heat-pump water heaters. Leaking tank today? Most swaps happen the same or next day.</p>
+          <ul><li>Tank &amp; tankless</li><li>Same-day swaps</li><li>Plumbing repairs</li></ul>
+        </article>
+        <article class="card svc urgent">
+          <div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4L3 27h26z"/><path d="M16 13v7M16 23.5v.5"/></g></svg></div>
+          <h3>No heat tonight?</h3>
+          <p>Evenings and weekends, call the main number and pick option 1 for the emergency line. Frozen pipes, no heat and active leaks come first.</p>
+          <ul><li>Evenings</li><li>Weekends</li><li><a href="tel:+14135550142">(413) 555-0142</a></li></ul>
+        </article>
+      </div>
+      <p class="note">Mass Save rebates and incentives change; we'll tell you what applies to your house when we quote, and we don't promise a dollar figure up front.</p>
+    </div>
+  </section>
+
+  <section id="towns" class="towns" aria-labelledby="towns-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Towns we cover</p>
+        <h2 id="towns-h">Ten towns, one shop on Route 20.</h2>
+        <p>Every town below is within about 35 minutes of our shop. Here's a recent job from each, so you can see the kind of houses we work in.</p>
+      </div>
+      <ul class="chips" aria-label="Jump to a town">
+        <li><a href="#town-westfield">Westfield</a></li><li><a href="#town-southwick">Southwick</a></li><li><a href="#town-agawam">Agawam</a></li><li><a href="#town-feeding-hills">Feeding Hills</a></li><li><a href="#town-west-springfield">West Springfield</a></li><li><a href="#town-holyoke">Holyoke</a></li><li><a href="#town-easthampton">Easthampton</a></li><li><a href="#town-granville">Granville</a></li><li><a href="#town-russell">Russell</a></li><li><a href="#town-montgomery">Montgomery</a></li>
+      </ul>
+      <div class="grid three">
+        <article class="card town home-base" id="town-westfield">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Westfield</h3><span class="mi">Home base</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Replaced a 1987 oil boiler with a cold-climate heat pump in a Cape off Route 202. The oil tank came out the same week.</p>
+          <div class="tags"><span>Heat pump</span><span>Oil removal</span></div>
+        </article>
+        <article class="card town" id="town-southwick">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Southwick</h3><span class="mi">~15 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Swapped a leaking 40-gallon water heater in a lakeside ranch near Congamond. In at 9, hot showers by 2.</p>
+          <div class="tags"><span>Water heater</span><span>Same day</span></div>
+        </article>
+        <article class="card town" id="town-agawam">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Agawam</h3><span class="mi">~20 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Added two ductless heads to a split-level whose upstairs never got below 80° in July.</p>
+          <div class="tags"><span>Mini-split</span><span>Cooling</span></div>
+        </article>
+        <article class="card town" id="town-feeding-hills">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Feeding Hills</h3><span class="mi">~18 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Tracked a short-cycling gas furnace to a clogged flame sensor and an undersized return. Fixed both in one visit.</p>
+          <div class="tags"><span>Furnace repair</span><span>Ductwork</span></div>
+        </article>
+        <article class="card town" id="town-west-springfield">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>West Springfield</h3><span class="mi">~20 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">No-heat call at 9 PM on a January Sunday. Failed igniter on a 12-year-old furnace; house warm again by 10:30.</p>
+          <div class="tags"><span>Emergency</span><span>Furnace</span></div>
+        </article>
+        <article class="card town" id="town-holyoke">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Holyoke</h3><span class="mi">~25 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Rebalanced radiators on all three floors of a brick triple-decker near the canals, so the top unit stopped baking.</p>
+          <div class="tags"><span>Steam &amp; radiators</span><span>Multi-family</span></div>
+        </article>
+        <article class="card town" id="town-easthampton">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Easthampton</h3><span class="mi">~30 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Moved a mill-building condo off electric baseboard and onto a ducted heat pump tucked above the closet.</p>
+          <div class="tags"><span>Heat pump</span><span>Condo</span></div>
+        </article>
+        <article class="card town" id="town-granville">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Granville</h3><span class="mi">~25 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Installed a propane combi boiler in an 1850s farmhouse at the end of a long dirt road, with a backup tank alarm.</p>
+          <div class="tags"><span>Combi boiler</span><span>Propane</span></div>
+        </article>
+        <article class="card town" id="town-russell">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Russell</h3><span class="mi">~20 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Thawed a frozen condensate line and added heat tape for a house along the Westfield River before the next cold snap.</p>
+          <div class="tags"><span>Winterizing</span><span>Plumbing</span></div>
+        </article>
+        <article class="card town" id="town-montgomery">
+          <svg class="ridge" aria-hidden="true"><use href="#i-ridge"/></svg>
+          <div class="t-top"><h3>Montgomery</h3><span class="mi">~30 min</span></div>
+          <p class="job-k">Recent job</p>
+          <p class="job">Found a cracked heat exchanger in a hilltop colonial's oil furnace. Replaced the unit and put a CO detector on every floor.</p>
+          <div class="tags"><span>Safety</span><span>Replacement</span></div>
+        </article>
+        <article class="card town more" style="justify-content:center;background:transparent;box-shadow:none;border-style:dashed">
+          <div class="t-top"><h3>Not on the list?</h3></div>
+          <p class="job">Southampton, Blandford, Chester? Call or text anyway. If we can't get there in reasonable time, we'll say so and point you to someone who can.</p>
+          <div class="tags"><a class="btn btn-text" href="sms:+14135550142"><svg aria-hidden="true"><use href="#i-text"/></svg>Text us your town</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="why-h">
+    <div class="wrap why">
+      <div>
+        <div class="sec-head" style="margin-bottom:24px">
+          <p class="eyebrow">Why Ridgeline</p>
+          <h2 id="why-h">Small shop. Straight answers.</h2>
+        </div>
+        <ol class="points">
+          <li><span class="n" aria-hidden="true">1</span><div><h3>Same faces every visit</h3><p>Four techs, two vans, one family. You'll get to know whoever shows up.</p></div></li>
+          <li><span class="n" aria-hidden="true">2</span><div><h3>Price before the work starts</h3><p>A written number on repairs and replacements. If we find something else, we stop and ask first.</p></div></li>
+          <li><span class="n" aria-hidden="true">3</span><div><h3>Repair first, replace when it's time</h3><p>If a $300 part buys you five more winters, that's what we'll recommend.</p></div></li>
+          <li><span class="n" aria-hidden="true">4</span><div><h3>Licensed and insured</h3><p>Massachusetts HIC and Master Plumber licenses, with numbers printed on every quote.</p></div></li>
+        </ol>
+      </div>
+      <div>
+        <span class="tagline">Sample reviews · written for this demo</span>
+        <h2 class="sr">Sample reviews</h2>
+        <div class="reviews">
+          <figure class="card review">
+            <div class="stars5" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>“Texted at 7:40 about our boiler and had a call back before 8:30. They talked me out of replacing it, which nobody else did.”</blockquote>
+            <figcaption><span class="av" aria-hidden="true">D</span><span><b>Diane</b> · Southwick</span></figcaption>
+          </figure>
+          <figure class="card review">
+            <div class="stars5" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>“Heat pump install was tidy, the quote matched the bill, and they walked us through the rebate forms.”</blockquote>
+            <figcaption><span class="av" aria-hidden="true">M</span><span><b>Mark</b> · Westfield</span></figcaption>
+          </figure>
+          <figure class="card review">
+            <div class="stars5" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>“No heat on a Saturday night with a newborn. Someone was here in under two hours.”</blockquote>
+            <figcaption><span class="av" aria-hidden="true">K</span><span><b>Kayla</b> · Holyoke</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request" class="req" aria-labelledby="req-h">
+    <div class="wrap req-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="eyebrow">Request service</p>
+          <h2 id="req-h">Tell us what's going on.</h2>
+          <p>Takes about a minute. During business hours we usually call back within the hour.</p>
+        </div>
+        <ul class="aside-list">
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span><b>Faster by phone?</b> <a href="tel:+14135550142">(413) 555-0142</a></span></li>
+          <li><svg aria-hidden="true"><use href="#i-text"/></svg><span><b>Prefer text?</b> Send a photo of the unit's label and we'll know what we're walking into.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span>We only use your number to call you back about this job.</span></li>
+        </ul>
+      </div>
+      <form class="card" id="reqform" novalidate>
+        <div class="fields">
+          <div><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(413) 555-0100" required></div>
+          <div><label for="f-town">Town</label>
+            <select id="f-town" name="town" required>
+              <option value="">Choose your town</option>
+              <option>Westfield</option><option>Southwick</option><option>Agawam</option><option>Feeding Hills</option><option>West Springfield</option><option>Holyoke</option><option>Easthampton</option><option>Granville</option><option>Russell</option><option>Montgomery</option><option>Somewhere else</option>
+            </select></div>
+          <div><label for="f-svc">What needs help?</label>
+            <select id="f-svc" name="service">
+              <option>No heat / heating problem</option><option>Boiler or radiators</option><option>Heat pump quote</option><option>Air conditioning</option><option>Water heater</option><option>Plumbing</option><option>Tune-up / maintenance</option>
+            </select></div>
+          <fieldset class="full">
+            <legend class="lbl">How soon?</legend>
+            <div class="seg">
+              <label><input type="radio" name="when" value="today" checked><span>Today</span></label>
+              <label><input type="radio" name="when" value="week"><span>This week</span></label>
+              <label><input type="radio" name="when" value="quote"><span>Quote only</span></label>
+            </div>
+          </fieldset>
+          <div class="full"><label for="f-msg">Details <span class="opt">(optional)</span></label><textarea id="f-msg" name="details" placeholder="e.g. Furnace clicks but won't light, about 15 years old, oil."></textarea></div>
+        </div>
+        <div class="form-foot">
+          <small>Weekdays 7 AM – 6 PM we usually call back within the hour.</small>
+          <button class="btn btn-call" type="submit">Send request</button>
+        </div>
+        <div class="sent" id="sent" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#i-check"/></svg><span>This is a sample site — nothing was sent.</span></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-h">Good to know before you call.</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>Do you really call back within the hour?<i aria-hidden="true"></i></summary><p>Usually, yes, on weekdays between 7 AM and 6 PM. On the busiest cold mornings it can slip; when it does, we text to let you know where you are in line instead of leaving you guessing.</p></details>
+        <details><summary>What counts as an emergency after hours?<i aria-hidden="true"></i></summary><p>No heat, a water heater or pipe actively leaking, or a CO alarm (after you've left the house and called 911). Everything else we'll book first thing the next business day.</p></details>
+        <details><summary>Is a heat pump worth it in an old New England house?<i aria-hidden="true"></i></summary><p>Often, especially if you're on oil or electric baseboard. Cold-climate models run well below zero. We'll look at your insulation and current system and give you an honest answer, including when keeping your boiler as backup makes sense.</p></details>
+        <details><summary>Can you help with Mass Save rebates?<i aria-hidden="true"></i></summary><p>Yes. We'll tell you which programs your project likely qualifies for and help with the paperwork. Rebate amounts change, so we don't quote a number until we know your setup.</p></details>
+        <details><summary>Do you charge for estimates?<i aria-hidden="true"></i></summary><p>Replacement and heat-pump estimates are free. Repair visits have a flat diagnostic fee that we tell you on the phone, and it's applied to the repair if you go ahead.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="ridgefoot" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60 V40 L120 20 L230 36 L360 8 L480 32 L600 16 L720 38 L860 10 L980 34 L1100 18 L1230 36 L1340 22 L1440 30 V60Z"/></svg>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="fbrand"><svg aria-hidden="true"><use href="#logo"/></svg><b>Ridgeline Heating &amp; Cooling</b></div>
+        <p>Family-run heating, cooling and plumbing out of Westfield, MA. ridgelineheating.com</p>
+        <p style="margin-top:14px"><a href="tel:+14135550142">(413) 555-0142</a> · <a href="sms:+14135550142">Text us</a></p>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <ul><li>Mon – Fri: 7 AM – 6 PM</li><li>Evenings &amp; weekends: emergency line</li><li>Call back: usually within the hour, 7 AM – 6 PM</li></ul>
+      </div>
+      <div>
+        <h2>Towns</h2>
+        <p>Westfield, Southwick, Agawam, Feeding Hills, West Springfield, Holyoke, Easthampton, Granville, Russell, Montgomery</p>
+      </div>
+    </div>
+    <div class="lic">
+      <span class="lic-badge"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>MA HIC #000000 · Master Plumber #00000 · Insured <em>(sample numbers)</em></span></span>
+      <p class="fine">© <span id="yr">2026</span> Ridgeline Heating &amp; Cooling, a fictional business. Sample site by 413 Growth.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('sample'),r=document.documentElement;
+  function fit(){r.style.setProperty('--bannerh',b.offsetHeight+'px')}
+  fit();window.addEventListener('resize',fit);
+  if(window.ResizeObserver)new ResizeObserver(fit).observe(b);
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+    var wd='',hr=0;p.forEach(function(x){if(x.type==='weekday')wd=x.value;if(x.type==='hour')hr=parseInt(x.value,10)%24});
+    var open=['Mon','Tue','Wed','Thu','Fri'].indexOf(wd)>-1&&hr>=7&&hr<18;
+    var s=document.getElementById('status');
+    document.getElementById('status-t').textContent=open?'Office open now':'After hours: emergency line on';
+    if(!open)s.classList.add('closed');
+  }catch(e){}
+
+  var f=document.getElementById('reqform'),sent=document.getElementById('sent');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    sent.classList.add('show');
+    sent.querySelector('span').textContent='This is a sample site — nothing was sent.';
+    f.querySelector('button[type=submit]').textContent='Sent (sample)';
+  });
+})();
+</script>
+</body>
+</html>

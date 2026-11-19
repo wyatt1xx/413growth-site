@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Juniper · Hair &amp; Pilates in Northampton</title>
+<meta name="description" content="Studio Juniper is an independent hair salon and small Pilates studio in Northampton, MA. Sample site made by 413 Growth; the business is fictional.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f0e7;--bg-2:#ece4d6;--surface:#fbf8f2;--ink:#1f2b25;--ink-2:#4b5a52;--muted:#6f7a72;
+  --line:#d9cfbd;--juniper:#2f4a3d;--juniper-2:#3f6150;--sage:#a8b89c;--clay:#b8653f;--clay-soft:#e7c6ad;
+  --berry:#5a6b8c;--berry-soft:#c9d0de;--sprig:#2f4a3d;--tk-bg:#2f4a3d;--tk-ink:#f5f0e7;--tk-eye:#e7c6ad;--on-dark:#f5f0e7;--banner:#18211d;--banner-ink:#e9e3d6;
+  --shadow:0 1px 2px rgba(31,43,37,.06),0 12px 32px -12px rgba(31,43,37,.18);
+  --r:18px;--gut:20px;--max:1200px;--bh:34px;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;--body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#121815;--bg-2:#18201c;--surface:#1c2521;--ink:#ece6da;--ink-2:#c5c2b6;--muted:#9aa197;
+  --line:#2f3a34;--juniper:#9fc2ad;--juniper-2:#7fa892;--sage:#5f7660;--clay:#e3946c;--clay-soft:#4a3226;
+  --berry:#a9b6d6;--berry-soft:#2c3446;--sprig:#8fb59f;--tk-bg:#253d31;--tk-ink:#ece6da;--tk-eye:#e3946c;--on-dark:#121815;--banner:#0b0f0d;--banner-ink:#d6d1c4;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 34px -14px rgba(0,0,0,.6);
+}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;padding-top:var(--bh);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em;font-variation-settings:"SOFT" 50}
+p{margin:0}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+section[id]{scroll-margin-top:calc(var(--bh) + 76px)}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.75em 1.4em;border-radius:999px;font:600 1rem/1 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s ease,background-color .2s,color .2s,box-shadow .2s}
+.btn-primary{background:var(--juniper);color:var(--on-dark)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-ghost{border-color:currentColor;color:var(--juniper);background:transparent}
+.btn-ghost:hover{background:var(--juniper);color:var(--on-dark)}
+.btn svg{width:18px;height:18px}
+
+/* demo banner */
+.demo{position:fixed;inset:0 0 auto 0;height:var(--bh);z-index:60;background:var(--banner);color:var(--banner-ink);font-size:12.5px;display:flex;align-items:center;justify-content:center;gap:.6em;padding:0 12px;white-space:nowrap;overflow:hidden}
+.demo b{font-weight:600}.demo .d2{opacity:.75}
+.demo a{color:#e9b38f;font-weight:600;text-decoration:none;margin-left:.2em}
+.demo a:hover{text-decoration:underline}
+@media (max-width:640px){.demo .d2,.demo .sep2{display:none}}
+
+/* header */
+.top{position:sticky;top:var(--bh);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--juniper)}
+.logo svg{width:34px;height:34px}
+.logo span{font-family:var(--display);font-size:1.4rem;letter-spacing:-.01em;color:var(--ink)}
+.logo em{font-style:italic;color:var(--juniper)}
+.nav{display:none;gap:28px;font-size:.95rem;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink-2);position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover::after{transform:scaleX(1)}
+.top .btn{min-height:42px;padding:.6em 1.15em;font-size:.95rem}
+@media (min-width:900px){.nav{display:flex}}
+
+/* hero */
+.hero{padding:44px 0 56px;position:relative}
+.hero .wrap{display:grid;gap:40px}
+.hero h1{font-size:clamp(2.6rem,9vw,5.4rem);font-weight:350;margin:14px 0 20px}
+.hero h1 em{font-style:italic;color:var(--juniper)}
+.hero .lede{font-size:1.12rem;color:var(--ink-2);max-width:34ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.offer-chip{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.92rem;text-decoration:none;color:var(--ink)}
+.offer-chip b{background:var(--clay);color:var(--on-dark);border-radius:999px;padding:3px 10px;font-size:.8rem}
+.offer-chip:hover{border-color:var(--clay)}
+.hero-art{position:relative;max-width:520px;width:100%;justify-self:center}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;background:linear-gradient(170deg,var(--clay-soft),color-mix(in srgb,var(--clay) 55%,var(--clay-soft)));overflow:hidden;position:relative;box-shadow:var(--shadow)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+.sway{transform-origin:50% 100%;animation:sway 9s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+.float{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-size:.9rem;line-height:1.35}
+.float small{display:block;color:var(--muted);font-size:.78rem}
+.float strong{font-family:var(--display);font-size:1.25rem;font-weight:500}
+.f1{left:-6px;bottom:16%;animation:bob 7s ease-in-out infinite}
+.f2{right:-6px;top:12%;animation:bob 8s ease-in-out -3s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (min-width:900px){.hero{padding:72px 0 96px}.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}.f1{left:-48px}.f2{right:-36px}}
+
+/* ticker */
+.strip{border-block:1px solid var(--line);background:var(--bg-2);overflow:hidden}
+.strip ul{list-style:none;margin:0;padding:14px 0;display:flex;gap:40px;width:max-content;animation:tick 40s linear infinite;font-family:var(--display);font-style:italic;font-size:1.15rem;color:var(--juniper)}
+.strip li{display:flex;align-items:center;gap:40px}
+.strip li::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--berry)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:80px 0}
+.sec-head{display:grid;gap:14px;margin-bottom:40px;max-width:640px}
+.sec-head h2{font-size:clamp(2rem,6vw,3.3rem)}
+.sec-head h2 em{font-style:italic;color:var(--juniper)}
+.sec-head p{color:var(--ink-2)}
+.sec-head .eyebrow{color:var(--clay)}
+
+/* prices */
+.menu{display:grid;gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
+.card h3{font-size:1.7rem;display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.card h3 svg{width:30px;height:30px;color:var(--clay)}
+.card .sub{color:var(--muted);font-size:.92rem;margin-bottom:10px}
+.pl{list-style:none;margin:0;padding:0}
+.pl li{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:4px 12px;padding:14px 0;border-top:1px dashed var(--line)}
+.pl li:first-child{border-top:0}
+.pl .n{font-weight:600}
+.pl .d{grid-column:1;font-size:.86rem;color:var(--muted)}
+.pl .p{grid-row:1/span 2;grid-column:2;text-align:right;font-family:var(--display);font-size:1.45rem;line-height:1;color:var(--juniper);white-space:nowrap}
+.pl .p small{display:block;font-family:var(--body);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.dur{display:inline-flex;align-items:center;gap:5px}
+.dur svg{width:14px;height:14px}
+.pnote{margin-top:22px;font-size:.92rem;color:var(--muted);max-width:60ch}
+@media (min-width:900px){.menu{grid-template-columns:1.2fr 1fr}.card{padding:34px 34px}}
+
+/* offer */
+.offer{padding:0 0 80px}
+.ticket{position:relative;display:grid;gap:22px;background:var(--tk-bg);color:var(--tk-ink);border-radius:26px;padding:34px 24px;overflow:hidden}
+.ticket::before,.ticket::after{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:var(--bg);top:50%;transform:translateY(-50%)}
+.ticket::before{left:-15px}.ticket::after{right:-15px}
+.ticket .eyebrow{color:var(--tk-eye)}
+.ticket>*:not(.deco){position:relative}
+.ticket h2{font-size:clamp(2rem,6.5vw,3.4rem);font-weight:350}
+.ticket h2 em{font-style:italic}
+.terms{list-style:none;margin:0;padding:0;font-size:.92rem;display:grid;gap:6px;opacity:.92}
+.terms li{display:flex;gap:10px}
+.terms li::before{content:"";flex:none;width:6px;height:6px;margin-top:.62em;border-radius:50%;background:currentColor;opacity:.6}
+.ticket .btn{background:var(--tk-ink);color:var(--tk-bg);justify-self:start}
+.ticket .btn:hover{transform:translateY(-2px)}
+.ticket .deco{position:absolute;right:-30px;bottom:-40px;width:220px;opacity:.16;color:var(--tk-ink)}
+.endtag{display:inline-block;border:1px dashed currentColor;border-radius:8px;padding:2px 10px;font-size:.85rem;font-weight:600}
+@media (min-width:900px){.ticket{grid-template-columns:1.3fr 1fr;padding:52px 64px;align-items:center;gap:20px 56px}.ticket .btn{grid-column:1}}
+
+/* booking */
+#book{background:var(--bg-2);border-block:1px solid var(--line)}
+.booker{display:grid;gap:28px}
+.bk{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;box-shadow:var(--shadow)}
+.bk fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
+.bk legend{font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px;padding:0}
+.bk legend i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--juniper);color:var(--on-dark);display:inline-grid;place-items:center;font-size:.82rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:block;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;font-size:.93rem;line-height:1.25;background:var(--bg);transition:border-color .15s,background-color .15s}
+.chip span small{display:block;color:var(--muted);font-size:.78rem}
+.chip input:checked+span{border-color:var(--juniper);background:color-mix(in srgb,var(--juniper) 12%,var(--surface))}
+.chip input:focus-visible+span{outline:3px solid var(--clay);outline-offset:2px}
+.chip:hover span{border-color:var(--juniper-2)}
+.days .chip span{text-align:center;min-width:64px}
+.summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+.summary p{font-size:.95rem;color:var(--ink-2)}
+.summary strong{color:var(--ink)}
+.sample-note{display:flex;gap:12px;margin-top:18px;padding:14px 16px;border-radius:12px;background:color-mix(in srgb,var(--sage) 22%,var(--surface));border:1px solid color-mix(in srgb,var(--juniper-2) 40%,transparent);font-size:.93rem}
+.sample-note svg{flex:none;width:22px;height:22px;color:var(--juniper)}
+.sample-note.pop{animation:pop .4s ease}
+@keyframes pop{50%{transform:scale(1.02)}}
+.book-side{display:grid;gap:18px;align-content:start}
+.book-side .call{font-family:var(--display);font-size:1.6rem;color:var(--juniper);text-decoration:none}
+.book-side ul{margin:0;padding-left:1.1em;color:var(--ink-2);display:grid;gap:6px}
+@media (min-width:900px){.booker{grid-template-columns:1.5fr 1fr;gap:56px}.bk{padding:34px}}
+
+/* about */
+.about .wrap{display:grid;gap:40px}
+.about-art{border-radius:var(--r);background:var(--juniper);aspect-ratio:5/4;position:relative;overflow:hidden}
+.about-art svg{position:absolute;inset:0;width:100%;height:100%}
+.about p+p{margin-top:16px}
+.about .big{font-family:var(--display);font-size:clamp(1.45rem,3.6vw,2rem);line-height:1.3;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;text-align:center}
+.facts div{border:1px solid var(--line);border-radius:14px;padding:14px 6px}
+.facts strong{display:block;font-family:var(--display);font-size:clamp(1.3rem,5vw,1.8rem);white-space:nowrap;font-weight:400;color:var(--clay)}
+.facts span{font-size:.8rem;color:var(--muted)}
+@media (min-width:900px){.about .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:72px}}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.person{text-align:left}
+.portrait{aspect-ratio:3/4;border-radius:999px 999px 16px 16px;overflow:hidden;margin-bottom:14px;transition:transform .3s}
+.person:hover .portrait{transform:translateY(-4px)}
+.portrait svg{width:100%;height:100%}
+.person h3{font-size:1.45rem}
+.person .role{font-size:.85rem;color:var(--clay);font-weight:600;letter-spacing:.04em}
+.person p{font-size:.9rem;color:var(--ink-2);margin-top:6px}
+@media (min-width:900px){.team{grid-template-columns:repeat(4,1fr);gap:28px}}
+
+/* schedule */
+.sched{display:grid;gap:12px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:start;align-content:start}
+.day h3{font-size:1.3rem;font-style:italic;color:var(--juniper);padding-top:4px}
+.day ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cls{display:flex;justify-content:space-between;gap:10px;padding:8px 12px;border-radius:10px;background:var(--bg);font-size:.92rem}
+.cls b{font-weight:600}
+.cls span{color:var(--muted);white-space:nowrap}
+.cls.intro{background:color-mix(in srgb,var(--clay) 16%,var(--surface))}
+.cls.ref{background:color-mix(in srgb,var(--berry) 24%,var(--surface))}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-size:.86rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+@media (min-width:900px){.sched{grid-template-columns:repeat(5,1fr)}.day{grid-template-columns:1fr;padding:20px}.cls{flex-direction:column;gap:2px}}
+
+/* reviews */
+.rv-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px dashed var(--muted);font-size:.82rem;font-weight:600;color:var(--ink-2)}
+.reviews{display:grid;gap:16px}
+.rv{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;margin:0}
+.stars{display:flex;gap:3px;color:var(--clay)}
+.stars svg{width:18px;height:18px}
+.rv blockquote{margin:0;font-family:var(--display);font-size:1.18rem;line-height:1.45;font-weight:350}
+.rv figcaption{margin-top:auto;font-size:.88rem;color:var(--muted)}
+.rv figcaption b{color:var(--ink);font-weight:600}
+@media (min-width:700px){.reviews{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.reviews{grid-template-columns:repeat(3,1fr)}.rv.wide{grid-column:span 2}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tile{aspect-ratio:1;border-radius:12px;overflow:hidden;position:relative;margin:0}
+.tile svg{width:100%;height:100%;transition:transform .5s ease}
+.tile:hover svg{transform:scale(1.04)}
+.tile figcaption{position:absolute;left:10px;bottom:10px;font-size:.78rem;font-weight:600;background:rgba(20,26,23,.62);color:#f5f0e7;padding:4px 10px;border-radius:999px}
+.ig{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-weight:600;text-decoration:none}
+.ig svg{width:22px;height:22px}
+@media (min-width:800px){.gal{grid-template-columns:repeat(3,1fr);gap:14px}}
+
+/* visit */
+.visit{display:grid;gap:24px}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:280px;background:var(--bg-2)}
+.map svg{width:100%;height:100%}
+.info{display:grid;gap:22px}
+.info h3{font-size:1.25rem;margin-bottom:8px}
+.hours{width:100%;border-collapse:collapse;font-size:.95rem}
+.hours th{text-align:left;font-weight:500;padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td{text-align:right;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.hours .closed td{color:var(--muted)}
+address{font-style:normal;color:var(--ink-2)}
+.tel{font-family:var(--display);font-size:1.7rem;color:var(--juniper);text-decoration:none}
+@media (min-width:900px){.visit{grid-template-columns:1.2fr 1fr;gap:48px}}
+
+/* footer */
+footer{background:var(--banner);color:var(--banner-ink);padding:56px 0 110px}
+footer .wrap{display:grid;gap:28px}
+footer .logo span{color:var(--banner-ink)}
+footer .logo,footer .logo em{color:#a8c7b4}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.92rem}
+footer nav a{text-decoration:none;opacity:.85}
+footer nav a:hover{opacity:1;text-decoration:underline}
+footer .fine{font-size:.82rem;opacity:.65;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+footer .fine a{color:#e9b38f}
+@media (min-width:900px){footer{padding-bottom:56px}footer .wrap{grid-template-columns:1fr auto;align-items:center}footer .fine{grid-column:1/-1}}
+
+/* sticky phone bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.mbar .btn{flex:1}
+.mbar .btn-ghost{flex:0 0 auto;width:52px;padding:0}
+@media (min-width:900px){.mbar{display:none}}
+@media (max-width:899px){body{padding-bottom:76px}.top .btn{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo" role="note">
+  <b>Sample site made by 413 Growth</b><span class="sep2" aria-hidden="true">·</span><span class="d2">Studio Juniper is a made-up business</span><span aria-hidden="true">·</span><a href="../../work.html">← Back to our work</a>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="sprig" viewBox="0 0 120 220">
+      <path d="M60 218 C58 170 62 120 58 70 C56 44 62 20 70 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M59 200 l-22 -14 M60 200 l20 -16 M59 182 l-26 -12 M60 180 l24 -16 M59 162 l-28 -10 M60 160 l26 -14 M58 142 l-28 -8 M59 140 l27 -15 M58 122 l-27 -6 M58 120 l26 -16 M57 102 l-25 -4 M58 100 l24 -16 M57 82 l-22 -2 M58 80 l22 -16 M58 62 l-18 0 M60 60 l18 -14 M61 42 l-14 2 M63 40 l14 -12 M65 24 l-10 3 M67 22 l10 -10"/>
+        <path d="M44 150 c-16 -6 -26 -20 -30 -34 M42 152 l-14 -2 M36 140 l-12 2 M30 128 l-10 3" />
+        <path d="M75 116 c14 -8 22 -22 24 -38 M80 112 l12 2 M86 102 l12 0 M92 90 l10 -2"/>
+      </g>
+      <g style="fill:var(--berry)"><circle cx="36" cy="172" r="6"/><circle cx="46" cy="178" r="5"/><circle cx="84" cy="138" r="6"/><circle cx="92" cy="146" r="4.5"/><circle cx="40" cy="94" r="5"/></g>
+      <g fill="#fff" opacity=".45"><circle cx="34" cy="170" r="1.6"/><circle cx="82" cy="136" r="1.6"/><circle cx="38" cy="92" r="1.3"/></g>
+    </symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4.2-2 1.4a12 12 0 0 0 6.3 6.3l1.4-2 4.2 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Studio Juniper, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/><use href="#sprig" x="9" y="5" width="22" height="31" style="color:currentColor"/></svg>
+      <span>Studio <em>Juniper</em></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#prices">Prices</a><a href="#pilates">Pilates</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Hair salon + Pilates studio · Northampton, MA</p>
+        <h1 id="hero-h">Good hair. Strong core. <em>No rush.</em></h1>
+        <p class="lede">Three stylists, one Pilates instructor and a sunny second-floor studio. Book a cut, color or class in under a minute.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#book">Book a visit <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#prices">See prices</a>
+        </div>
+        <a class="offer-chip" href="#offer"><b>$15 off</b> Your first visit, through Jan 31</a>
+      </div>
+      <div class="hero-art">
+        <div class="arch">
+          <svg viewBox="0 0 400 500" role="img" aria-label="Illustration of a juniper branch with blue berries under a soft sun">
+            <circle cx="270" cy="150" r="78" fill="#f3d9c2" opacity=".75"/>
+            <path d="M0 400 C90 360 160 420 240 390 S360 360 400 380 V500 H0z" fill="#2f4a3d" opacity=".9"/>
+            <path d="M0 440 C110 410 200 470 290 440 S380 420 400 430 V500 H0z" fill="#1f3329"/>
+            <g class="sway" style="color:var(--sprig)"><use href="#sprig" x="70" y="80" width="200" height="370"/></g>
+            <g style="color:#3f6150" opacity=".7" transform="rotate(18 300 400)"><use href="#sprig" x="250" y="210" width="110" height="200"/></g>
+            <g fill="none" stroke="#fbf8f2" stroke-width="1.4" opacity=".55"><path d="M40 70 q30 -20 60 0 t60 0"/><path d="M300 300 q20 -14 40 0 t40 0"/></g>
+          </svg>
+        </div>
+        <div class="float f1"><small>Cut &amp; style</small><strong>from $55</strong><small>45 min</small></div>
+        <div class="float f2"><small>Pilates intro class</small><strong>$20</strong><small>50 min · 6 max</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <ul>
+      <li>Lived-in color</li><li>Precision cuts</li><li>Curly cuts</li><li>Reformer small groups</li><li>Mat classes</li><li>Blowouts</li>
+      <li>Lived-in color</li><li>Precision cuts</li><li>Curly cuts</li><li>Reformer small groups</li><li>Mat classes</li><li>Blowouts</li>
+    </ul>
+  </div>
+
+  <section class="sec" id="prices" aria-labelledby="prices-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Prices</p>
+        <h2 id="prices-h">What it costs, <em>how long it takes.</em></h2>
+        <p>No surprises at the chair. Every price is a starting point; we'll confirm yours before we begin.</p>
+      </div>
+      <div class="menu">
+        <div class="card">
+          <h3><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="24" r="4"/><circle cx="20" cy="26" r="4"/><path d="M11 21 L26 4 M17 23 L14 5"/></g></svg>Hair</h3>
+          <p class="sub">Every service includes a consult and a finish.</p>
+          <ul class="pl">
+            <li><span class="n">Cut &amp; style</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>45 min</span> · wash, cut, finish</span><span class="p"><small>from</small>$55</span></li>
+            <li><span class="n">Clean-up cut</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>30 min</span> · bangs, neckline, shape</span><span class="p"><small>from</small>$35</span></li>
+            <li><span class="n">Blowout</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>30 min</span> · smooth, bouncy or waves</span><span class="p"><small>from</small>$40</span></li>
+            <li><span class="n">Color</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>2 hr</span> · single process + style</span><span class="p"><small>from</small>$95</span></li>
+            <li><span class="n">Partial highlights</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>2.5 hr</span> · foils + gloss</span><span class="p"><small>from</small>$130</span></li>
+            <li><span class="n">Balayage</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>3 hr</span> · hand-painted, soft grow-out</span><span class="p"><small>from</small>$160</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="16" cy="6" r="3"/><path d="M16 10 v9 M8 14 l8 -2 8 2 M16 19 l-6 9 M16 19 l6 9"/></g></svg>Pilates</h3>
+          <p class="sub">Small groups, six people max. Mats and props provided.</p>
+          <ul class="pl">
+            <li><span class="n">Intro class</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>50 min</span> · start here, no experience needed</span><span class="p"><small>flat</small>$20</span></li>
+            <li><span class="n">Mat class</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>50 min</span> · drop-in</span><span class="p"><small>flat</small>$24</span></li>
+            <li><span class="n">Reformer small group</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>50 min</span> · up to 4 reformers</span><span class="p"><small>flat</small>$34</span></li>
+            <li><span class="n">Private session</span><span class="d"><span class="dur"><svg aria-hidden="true"><use href="#clock"/></svg>55 min</span> · one-on-one, any level</span><span class="p"><small>flat</small>$85</span></li>
+            <li><span class="n">5-class pack</span><span class="d">mat or reformer · good for 3 months</span><span class="p"><small>pack</small>$110</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pnote">Hair prices vary with length and thickness. Gratuity is never expected. Cancel or move your visit up to 24 hours ahead at no charge.</p>
+    </div>
+  </section>
+
+  <section class="offer" id="offer" aria-labelledby="offer-h">
+    <div class="wrap">
+      <div class="ticket">
+        <svg class="deco" viewBox="0 0 120 220" aria-hidden="true"><use href="#sprig"/></svg>
+        <div>
+          <p class="eyebrow">First-visit offer</p>
+          <h2 id="offer-h">New here? <em>$15 off</em> your first visit, through Jan 31.</h2>
+        </div>
+        <ul class="terms" aria-label="Offer terms">
+          <li>For first-time guests only, hair or Pilates.</li>
+          <li>On any service $40 and up, or a 5-class Pilates pack.</li>
+          <li>One per person. Not combined with other offers.</li>
+          <li>Just mention it when you book.</li>
+          <li><span class="endtag">Ends January 31, 2027</span></li>
+        </ul>
+        <a class="btn" href="#book">Claim it when you book <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="book" aria-labelledby="book-h">
+    <div class="wrap booker">
+      <div>
+        <div class="sec-head">
+          <p class="eyebrow">Book</p>
+          <h2 id="book-h">Pick a service, <em>pick a day.</em></h2>
+        </div>
+        <form class="bk" id="bk" onsubmit="return false">
+          <fieldset>
+            <legend><i>1</i>Service</legend>
+            <div class="chips" id="svc">
+              <label class="chip"><input type="radio" name="svc" value="Cut &amp; style" checked><span>Cut &amp; style<small>45 min · from $55</small></span></label>
+              <label class="chip"><input type="radio" name="svc" value="Color"><span>Color<small>2 hr · from $95</small></span></label>
+              <label class="chip"><input type="radio" name="svc" value="Blowout"><span>Blowout<small>30 min · from $40</small></span></label>
+              <label class="chip"><input type="radio" name="svc" value="Balayage"><span>Balayage<small>3 hr · from $160</small></span></label>
+              <label class="chip"><input type="radio" name="svc" value="Pilates intro class"><span>Pilates intro<small>50 min · $20</small></span></label>
+              <label class="chip"><input type="radio" name="svc" value="Reformer small group"><span>Reformer<small>50 min · $34</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><i>2</i>Day</legend>
+            <div class="chips days" id="days">
+              <label class="chip"><input type="radio" name="day" value="Tuesday" checked><span>Tue<small data-d="2">&nbsp;</small></span></label>
+              <label class="chip"><input type="radio" name="day" value="Wednesday"><span>Wed<small data-d="3">&nbsp;</small></span></label>
+              <label class="chip"><input type="radio" name="day" value="Thursday"><span>Thu<small data-d="4">&nbsp;</small></span></label>
+              <label class="chip"><input type="radio" name="day" value="Friday"><span>Fri<small data-d="5">&nbsp;</small></span></label>
+              <label class="chip"><input type="radio" name="day" value="Saturday"><span>Sat<small data-d="6">&nbsp;</small></span></label>
+            </div>
+          </fieldset>
+          <div class="summary">
+            <p aria-live="polite">You picked <strong id="pick">Cut &amp; style · Tuesday</strong></p>
+            <button class="btn btn-primary" type="button" id="go">See times <svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          </div>
+          <div class="sample-note" id="note" role="status">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <p><strong>This is a sample site</strong> — booking would open your booking app here (Square, Vagaro, Mindbody or whatever you already use), with live times for that day.</p>
+          </div>
+        </form>
+      </div>
+      <aside class="book-side" aria-label="Other ways to book">
+        <p class="eyebrow">Rather talk to a person?</p>
+        <a class="call" href="tel:+14135550167">(413) 555-0167</a>
+        <p style="color:var(--ink-2)">We pick up between clients, Tue–Sat. Leave a message and we'll call back the same day.</p>
+        <ul>
+          <li>New guests: mention the $15 first-visit offer.</li>
+          <li>Color clients: a quick patch test may be needed.</li>
+          <li>Pilates: wear comfy clothes, grip socks provided.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec about" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="about-art">
+        <svg viewBox="0 0 500 400" role="img" aria-label="Line drawing of the studio: an arched window, a salon chair and a Pilates reformer">
+          <rect width="500" height="400" fill="#2f4a3d"/>
+          <g fill="none" stroke="#e7c6ad" stroke-width="2" stroke-linecap="round">
+            <path d="M60 330 V140 a70 70 0 0 1 140 0 V330z"/><path d="M130 70 V330 M60 210 H200"/>
+            <circle cx="150" cy="110" r="22" stroke="#e3946c"/>
+            <path d="M250 330 v-26 h70 v26 M250 304 c-6 -60 0 -80 34 -80 s40 20 36 80 M262 330 l-8 30 M308 330 l8 30 M285 330 v30"/>
+            <path d="M340 340 H470 M350 340 v18 M460 340 v18 M350 320 h110 v20 M440 320 c10 -40 20 -56 24 -60 M380 320 v-10 h28 v10"/>
+          </g>
+          <g style="color:#a8c7b4"><use href="#sprig" x="400" y="120" width="70" height="130"/></g>
+          <path d="M0 370 H500" stroke="#e7c6ad" stroke-width="1" opacity=".4"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">About the studio</p>
+        <h2 id="about-h" class="sr">About Studio Juniper</h2>
+        <p class="big">We opened Studio Juniper because getting your hair done and getting stronger should both feel like a breath out.</p>
+        <p style="color:var(--ink-2)">The salon has four chairs by tall windows; the Pilates room next door has four reformers and space for six on the mat. We book enough time to do the work properly, use low-fragrance products, and keep the music quiet enough to talk or not talk.</p>
+        <div class="facts">
+          <div><strong>4</strong><span>chairs</span></div>
+          <div><strong>6</strong><span>max per class</span></div>
+          <div><strong>Tue–Sat</strong><span>open</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="team" aria-labelledby="team-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The team</p>
+        <h2 id="team-h">Four people, <em>one calm room.</em></h2>
+      </div>
+      <div class="team">
+        <article class="person">
+          <div class="portrait"><svg viewBox="0 0 300 400" role="img" aria-label="Illustrated portrait of Maren"><rect width="300" height="400" fill="#e7c6ad"/><circle cx="150" cy="160" r="62" fill="#b8653f"/><path d="M88 165 c-6 -80 130 -90 124 0 c6 60 -10 110 -10 150 h-104 c0 -40 -16 -90 -10 -150z" fill="#5a3624"/><ellipse cx="150" cy="170" rx="44" ry="54" fill="#d9a07f"/><rect x="132" y="200" width="36" height="100" rx="12" style="fill:#d9a07f"/><path d="M48 400 c0 -96 42 -138 102 -138 s102 42 102 138z" fill="#2f4a3d"/></svg></div>
+          <h3>Maren</h3><p class="role">Owner · Color lead</p><p>Balayage, lived-in blondes and fixing box dye with patience.</p>
+        </article>
+        <article class="person">
+          <div class="portrait"><svg viewBox="0 0 300 400" role="img" aria-label="Illustrated portrait of Theo"><rect width="300" height="400" fill="#c9d0de"/><ellipse cx="150" cy="168" rx="46" ry="56" fill="#8a5a3c"/><path d="M102 150 c0 -50 96 -54 96 -4 c-14 -16 -60 -24 -96 4z" fill="#1f2b25"/><rect x="132" y="200" width="36" height="100" rx="12" style="fill:#8a5a3c"/><path d="M48 400 c0 -96 42 -138 102 -138 s102 42 102 138z" fill="#b8653f"/></svg></div>
+          <h3>Theo</h3><p class="role">Stylist · Cuts</p><p>Short cuts, fades and clean shapes that grow out well.</p>
+        </article>
+        <article class="person">
+          <div class="portrait"><svg viewBox="0 0 300 400" role="img" aria-label="Illustrated portrait of Lucia"><rect width="300" height="400" fill="#a8b89c"/><g fill="#2a1d17"><circle cx="110" cy="130" r="36"/><circle cx="150" cy="104" r="40"/><circle cx="192" cy="130" r="36"/><circle cx="96" cy="176" r="30"/><circle cx="204" cy="176" r="30"/></g><ellipse cx="150" cy="172" rx="44" ry="54" fill="#c48a63"/><rect x="132" y="200" width="36" height="100" rx="12" style="fill:#c48a63"/><path d="M48 400 c0 -96 42 -138 102 -138 s102 42 102 138z" fill="#f5f0e7"/></svg></div>
+          <h3>Lucia</h3><p class="role">Stylist · Curls</p><p>Curly and coily cuts, dry cutting and wash-day routines.</p>
+        </article>
+        <article class="person">
+          <div class="portrait"><svg viewBox="0 0 300 400" role="img" aria-label="Illustrated portrait of Ines"><rect width="300" height="400" fill="#2f4a3d"/><circle cx="150" cy="96" r="26" fill="#3b2a20"/><ellipse cx="150" cy="168" rx="44" ry="54" fill="#e2b393"/><path d="M106 160 c0 -44 88 -46 88 0 c-20 -22 -68 -22 -88 0z" fill="#3b2a20"/><rect x="132" y="200" width="36" height="100" rx="12" style="fill:#e2b393"/><path d="M48 400 c0 -96 42 -138 102 -138 s102 42 102 138z" fill="#e7c6ad"/></svg></div>
+          <h3>Ines</h3><p class="role">Pilates instructor</p><p>Comprehensively certified. Big on breath, posture and real-life strength.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pilates" aria-labelledby="pilates-h" style="background:var(--bg-2);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Pilates schedule</p>
+        <h2 id="pilates-h">This week <em>on the mat.</em></h2>
+        <p>Six spots per class. New to Pilates? Start with an Intro class — Ines will set you up.</p>
+      </div>
+      <div class="sched">
+        <div class="day"><h3>Tue</h3><ul><li class="cls"><b>Mat</b><span>7:00 am</span></li><li class="cls ref"><b>Reformer</b><span>12:15 pm</span></li><li class="cls intro"><b>Intro</b><span>5:30 pm</span></li></ul></div>
+        <div class="day"><h3>Wed</h3><ul><li class="cls ref"><b>Reformer</b><span>7:00 am</span></li><li class="cls"><b>Mat</b><span>6:00 pm</span></li></ul></div>
+        <div class="day"><h3>Thu</h3><ul><li class="cls"><b>Mat</b><span>7:00 am</span></li><li class="cls ref"><b>Reformer</b><span>12:15 pm</span></li><li class="cls intro"><b>Intro</b><span>5:30 pm</span></li></ul></div>
+        <div class="day"><h3>Fri</h3><ul><li class="cls ref"><b>Reformer</b><span>9:00 am</span></li><li class="cls"><b>Mat</b><span>12:15 pm</span></li></ul></div>
+        <div class="day"><h3>Sat</h3><ul><li class="cls intro"><b>Intro</b><span>8:30 am</span></li><li class="cls ref"><b>Reformer</b><span>10:00 am</span></li></ul></div>
+      </div>
+      <div class="legend" aria-hidden="true"><span><i style="background:color-mix(in srgb,var(--clay) 30%,var(--surface))"></i>Intro · $20</span><span><i style="background:var(--bg);border:1px solid var(--line)"></i>Mat · $24</span><span><i style="background:color-mix(in srgb,var(--berry) 30%,var(--surface))"></i>Reformer · $34</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="sec-head rv-head" style="max-width:none">
+        <div style="display:grid;gap:14px">
+          <p class="eyebrow">Reviews</p>
+          <h2 id="reviews-h">Kind words, <em>right here.</em></h2>
+        </div>
+        <span class="badge">Sample reviews · written for this demo site</span>
+      </div>
+      <div class="reviews">
+        <figure class="rv wide">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>Maren listened to every rambly thing I said about my hair and still nailed it. My balayage grew out so softly I went four months between visits.</blockquote>
+          <figcaption><b>Dana R.</b> · Florence</figcaption>
+        </figure>
+        <figure class="rv">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>First curly cut I've ever left happy. Lucia taught me a routine I can actually do.</blockquote>
+          <figcaption><b>Priya S.</b> · Amherst</figcaption>
+        </figure>
+        <figure class="rv">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>The intro class was the least intimidating workout of my life. Six people, lots of help.</blockquote>
+          <figcaption><b>Beth M.</b> · Easthampton</figcaption>
+        </figure>
+        <figure class="rv">
+          <div class="stars" role="img" aria-label="4 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg style="opacity:.25"><use href="#star"/></svg></div>
+          <blockquote>Great quick cut from Theo and the price matched the website. Parking on a Saturday took a minute.</blockquote>
+          <figcaption><b>Marcus T.</b> · Hadley</figcaption>
+        </figure>
+        <figure class="rv">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+          <blockquote>I do reformer with Ines on Tuesday and a blowout on Saturday. Best two hours of my week.</blockquote>
+          <figcaption><b>Elena V.</b> · Northampton</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="gallery" aria-labelledby="gal-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head rv-head" style="max-width:none">
+        <div style="display:grid;gap:14px"><p class="eyebrow">From the studio</p><h2 id="gal-h">Lately <em>on the feed.</em></h2></div>
+        <span class="ig"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>@studiojuniper</span>
+      </div>
+      <div class="gal">
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="Flowing copper waves, like balayage"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a3624"/><stop offset=".6" stop-color="#b8653f"/><stop offset="1" stop-color="#f0c9a4"/></linearGradient></defs><rect width="200" height="200" fill="url(#g1)"/><g fill="none" stroke="#f7dcc2" stroke-width="2" opacity=".6"><path d="M-10 40 C40 10 60 80 110 50 S180 20 210 50"/><path d="M-10 80 C40 50 60 120 110 90 S180 60 210 90"/><path d="M-10 120 C40 90 60 160 110 130 S180 100 210 130"/><path d="M-10 160 C40 130 60 200 110 170 S180 140 210 170"/></g></svg><figcaption>Copper balayage</figcaption></figure>
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="A fan of hair color swatches"><rect width="200" height="200" fill="#e9dfcd"/><g transform="translate(100 172) scale(.86)"><g transform="rotate(-45)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#2a1d17"/></g><g transform="rotate(-27)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#5a3624"/></g><g transform="rotate(-9)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#b8653f"/></g><g transform="rotate(9)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#d99a6c"/></g><g transform="rotate(27)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#ecd1a8"/></g><g transform="rotate(45)"><rect x="-10" y="-140" width="20" height="130" rx="10" fill="#c9d0de"/></g><circle r="9" fill="#2f4a3d"/></g></svg><figcaption>Swatch day</figcaption></figure>
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="A juniper sprig on deep green"><rect width="200" height="200" fill="#2f4a3d"/><circle cx="140" cy="60" r="34" fill="#3f6150"/><g style="color:#cfe0d3"><use href="#sprig" x="50" y="20" width="100" height="180"/></g></svg><figcaption>Our namesake</figcaption></figure>
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="Line drawing of a Pilates reformer at sunrise"><rect width="200" height="200" fill="#c9d0de"/><circle cx="100" cy="92" r="46" fill="#e7c6ad"/><g fill="none" stroke="#1f2b25" stroke-width="2.2" stroke-linecap="round"><path d="M24 140 H176 M30 140 v18 M170 140 v18 M40 128 h70 v12 M150 140 v-24 M146 116 h8"/><path d="M60 128 c4 -20 10 -30 22 -34 l20 -6 M102 88 l26 22"/><circle cx="56" cy="122" r="7"/></g></svg><figcaption>7 am reformer</figcaption></figure>
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="Glossy dark hair waves"><rect width="200" height="200" fill="#1f2b25"/><g fill="none" stroke-linecap="round"><path d="M40 0 C20 60 80 90 50 200" stroke="#3b2a20" stroke-width="30"/><path d="M90 0 C70 60 130 90 100 200" stroke="#4a3426" stroke-width="30"/><path d="M140 0 C120 60 180 90 150 200" stroke="#3b2a20" stroke-width="30"/><path d="M92 10 C76 60 126 92 100 180" stroke="#c48a63" stroke-width="3" opacity=".7"/><path d="M42 10 C26 60 76 92 50 180" stroke="#c48a63" stroke-width="3" opacity=".5"/></g></svg><figcaption>Gloss &amp; blowout</figcaption></figure>
+        <figure class="tile"><svg viewBox="0 0 200 200" role="img" aria-label="Arched window with plants and morning light"><rect width="200" height="200" fill="#e7c6ad"/><path d="M50 200 V90 a50 50 0 0 1 100 0 V200z" fill="#f5f0e7"/><path d="M100 40 V200 M50 120 H150" stroke="#b8653f" stroke-width="2"/><circle cx="125" cy="80" r="14" fill="#f0c9a4"/><path d="M34 166 h36 l-5 34 h-26z" fill="#b8653f"/><path d="M52 160 c-4 -20 4 -34 14 -40 M52 160 c-10 -14 -22 -18 -30 -16" stroke="#3f6150" stroke-width="3" fill="none" stroke-linecap="round"/></svg><figcaption>Morning light</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Visit</p><h2 id="visit-h">Find us <em>upstairs.</em></h2></div>
+      <div class="visit">
+        <div class="map">
+          <svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Simple illustrated map showing the studio near a park and the bike path">
+            <rect style="fill:var(--bg-2)" width="600" height="380"/>
+            <path style="fill:var(--sage)" d="M0 250 C120 230 200 290 320 260 S520 200 600 220 V380 H0z" opacity=".45"/>
+            <g style="stroke:var(--surface)" stroke-width="22" fill="none" stroke-linecap="round"><path d="M-20 140 H620"/><path d="M220 -20 V400"/><path d="M430 -20 C420 120 460 240 440 400"/></g>
+            <path style="stroke:var(--clay)" d="M-20 320 C150 300 260 340 400 310 S560 270 620 290" stroke-width="3" stroke-dasharray="8 8" fill="none"/>
+            <g style="fill:var(--muted)" font-family="Hanken Grotesk, sans-serif" font-size="13" font-weight="600" letter-spacing="1"><text x="30" y="128">ORCHARD ROW</text><text x="232" y="40" transform="rotate(90 232 40)">MAPLE ST</text><text x="60" y="350">BIKE PATH</text><text x="500" y="365">PARK</text></g>
+            <g transform="translate(300 140)"><circle style="fill:var(--clay)" r="40" opacity=".18"/><path style="fill:var(--juniper)" d="M0 -6 c-14 0 -22 -10 -22 -22 a22 22 0 0 1 44 0 c0 12 -8 22 -22 22z M0 -6 L0 0"/><path style="fill:var(--juniper)" d="M0 -6 L-9 -18 h18z"/><circle style="fill:var(--surface)" cy="-28" r="8"/></g>
+            <rect style="fill:var(--surface);stroke:var(--line)" x="330" y="150" rx="10" width="170" height="44"/>
+            <text style="fill:var(--ink)" x="346" y="178" font-family="Fraunces, serif" font-size="18">Studio Juniper</text>
+          </svg>
+        </div>
+        <div class="info">
+          <div>
+            <h3>Address</h3>
+            <address>112 Orchard Row, 2nd floor<br>Northampton, MA 01060 <small style="opacity:.7">(sample address)</small><br><span style="color:var(--muted);font-size:.9rem">Free lot behind the building · elevator access</span></address>
+          </div>
+          <div>
+            <h3>Call or text</h3>
+            <a class="tel" href="tel:+14135550167">(413) 555-0167</a>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <table class="hours">
+              <caption class="sr">Opening hours</caption>
+              <tbody>
+                <tr><th scope="row">Tuesday – Thursday</th><td>9 am – 7 pm</td></tr>
+                <tr><th scope="row">Friday</th><td>9 am – 6 pm</td></tr>
+                <tr><th scope="row">Saturday</th><td>8:30 am – 4 pm</td></tr>
+                <tr class="closed"><th scope="row">Sunday &amp; Monday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Studio Juniper, back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/><use href="#sprig" x="9" y="5" width="22" height="31"/></svg>
+      <span>Studio <em>Juniper</em></span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="#prices">Prices</a><a href="#book">Book</a><a href="#pilates">Pilates</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a><a href="tel:+14135550167">(413) 555-0167</a>
+    </nav>
+    <p class="fine">© 2026 Studio Juniper · studiojuniper.com · Hair &amp; Pilates in Northampton, MA. Studio Juniper is a made-up business; this is a sample site designed by 413 Growth. <a href="../../work.html">See more of our work</a>.</p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+14135550167" aria-label="Call (413) 555-0167"><svg aria-hidden="true"><use href="#phone"/></svg></a>
+  <a class="btn btn-primary" href="#book">Book a visit</a>
+</div>
+
+<script>
+(function(){
+  var form=document.getElementById('bk'),pick=document.getElementById('pick'),note=document.getElementById('note');
+  // label day chips with upcoming dates
+  var now=new Date(),mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.querySelectorAll('[data-d]').forEach(function(el){
+    var d=new Date(now),diff=(+el.dataset.d-now.getDay()+7)%7||7;d.setDate(now.getDate()+diff);
+    el.textContent=mo[d.getMonth()]+' '+d.getDate();
+  });
+  function val(n){var c=form.querySelector('input[name="'+n+'"]:checked');return c?c.value:'';}
+  function upd(){pick.textContent=val('svc')+' · '+val('day');}
+  form.addEventListener('change',upd);
+  document.getElementById('go').addEventListener('click',function(){
+    note.classList.remove('pop');void note.offsetWidth;note.classList.add('pop');
+    note.querySelector('p').innerHTML='<strong>This is a sample site</strong> — booking would open your booking app here for <strong>'+val('svc').replace(/&/g,'&amp;')+'</strong> on <strong>'+val('day')+'</strong>, with live times.';
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
